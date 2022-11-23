@@ -1,0 +1,25 @@
+
+  @font-face {
+    font-family: 'Felix';
+    src: url('../static/Felix.ttf') format('truetype');
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Bison';
+    src: url('../static/Bison-Bold.ttf') format('truetype');
+    font-display: swap;
+  
+  }
+  
+  @font-face {
+    font-family: 'Bison ThickOutline';
+    src: url('../static/BisonThickOutline.ttf') format('truetype');
+    font-display: swap;
+  
+  }
+  
+  @font-face {
+    font-family: 'Comfortaa';
+    src: url('../static/Comfortaa.ttf') format('truetype');
+    font-display: swap;
+  }
