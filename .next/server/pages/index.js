@@ -1,1032 +1,252 @@
-"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 (() => {
 var exports = {};
-exports.id = 405;
-exports.ids = [405];
+exports.id = "pages/index";
+exports.ids = ["pages/index"];
 exports.modules = {
 
-/***/ 2625:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "Z": () => (/* binding */ components_HeroSlider)
-});
-
-// EXTERNAL MODULE: external "react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(997);
-// EXTERNAL MODULE: external "styled-components"
-var external_styled_components_ = __webpack_require__(7518);
-var external_styled_components_default = /*#__PURE__*/__webpack_require__.n(external_styled_components_);
-// EXTERNAL MODULE: external "react-awesome-slider"
-var external_react_awesome_slider_ = __webpack_require__(6318);
-var external_react_awesome_slider_default = /*#__PURE__*/__webpack_require__.n(external_react_awesome_slider_);
-;// CONCATENATED MODULE: external "react-awesome-slider/dist/autoplay"
-const autoplay_namespaceObject = require("react-awesome-slider/dist/autoplay");
-var autoplay_default = /*#__PURE__*/__webpack_require__.n(autoplay_namespaceObject);
-;// CONCATENATED MODULE: ./components/HeroSlider.js
-
-
-
-
-
-const fadeOut = external_styled_components_.keyframes` {
-  from { opacity: 1.0; }
-  to   { opacity: 0.0; }
-}`;
-const fadeIn = external_styled_components_.keyframes` {
-  from { opacity: 0.0; }
-  to   { opacity: 1.0; }
-}`;
-const scroller = external_styled_components_.keyframes` {
-  0% {
-    transform: rotate(-45deg) translate(0, 0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(-45deg) translate(-20px, 20px);
-    opacity: 0;
-  }
-}`;
-const SliderDiv = external_styled_components_default().div.withConfig({
-    componentId: "sc-3287dd62-0"
-})`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: lightgrey;
-
-  .shorten {
-    height: 100vh;
-  }
-  .arrow {
-    height: 50%;
-  }
-  .awssld__bullets {
-    transform: translateY(-50px) scale(0.6);
-    z-index: 100;
-    color: rgba(222, 222, 222, 0.7);
-  }
-  .awssld__bullets button {
-    background: rgba(222, 222, 222, 0.8);
-  }
-  .awssld__bullets--active {
-    transform: scale(1.2);
-  }
-
-  a {
-  padding-top: 0px;
-  position: absolute;
-  bottom:  0px;
-
-  z-index: 800;
-  display: flex;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  color: #503931;
-  font : normal 400 20px/1 'Josefin Sans', sans-serif;
-  letter-spacing: .1em;
-  text-decoration: none;
-  transition: opacity .3s;
-width: 100px;
-height: 100px;
-&:hover {
-  cursor: pointer;
-}
-  }
-   span {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 2px solid #503931;
-    border-bottom: 2px solid #503931;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    -webkit-animation: ${scroller} 3s infinite;
-    animation: ${scroller} 3s infinite;
-    box-sizing: border-box;
-
-  }
-  .aws-btn {
-
-
-    --loader-bar-color: rgba(255,255,255,0);
-    --loader-bar-height: 0px;
-    }
-  .awssld--animated {
-    will-change: opacity;
-    visibility: visible; }
-  .awssld--moveRight {
-    animation: ${fadeIn} 3s cubic-bezier(0.5, 0.075, 0.25, 0.95) ;
-  }
-  .awssld--moveLeft {
-    -webkit-animation:  ${fadeIn} 3s cubic-bezier(0.5, 0.075, 0.25, 0.95);
-            animation:  ${fadeIn} 3s cubic-bezier(0.5, 0.075, 0.25, 0.95); }
-  .awssld--exit {
-    z-index: 0; }
-    .awssld--exit.awssld--moveLeft {
-      -webkit-animation:  ${fadeOut} 3s cubic-bezier(0.5, 0.075, 0.25, 0.95);
-              animation:  ${fadeOut} 3s cubic-bezier(0.5, 0.075, 0.25, 0.95); }
-    .awssld--exit.awssld--moveRight {
-      -webkit-animation:  ${fadeOut} 3s cubic-bezier(0.5, 0.075, 0.25, 0.95);
-              animation:  ${fadeOut} 3s cubic-bezier(0.5, 0.075, 0.25, 0.95); }
-   .awssld__timer {
-               opacity: 0;
-              }
-`;
-const Opaque = external_styled_components_default().div.withConfig({
-    componentId: "sc-3287dd62-1"
-})`
-opacity: 1;
-position: absolute;
-width: 100%;
-height: 100%;
-background: rgba(245,245,245,.5);
-z-index: 50;
-`;
-const Title = external_styled_components_default().div.withConfig({
-    componentId: "sc-3287dd62-2"
-})`
-  display: flex;
-  // width: 100%;
-
-  position: absolute;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  z-index: 60;
-  letter-spacing: 4px;
-
- color: ${(props)=>props.theme.black};
-
-
-  .box {
-
-
-
-    display: flex;
-    flex-flow: column;
-    justify-contents: center;
-    align-items: center;
-    text-align: center;
-margin: 0 auto;
-
-  }
-  img {
-    width: 400px;
-    display: flex;
-    margin: 0 auto;
-    transform: translateX(-2px)  ;
-    @media (min-width: 0px) and (max-width: 768px) {
-      width: 90%;
-      max-width: 400px;
-    }
-  }
-
-
-  h2 {
-    font-size: 1em;
-color: #000000;
-    font-family: 'Comfortaa';
-    width: 100%;
-    text-align: center;
-text-transform: uppercase;
-font-weight: 900;
-
-  }
-
-  .arrow-down {
-    width: 33px;
-    height: 33px;
-    border: 3px solid #333;
-    border-left: 0;
-    border-top: 0;
-bottom: 0;
-     transform: rotate(45deg);
-     &:hover {
-       cursor: pointer;
-     }
-  }
-`;
-const AutoplaySlider = autoplay_default()((external_react_awesome_slider_default()));
-const HeroSlider = function(props) {
-    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)(SliderDiv, {
-        children: [
-            /*#__PURE__*/ jsx_runtime_.jsx(Title, {
-                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                    className: "box",
-                    children: [
-                        /*#__PURE__*/ jsx_runtime_.jsx("img", {
-                            src: "/../static/stephysbrideguidelogodarkbrown.png",
-                            alt: "stephys bride guide"
-                        }),
-                        /*#__PURE__*/ jsx_runtime_.jsx("h2", {
-                            children: "wedding planning | styling | coordination"
-                        })
-                    ]
-                })
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx(Opaque, {}),
-            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(AutoplaySlider, {
-                className: "shorten aws-btn",
-                play: true,
-                cancelOnInteraction: false,
-                buttons: false,
-                bullets: false,
-                interval: 10000,
-                children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                        "data-src": "/../static/stephysbrideguide-olivia.jpeg"
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                        "data-src": "/../static/stephysbrideguide-alexa.jpg"
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                        "data-src": "/../static/stephysbrideguide-tristan-olivia.jpg"
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                        "data-src": "/../static/stephysbrideguide-julya-jack.JPG"
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                        "data-src": "/../static/stephysbrideguide-noel-david.jpg"
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                        "data-src": "/../static/stephysbrideguide-heather-tablescape.jpg"
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                        "data-src": "/../static/stephysbrideguide-bouqet.jpg"
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                        "data-src": "/../static/stephysbrideguide-heather-drew.jpg"
-                    })
-                ]
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("a", {
-                className: "scroll-down-button",
-                onClick: props.arrowClick,
-                children: /*#__PURE__*/ jsx_runtime_.jsx("span", {})
-            })
-        ]
-    });
-};
-/* harmony default export */ const components_HeroSlider = (HeroSlider);
-
-
-/***/ }),
-
-/***/ 7175:
+/***/ "./components/ContactForm.js":
+/*!***********************************!*\
+  !*** ./components/ContactForm.js ***!
+  \***********************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (/* binding */ HomePage)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _HeroSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2625);
-/* harmony import */ var _ContactForm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7060);
-/* harmony import */ var _Reviews__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(494);
-/* harmony import */ var _Intro__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7040);
-/* harmony import */ var _Instagram__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(5577);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_ContactForm__WEBPACK_IMPORTED_MODULE_3__]);
-_ContactForm__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
-
-
-
-
-
-
-
-function HomePage() {
-    // const inquiryRef = useRef(null)
-    const ref = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(null);
-    const arrowClick = ()=>{
-        ref.current?.scrollIntoView({
-            behavior: "smooth"
-        });
-    };
-    console.log(arrowClick);
-    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-        children: [
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_HeroSlider__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
-                arrowClick: arrowClick
-            }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_Intro__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z, {
-                ref: ref
-            }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_Reviews__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {}),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_ContactForm__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {}),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_Instagram__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, {})
-        ]
-    });
-};
-
-__webpack_async_result__();
-} catch(e) { __webpack_async_result__(e); } });
+"use strict";
+eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ \"styled-components\");\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-hook-form */ \"react-hook-form\");\n/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @apollo/client */ \"@apollo/client\");\n/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_apollo_client__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! graphql-tag */ \"graphql-tag\");\n/* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _Loader__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Loader */ \"./components/Loader.js\");\n/* harmony import */ var react_datepicker_dist_react_datepicker_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-datepicker/dist/react-datepicker.css */ \"./node_modules/react-datepicker/dist/react-datepicker.css\");\n/* harmony import */ var react_datepicker_dist_react_datepicker_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_datepicker_dist_react_datepicker_css__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-datepicker */ \"react-datepicker\");\n/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_datepicker__WEBPACK_IMPORTED_MODULE_7__);\n/* harmony import */ var react_select__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-select */ \"react-select\");\n/* harmony import */ var react_select__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_select__WEBPACK_IMPORTED_MODULE_8__);\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([react_hook_form__WEBPACK_IMPORTED_MODULE_2__]);\nreact_hook_form__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\n\n\n\n\n\n\n\n\n\nconst CREATE_SUBMISSION = (graphql_tag__WEBPACK_IMPORTED_MODULE_4___default())`\n  mutation CREATE_SUBMISSION(\n    $firstName: String!\n    $lastName: String!\n    $fianceFirst: String!\n    $mobilePhone: String!\n    $email: String!\n    $eventDate: DateTime\n    $venue: String!\n    $serviceRequested: String\n    $additionalInfo: String\n  ) {\n\n    createSubmission(\n      data: {\n    firstName: $firstName\n    lastName: $lastName\n    fianceFirst: $fianceFirst\n    mobilePhone: $mobilePhone\n    email: $email\n    venue: $venue\n    eventDate: $eventDate\n    serviceRequested: $serviceRequested\n    additionalInfo: $additionalInfo\n    }\n  ) {\n    id\n    firstName\n    lastName\n    fianceFirst\n    mobilePhone\n    email\n    venue\n    eventDate\n    serviceRequested\n    additionalInfo\n  }\n  }\n`;\nconst loading = styled_components__WEBPACK_IMPORTED_MODULE_1__.keyframes`\n  from {\n    background-position: 0 0;\n    /* rotate: 0; */\n  }\n\n  to {\n    background-position: 100% 100%;\n    /* rotate: 360deg; */\n  }\n`;\nconst ThankYouMessage = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({\n    displayName: \"ContactForm__ThankYouMessage\",\n    componentId: \"sc-a18bf671-0\"\n})`\nwidth: 100%;\n\nposition: relative;\nbackground:  ${(props)=>props.theme.primary};\n  margin: 30px auto 110px;\ndisplay: flex;\nflex-flow: column;\njustify-contents: center;\nalign-items: center;\ntext-align: center;\nuser-select: none;\nh4 {\n  font-family: 'Tomatoes';\n  width: 60%;\n  margin: 30px auto 10px;\n  opacity:.6;\n  line-height: 20px;\nfont-size: 30px;\n  color: ${(props)=>props.theme.third};\n}\np {\n      font-family: 'Comfortaa';\n  line-height: 14px;\n  letter-spacing: 3px;\n  font-size: 16px;\n  }\n  span {\n    font-family: 'Comfortaa';\nline-height: 14px;\nletter-spacing: 3px;\nfont-size: 18px;}\n\n\n`;\nconst Layout = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({\n    displayName: \"ContactForm__Layout\",\n    componentId: \"sc-a18bf671-1\"\n})`\n  width: 100%;\n\nposition: relative;\n\n  margin: 100px auto 50px;\ndisplay: flex;\nflex-flow: column;\njustify-contents: center;\nalign-items: center;\ntext-align: center;\n\n.getintouch {\n  font-family: 'Comfortaa';\n  width: 80%;\n  opacity:.6;\n  letter-spacing: 3px;\n  color: ${(props)=>props.theme.third};\n  margin-bottom:20px;\n  text-transform: uppercase;\n\n  @media (min-width: 0px) and (max-width: 768px) {\n  display: none;\n  }\n\n}\n\n.line {\n  background: ${(props)=>props.theme.second};\n  height: 2px;\n  width: 250px;\n  margin-bottom: 10px;\n  opacity:.3;\n  @media (min-width: 0px) and (max-width: 768px) {\n    display: none;\n    }\n}\n.line2 {\n  background: ${(props)=>props.theme.second};\n  height: 2px;\n  width: 150px;\n  margin-bottom:70px;\n  opacity:.3;\n  @media (min-width: 0px) and (max-width: 768px) {\n    display: none;\n    }\n}\n\n`;\nconst Form = styled_components__WEBPACK_IMPORTED_MODULE_1___default().form.withConfig({\n    displayName: \"ContactForm__Form\",\n    componentId: \"sc-a18bf671-2\"\n})`\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  grid-gap: 20px;\n  align-items: center;\n  justify-content: center;\n  width:60%;\n\n  min-width: 500px;\n  background: white;\n\n  margin: 0px auto;\n  z-index:0;\n  font-size: 1.5rem;\n  line-height: 1.5;\n  font-weight: 600;\n  position: relative;\n  @media (min-width: 0px) and (max-width: 768px) {\n    min-width: 340px;\n    width: 90%;\n    grid-template-columns: 1fr;\n    grid-gap: 0px;\n    }\n  &:after {\n    content: 'Get In Touch';\n    position: absolute;\n    font-family: 'Amelaryas';\n    font-size: 40px;\n    transform: rotate(90deg);\n    top:155px;\n    right: -240px;\n    margin: 0 auto;\n    color: ${(props)=>props.theme.second};\n    @media (min-width: 0px) and (max-width: 768px) {\n      display: none;\n\n       }\n  }\n  &:before {\n    display: none;\n\n    @media (min-width: 0px) and (max-width: 768px) {\n      display: block;\n\n    content: 'Get In Touch';\n    position: relative;\n    font-family: 'Amelaryas';\n    font-size: 30px;\n    transform: translateY(-20px);\n    top: 0px;\nline-height: 15px;\n\n    color: ${(props)=>props.theme.second};\n\n       }\n  }\n  .side-one {\n    grid-column: 1;\n  }\n  .side-two {\n    grid-column: 2;\n    @media (min-width: 0px) and (max-width: 768px) {\n     grid-column: 1;\n      }\n  }\n  .both-sides {\n    grid-column: 1/3;\n  }\n  .error-msg {\n    line-height: 10px;\n    font-size: 10px;\n    margin: 0;\n    color: red;\n    position: absolute;\n    transform: translateY(-30px);\n  }\n  label {\n    display: block;\n    line-height: 18px;\n    z-index: 0;\n    margin: 0 auto;\n    text-align: left;\n    width: 100%;\n    font-family: 'Comfortaa';\n    opacity: 0.7;\n    position: relative;\n    letter-spacing: 3px;\n    font-size: 1.3rem;\n    // text-transform: uppercase;\n    margin-bottom: ${(props)=>props.errormsg && props.errormsg.type.length > 1 ? \"20px\" : \"0px\"};\n    color: ${(props)=>props.theme.second};\n  }\n  .placeholder_option {\n    color: rgba(255,255,255,.5);\n  }\n  .getintouch-smallscreen {\n    display: none;\n    font-family: 'Comfortaa';\n\n  opacity:.6;\n  letter-spacing: 3px;\n  color: ${(props)=>props.theme.third};\n  margin-bottom:20px;\n  text-transform: uppercase;\n\n  @media (min-width: 600px) and (max-width: 768px) {\n    display: block;\n    grid-column: 1;\n  font-size: 11px;\n  }\n  @media (min-width: 0px) and (max-width: 599px) {\n    display: block;\n    font-size: 9px;\n    grid-column: 1;\n    width:100%;\n    }\n  }\n  input,\n  select {\n    padding-left: 1rem;\n    padding-top: 0.7rem;\n    padding-bottom: 0.7rem;\n    font-size: 1.5rem;\n    margin-bottom: 30px;\n     font-family: 'Comfortaa';\n    background: transparent;\n    border-radius: 3px;\n    border: 2px solid ${(props)=>props.theme.primary};\n    /* border-radius: 5px; */\n    /* margin-top: 0.8rem; */\n    width: 100%;\n    &:focus {\n      outline: 0;\n      border: 2px solid ${(props)=>props.theme.second};\n    }\n  }\n  .input {\n    font-family: 'Comfortaa';\n    font-size: 13px;\n    text-transform: capitalize;\n    letter-spacing: 2px;\n  }\n.theSelector {\n  grid-column: 1/3;\n  margin-bottom: 30px;\n}\n  .button-52 {\n    font-size: 16px;\n    font-weight: 200;\n    color: black;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    padding: 13px 20px 13px;\n    outline: 0;\n    border: 1px solid black;\n    cursor: pointer;\n    position: relative;\n    background-color: rgba(0, 0, 0, 0);\n    user-select: none;\n    -webkit-user-select: none;\n    touch-action: manipulation;\n&:after {\n    content: \"\";\n    background-color: #ffe54c;\n    width: 100%;\n    z-index: 1;\n    position: absolute;\n    height: 100%;\n    top: 7px;\n    left: 7px;\n    transition: 0.2s;\n&:hover:after {\n    top: 0px;\n    left: 0px;\n  }\n}\n\n  @media (min-width: 768px) {\n    .button-52 {\n      padding: 13px 50px 13px;\n    }\n  }\n}\n\n.button-48 {\n  appearance: none;\n  border-width: 0;\n  box-sizing: border-box;\n  color: #000000;\n  cursor: pointer;\n  display: inline-block;\n   font-size: 14px;\n  font-weight: 500;\n  letter-spacing: 0;\n  line-height: .3em;\n  margin: 0;\n  opacity: 1;\n  outline: 0;\n  padding: 1.5em 2.2em;\n  position: relative;\n  text-align: center;\n  text-decoration: none;\n  text-rendering: geometricprecision;\n  text-transform: uppercase;\n  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);\n  user-select: none;\n  -webkit-user-select: none;\n  touch-action: manipulation;\n  vertical-align: baseline;\n  white-space: nowrap;\n  grid-column: 1;\n  width: 120px;\n  height: 40px;\n  justify-self: left;\n  background-color: ${(props)=>props.theme.primary};\nfont-family: 'Comfortaa';\n}\n\n.button-48:before {\n  animation: opacityFallbackOut .5s step-end forwards;\n  backface-visibility: hidden;\n  background-color: #bea8a7ff;\n  clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);\n  content: \"\";\n  height: 100%;\n  left: 0;\n  position: absolute;\n  top: 0;\n  transform: translateZ(0);\n  transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);\n  width: 100%;\n}\n\n.button-48:hover:before {\n  animation: opacityFallbackIn 0s step-start forwards;\n  clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);\n}\n\n.button-48:after {\n  background-color: #FFFFFF;\n}\n\n.button-48 span {\n  z-index: 1;\n  position: relative;\n}\n.submit-button {\n  border-radius: 5px;\n  text-align: center;\n  color: black;\n  grid-column: 2;\n  width: 50%;\n  display: flex;\njustify-self: right;\ntransition:  0.7s;\nheight: 30px;\n  justify-content: center;\n  text-transform: uppercase;\n  font-family: 'Comfortaa';\n  align-items: center;\nline-height: 8px;\npadding: 8px 2px;\n&:hover {\n  cursor: pointer;\n  box-shadow: 0px 4px 6px -3px rgba(20,20,20,.1);\n  // transform: scale(1.1);\n}\n}\n  textarea {\n    resize: none;\n    min-height: 100px;\n    margin-top: 0px;\n    font-family: 'Comfortaa';\n    font-size: 20px;\n    border-radius: 3px;\n    border: 2px solid ${(props)=>props.theme.primary};\n    width: 100%;\n    padding-left: 1rem;\n    padding-top: 0.7rem;\n    padding-bottom: 0.7rem;\n    font-size: 1.5rem;\n    position: relative;\n    margin-bottom: 20px;\n    background: transparent;\n// z-index: 0;\n    &:focus {\n      outline: 0;\n      border: 2px solid ${(props)=>props.theme.second};\n    }\n  }\n  button,\n  input[type='submit'] {\n    width: auto;\n    color: white;\n    border: 0;\n    font-size: 2rem;\n    font-weight: 600;\n    padding: 0.5rem 1.2rem;\n    margin-top: 1rem;\n  }\n  fieldset {\n    border: 0;\n    padding: 0;\n\n    &[disabled] {\n      opacity: 0.5;\n    }\n    &::before {\n      height: 10px;\n      margin-bottom: 10px;\n      content: '';\n      display: block;\n      background-image: linear-gradient(\n        to right,\n        ${(props)=>props.theme.second} 0%,\n        ${(props)=>props.theme.primary} 50%,\n        ${(props)=>props.theme.second} 100%\n      );\n    }\n    &[aria-busy='true']::before {\n      background-size: 50% auto;\n      animation: ${loading} 0.5s linear infinite;\n    }\n  }\n`;\nconst MyContainer = ({ className , children  })=>{\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        style: {\n            padding: \"20px\",\n            background: \"rgba(237, 222, 213, 1)\",\n            color: \"#fff\"\n        },\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_datepicker__WEBPACK_IMPORTED_MODULE_7__.CalendarContainer, {\n            className: className,\n            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                style: {\n                    position: \"relative\",\n                    fontFamily: \"Comfortaa\",\n                    opacity: 1\n                },\n                children: children\n            }, void 0, false, {\n                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                lineNumber: 475,\n                columnNumber: 9\n            }, undefined)\n        }, void 0, false, {\n            fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n            lineNumber: 473,\n            columnNumber: 7\n        }, undefined)\n    }, void 0, false, {\n        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n        lineNumber: 472,\n        columnNumber: 5\n    }, undefined);\n};\nconst selectStyles = {\n    control: (base)=>({\n            ...base,\n            minWidth: 240,\n            margin: 0\n        }),\n    menu: ()=>({\n            boxShadow: \" 0 1px 0 rgba(0, 0, 0, 0.1)\"\n        }),\n    menuPortal: ()=>({\n            zIndex: \"1000\",\n            position: \"absolute\",\n            top: \"214px\",\n            left: \"0px\",\n            boxShadow: \"0 1px 0 rgba(0, 0, 0, 0.1)\"\n        })\n};\n// const customStyles = {\n// container: (base, state) => {\n//   return ({\n//       ...base,\n//       zIndex: state.isFocused ? \"999\" : \"1\"  //Only when current state focused\n//   })\n// }\n// }\nconst packageOptions = [\n    {\n        value: \"fullService\",\n        label: \"Full Service Planning, Styling + Coordination\"\n    },\n    {\n        value: \"partial\",\n        label: \"Partial Planning + Coordination\"\n    },\n    {\n        value: \"coordination\",\n        label: \"Wedding Management/Coordination\"\n    },\n    {\n        value: \"tbd\",\n        label: \"I would like to discuss this further with you\"\n    }\n];\nfunction ContactForm() {\n    const { register , handleSubmit , control , formState: { errors  } ,  } = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_2__.useForm)();\n    const [createSubmission, { data , loading , error  }] = (0,_apollo_client__WEBPACK_IMPORTED_MODULE_3__.useMutation)(CREATE_SUBMISSION, {\n    });\n    console.log(errors);\n    const onSubmit = async (data)=>{\n        console.log(data);\n        await createSubmission({\n            variables: {\n                firstName: data.firstName,\n                lastName: data.lastName,\n                fianceFirst: data.fianceFirst,\n                email: data.email,\n                venue: data.venue,\n                mobilePhone: data.mobileNumber,\n                serviceRequested: data.serviceRequested,\n                additionalInfo: data.additionalInfo\n            }\n        });\n    };\n    if (loading) return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_Loader__WEBPACK_IMPORTED_MODULE_5__[\"default\"], {\n        children: \"loading\"\n    }, void 0, false, {\n        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n        lineNumber: 514,\n        columnNumber: 22\n    }, this);\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Layout, {\n            children: [\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: \"line\"\n                }, void 0, false, {\n                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                    lineNumber: 520,\n                    columnNumber: 9\n                }, this),\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                    className: \"getintouch\",\n                    children: [\n                        \"Please send inquiries with the following form \",\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"br\", {}, void 0, false, {\n                            fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                            lineNumber: 521,\n                            columnNumber: 77\n                        }, this),\n                        \"I look forward to speaking with you!  \"\n                    ]\n                }, void 0, true, {\n                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                    lineNumber: 521,\n                    columnNumber: 5\n                }, this),\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: \"line2\"\n                }, void 0, false, {\n                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                    lineNumber: 522,\n                    columnNumber: 5\n                }, this),\n                data && !loading && !error ? /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(ThankYouMessage, {\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h4\", {\n                            children: [\n                                \"Thank you \",\n                                data.firstName && data.firstName\n                            ]\n                        }, void 0, true, {\n                            fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                            lineNumber: 524,\n                            columnNumber: 49\n                        }, this),\n                        \"   \",\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                            children: [\n                                \"Your inquiry has been sent!\",\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"br\", {}, void 0, false, {\n                                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                                    lineNumber: 524,\n                                    columnNumber: 134\n                                }, this),\n                                \"  Please expect a response in the next \",\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n                                    children: \"48\"\n                                }, void 0, false, {\n                                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                                    lineNumber: 524,\n                                    columnNumber: 178\n                                }, this),\n                                \" hours \"\n                            ]\n                        }, void 0, true, {\n                            fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                            lineNumber: 524,\n                            columnNumber: 104\n                        }, this)\n                    ]\n                }, void 0, true, {\n                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                    lineNumber: 524,\n                    columnNumber: 32\n                }, this) : /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Form, {\n                    onSubmit: handleSubmit(onSubmit),\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                            className: \"getintouch-smallscreen\",\n                            children: [\n                                \"Please send any inquiries below. \",\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"br\", {}, void 0, false, {\n                                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                                    lineNumber: 526,\n                                    columnNumber: 81\n                                }, this),\n                                \"I look forward to speaking with you!  \"\n                            ]\n                        }, void 0, true, {\n                            fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                            lineNumber: 526,\n                            columnNumber: 10\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                            htmlFor: \"firstname\",\n                            className: \"side-one\",\n                            children: [\n                                \"First Name\",\n                                errors.firstName && /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    className: \"error-msg\",\n                                    children: \"This field is required\"\n                                }, void 0, false, {\n                                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                                    lineNumber: 530,\n                                    columnNumber: 34\n                                }, this),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"input\", {\n                                    errormsg: errors.firstName,\n                                    name: \"firstname\",\n                                    type: \"text\",\n                                    \"aria-invalid\": errors.firstName ? \"true\" : \"false\",\n                                    ...register(\"firstName\", {\n                                        required: true,\n                                        maxLength: 80\n                                    })\n                                }, void 0, false, {\n                                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                                    lineNumber: 531,\n                                    columnNumber: 13\n                                }, this)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                            lineNumber: 527,\n                            columnNumber: 11\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                            htmlFor: \"lastname\",\n                            className: \"side-two\",\n                            children: [\n                                \"Last Name\",\n                                errors.lastName && /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    className: \"error-msg\",\n                                    children: \"This field is required\"\n                                }, void 0, false, {\n                                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                                    lineNumber: 543,\n                                    columnNumber: 33\n                                }, this),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"input\", {\n                                    errormsg: errors.lastName,\n                                    name: \"lastname\",\n                                    type: \"text\",\n                                    ...register(\"lastName\", {\n                                        required: true,\n                                        maxLength: 100\n                                    })\n                                }, void 0, false, {\n                                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                                    lineNumber: 544,\n                                    columnNumber: 13\n                                }, this)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                            lineNumber: 541,\n                            columnNumber: 11\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                            htmlFor: \"fianceFirst\",\n                            className: \"side-one\",\n                            children: [\n                                \"Fiance's name\",\n                                errors.fianceFirst && /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    className: \"error-msg\",\n                                    children: \"This field is required\"\n                                }, void 0, false, {\n                                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                                    lineNumber: 554,\n                                    columnNumber: 36\n                                }, this),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"input\", {\n                                    errormsg: errors.fianceFirst,\n                                    name: \"fianceFirst\",\n                                    type: \"text\",\n                                    ...register(\"fianceFirst\", {\n                                        required: true\n                                    })\n                                }, void 0, false, {\n                                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                                    lineNumber: 555,\n                                    columnNumber: 13\n                                }, this)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                            lineNumber: 552,\n                            columnNumber: 11\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                            htmlFor: \"email\",\n                            className: \"side-two\",\n                            children: [\n                                \"Email\",\n                                errors.email && /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    className: \"error-msg\",\n                                    children: \"This field is required\"\n                                }, void 0, false, {\n                                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                                    lineNumber: 566,\n                                    columnNumber: 30\n                                }, this),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"input\", {\n                                    errormsg: errors.email,\n                                    name: \"email\",\n                                    type: \"text\",\n                                    ...register(\"email\", {\n                                        required: true,\n                                        pattern: /^\\S+@\\S+$/i\n                                    })\n                                }, void 0, false, {\n                                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                                    lineNumber: 567,\n                                    columnNumber: 13\n                                }, this)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                            lineNumber: 564,\n                            columnNumber: 11\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                            htmlFor: \"mobileNumber\",\n                            className: \"side-one\",\n                            children: [\n                                \"Mobile Number\",\n                                errors.mobileNumber?.type === \"required\" ? /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    className: \"error-msg\",\n                                    children: \"This field is required\"\n                                }, void 0, false, {\n                                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                                    lineNumber: 577,\n                                    columnNumber: 57\n                                }, this) : \"\",\n                                errors.mobileNumber?.type === \"minLength\" ? /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    className: \"error-msg\",\n                                    children: \"Must be 10 digit number\"\n                                }, void 0, false, {\n                                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                                    lineNumber: 578,\n                                    columnNumber: 59\n                                }, this) : \"\",\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"input\", {\n                                    errormsg: errors.mobileNumber,\n                                    name: \"mobileNumber\",\n                                    type: \"tel\",\n                                    ...register(\"mobileNumber\", {\n                                        required: true,\n                                        minLength: 10,\n                                        maxLength: 16,\n                                        pattern: \".?(\\\\d{3}).*(\\\\d{3}).*(\\\\d{4})\"\n                                    })\n                                }, void 0, false, {\n                                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                                    lineNumber: 579,\n                                    columnNumber: 13\n                                }, this)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                            lineNumber: 575,\n                            columnNumber: 11\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                            htmlFor: \"date\",\n                            className: \"side-two\",\n                            children: [\n                                \"Date of Wedding\",\n                                errors.date && /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    className: \"error-msg\",\n                                    children: \"This field is required\"\n                                }, void 0, false, {\n                                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                                    lineNumber: 594,\n                                    columnNumber: 29\n                                }, this),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_hook_form__WEBPACK_IMPORTED_MODULE_2__.Controller, {\n                                    control: control,\n                                    name: \"ReactDatepicker\",\n                                    render: ({ field  })=>/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((react_datepicker__WEBPACK_IMPORTED_MODULE_7___default()), {\n                                            className: \"input\",\n                                            placeholderText: \"Select date\",\n                                            onChange: (e)=>field.onChange(e),\n                                            selected: field.value,\n                                            dateFormat: \"MMMM d, yyyy\",\n                                            calendarContainer: MyContainer\n                                        }, void 0, false, void 0, void 0)\n                                }, void 0, false, {\n                                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                                    lineNumber: 595,\n                                    columnNumber: 11\n                                }, this)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                            lineNumber: 592,\n                            columnNumber: 11\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                            className: \"theSelector\",\n                            htmlFor: \"serviceRequested\",\n                            children: [\n                                \"Planning Package\",\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_hook_form__WEBPACK_IMPORTED_MODULE_2__.Controller, {\n                                    name: \"serviceRequested\",\n                                    control: control,\n                                    render: ({ field  })=>/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((react_select__WEBPACK_IMPORTED_MODULE_8___default()), {\n                                            inputRef: field.ref,\n                                            className: \"basic-single selector-css\",\n                                            classNamePrefix: \"select\",\n                                            defaultValue: packageOptions[0],\n                                            value: packageOptions.find((c)=>c.value === field.value),\n                                            onChange: (val)=>field.onChange(val.value),\n                                            styles: selectStyles,\n                                            options: packageOptions\n                                        }, void 0, false, void 0, void 0)\n                                }, void 0, false, {\n                                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                                    lineNumber: 614,\n                                    columnNumber: 15\n                                }, this)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                            lineNumber: 611,\n                            columnNumber: 11\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                            htmlFor: \"venue\",\n                            className: \"both-sides\",\n                            children: [\n                                \"Venue\",\n                                errors.venue && /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    className: \"error-msg\",\n                                    children: \"This field is required\"\n                                }, void 0, false, {\n                                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                                    lineNumber: 640,\n                                    columnNumber: 30\n                                }, this),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"textarea\", {\n                                    name: \"venue\",\n                                    type: \"text\",\n                                    placeholder: \"If you don't have a venue, briefly describe what you're looking for\",\n                                    ...register(\"venue\", {\n                                        required: true\n                                    })\n                                }, void 0, false, {\n                                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                                    lineNumber: 641,\n                                    columnNumber: 13\n                                }, this)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                            lineNumber: 638,\n                            columnNumber: 11\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"label\", {\n                            htmlFor: \"additionalInfo\",\n                            className: \"both-sides\",\n                            children: [\n                                \"Any Additional Information?\",\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"textarea\", {\n                                    ...register(\"additionalInformation\", {}),\n                                    name: \"additionalInfo\",\n                                    type: \"text\",\n                                    placeholder: \"Is there anything else you'd like to share?\"\n                                }, void 0, false, {\n                                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                                    lineNumber: 653,\n                                    columnNumber: 13\n                                }, this)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                            lineNumber: 651,\n                            columnNumber: 11\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                            type: \"submit\",\n                            className: \"button-48\",\n                            role: \"button\",\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n                                    className: \"text\",\n                                    children: \"Submit \"\n                                }, void 0, false, {\n                                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                                    lineNumber: 661,\n                                    columnNumber: 69\n                                }, this),\n                                \" \"\n                            ]\n                        }, void 0, true, {\n                            fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                            lineNumber: 661,\n                            columnNumber: 11\n                        }, this)\n                    ]\n                }, void 0, true, {\n                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n                    lineNumber: 525,\n                    columnNumber: 9\n                }, this)\n            ]\n        }, void 0, true, {\n            fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/ContactForm.js\",\n            lineNumber: 519,\n            columnNumber: 7\n        }, this)\n    }, void 0, false);\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ContactForm);\n\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL0NvbnRhY3RGb3JtLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7QUFBcUQ7QUFDQTtBQUNUO0FBQ2Y7QUFFQTtBQUN1QjtBQUNlO0FBQ2xDO0FBQ2pDLE1BQU1VLGlCQUFpQixHQUFHTCxvREFBRyxDQUFDOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQXNDOUIsQ0FBQztBQUNELE1BQU1NLE9BQU8sR0FBR1Ysd0RBQVMsQ0FBQzs7Ozs7Ozs7OztBQVUxQixDQUFDO0FBQ0QsTUFBTVcsZUFBZSxHQUFHWix1RUFBVTs7O0VBQUEsQ0FBQzs7OzthQUl0QixFQUFFYyxDQUFBQSxLQUFLLEdBQUlBLEtBQUssQ0FBQ0MsS0FBSyxDQUFDQyxPQUFPLENBQUM7Ozs7Ozs7Ozs7Ozs7OztTQWVuQyxFQUFFRixDQUFBQSxLQUFLLEdBQUlBLEtBQUssQ0FBQ0MsS0FBSyxDQUFDRSxLQUFLLENBQUM7Ozs7Ozs7Ozs7Ozs7OztBQWV0QyxDQUFDO0FBQ0QsTUFBTUMsTUFBTSxHQUFHbEIsdUVBQVU7OztFQUFBLENBQUM7Ozs7Ozs7Ozs7Ozs7Ozs7O1NBaUJqQixFQUFFYyxDQUFBQSxLQUFLLEdBQUlBLEtBQUssQ0FBQ0MsS0FBSyxDQUFDRSxLQUFLLENBQUM7Ozs7Ozs7Ozs7O2NBV3hCLEVBQUVILENBQUFBLEtBQUssR0FBSUEsS0FBSyxDQUFDQyxLQUFLLENBQUNJLE1BQU0sQ0FBQzs7Ozs7Ozs7OztjQVU5QixFQUFFTCxDQUFBQSxLQUFLLEdBQUlBLEtBQUssQ0FBQ0MsS0FBSyxDQUFDSSxNQUFNLENBQUM7Ozs7Ozs7Ozs7QUFVNUMsQ0FBQztBQUNELE1BQU1DLElBQUksR0FBR3BCLHdFQUFXOzs7RUFBQSxDQUFDOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztXQWdDZCxFQUFFLENBQUNjLEtBQUssR0FBS0EsS0FBSyxDQUFDQyxLQUFLLENBQUNJLE1BQU0sQ0FBQzs7Ozs7Ozs7Ozs7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Q0FBQzs7Ozs7d0NBQ0Y7Ozs7OztnQ0FDSTtzQ0FDUiw4REFBQzlCLE9BQUs7NEJBQUMwQixPQUFPLEVBQUMsZ0JBQWdCOzRCQUFDaEQsU0FBUyxFQUFDLFlBQVk7O2dDQUFDLDZCQUVyRDs4Q0FBQSw4REFBQzBFLFVBQVE7b0NBQ04sR0FBR2xELFFBQVEsQ0FBQyx1QkFBdUIsRUFBRSxFQUFFLENBQUM7b0NBQ3pDMEIsSUFBSSxFQUFDLGdCQUFnQjtvQ0FDckJyRCxJQUFJLEVBQUMsTUFBTTtvQ0FDWDhFLFdBQVcsRUFBQyw2Q0FBNkM7Ozs7O3dDQUN6RDs7Ozs7O2dDQUNJO3NDQUVSLDhEQUFDQyxRQUFNOzRCQUFDL0UsSUFBSSxFQUFDLFFBQVE7NEJBQUNHLFNBQVMsRUFBQyxXQUFXOzRCQUFDNkUsSUFBSSxFQUFDLFFBQVE7OzhDQUFDLDhEQUFDOUIsTUFBSTtvQ0FBQy9DLFNBQVMsRUFBQyxNQUFNOzhDQUFDLFNBQU87Ozs7O3dDQUFPO2dDQUFBLEdBQUM7Ozs7OztnQ0FBUzs7Ozs7O3dCQUNwRzs7Ozs7O2dCQUNBO3FCQUNSLENBQ0o7Q0FDRjtBQUNELGlFQUFldUIsV0FBVyIsInNvdXJjZXMiOlsid2VicGFjazovL3N0ZXBoeXMtYnJpZGUtZ3VpZGUvLi9jb21wb25lbnRzL0NvbnRhY3RGb3JtLmpzP2MwNGEiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHN0eWxlZCwgeyBrZXlmcmFtZXMgfSBmcm9tICdzdHlsZWQtY29tcG9uZW50cydcbmltcG9ydCB7IHVzZUZvcm0sIENvbnRyb2xsZXIgfSBmcm9tICdyZWFjdC1ob29rLWZvcm0nXG5pbXBvcnQgeyB1c2VNdXRhdGlvbiB9IGZyb20gXCJAYXBvbGxvL2NsaWVudFwiXG5pbXBvcnQgZ3FsIGZyb20gJ2dyYXBocWwtdGFnJ1xuXG5pbXBvcnQgTG9hZGVyIGZyb20gJy4vTG9hZGVyJ1xuaW1wb3J0IFwicmVhY3QtZGF0ZXBpY2tlci9kaXN0L3JlYWN0LWRhdGVwaWNrZXIuY3NzXCI7XG5pbXBvcnQgUmVhY3REYXRlUGlja2VyLCB7Q2FsZW5kYXJDb250YWluZXJ9IGZyb20gJ3JlYWN0LWRhdGVwaWNrZXInXG5pbXBvcnQgU2VsZWN0IGZyb20gJ3JlYWN0LXNlbGVjdCdcbmNvbnN0IENSRUFURV9TVUJNSVNTSU9OID0gZ3FsYFxuICBtdXRhdGlvbiBDUkVBVEVfU1VCTUlTU0lPTihcbiAgICAkZmlyc3ROYW1lOiBTdHJpbmchXG4gICAgJGxhc3ROYW1lOiBTdHJpbmchXG4gICAgJGZpYW5jZUZpcnN0OiBTdHJpbmchXG4gICAgJG1vYmlsZVBob25lOiBTdHJpbmchXG4gICAgJGVtYWlsOiBTdHJpbmchXG4gICAgJGV2ZW50RGF0ZTogRGF0ZVRpbWVcbiAgICAkdmVudWU6IFN0cmluZyFcbiAgICAkc2VydmljZVJlcXVlc3RlZDogU3RyaW5nXG4gICAgJGFkZGl0aW9uYWxJbmZvOiBTdHJpbmdcbiAgKSB7XG5cbiAgICBjcmVhdGVTdWJtaXNzaW9uKFxuICAgICAgZGF0YToge1xuICAgIGZpcnN0TmFtZTogJGZpcnN0TmFtZVxuICAgIGxhc3ROYW1lOiAkbGFzdE5hbWVcbiAgICBmaWFuY2VGaXJzdDogJGZpYW5jZUZpcnN0XG4gICAgbW9iaWxlUGhvbmU6ICRtb2JpbGVQaG9uZVxuICAgIGVtYWlsOiAkZW1haWxcbiAgICB2ZW51ZTogJHZlbnVlXG4gICAgZXZlbnREYXRlOiAkZXZlbnREYXRlXG4gICAgc2VydmljZVJlcXVlc3RlZDogJHNlcnZpY2VSZXF1ZXN0ZWRcbiAgICBhZGRpdGlvbmFsSW5mbzogJGFkZGl0aW9uYWxJbmZvXG4gICAgfVxuICApIHtcbiAgICBpZFxuICAgIGZpcnN0TmFtZVxuICAgIGxhc3ROYW1lXG4gICAgZmlhbmNlRmlyc3RcbiAgICBtb2JpbGVQaG9uZVxuICAgIGVtYWlsXG4gICAgdmVudWVcbiAgICBldmVudERhdGVcbiAgICBzZXJ2aWNlUmVxdWVzdGVkXG4gICAgYWRkaXRpb25hbEluZm9cbiAgfVxuICB9XG5gXG5jb25zdCBsb2FkaW5nID0ga2V5ZnJhbWVzYFxuICBmcm9tIHtcbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiAwIDA7XG4gICAgLyogcm90YXRlOiAwOyAqL1xuICB9XG5cbiAgdG8ge1xuICAgIGJhY2tncm91bmQtcG9zaXRpb246IDEwMCUgMTAwJTtcbiAgICAvKiByb3RhdGU6IDM2MGRlZzsgKi9cbiAgfVxuYFxuY29uc3QgVGhhbmtZb3VNZXNzYWdlID0gc3R5bGVkLmRpdmBcbndpZHRoOiAxMDAlO1xuXG5wb3NpdGlvbjogcmVsYXRpdmU7XG5iYWNrZ3JvdW5kOiAgJHtwcm9wcyA9PiBwcm9wcy50aGVtZS5wcmltYXJ5fTtcbiAgbWFyZ2luOiAzMHB4IGF1dG8gMTEwcHg7XG5kaXNwbGF5OiBmbGV4O1xuZmxleC1mbG93OiBjb2x1bW47XG5qdXN0aWZ5LWNvbnRlbnRzOiBjZW50ZXI7XG5hbGlnbi1pdGVtczogY2VudGVyO1xudGV4dC1hbGlnbjogY2VudGVyO1xudXNlci1zZWxlY3Q6IG5vbmU7XG5oNCB7XG4gIGZvbnQtZmFtaWx5OiAnVG9tYXRvZXMnO1xuICB3aWR0aDogNjAlO1xuICBtYXJnaW46IDMwcHggYXV0byAxMHB4O1xuICBvcGFjaXR5Oi42O1xuICBsaW5lLWhlaWdodDogMjBweDtcbmZvbnQtc2l6ZTogMzBweDtcbiAgY29sb3I6ICR7cHJvcHMgPT4gcHJvcHMudGhlbWUudGhpcmR9O1xufVxucCB7XG4gICAgICBmb250LWZhbWlseTogJ0NvbWZvcnRhYSc7XG4gIGxpbmUtaGVpZ2h0OiAxNHB4O1xuICBsZXR0ZXItc3BhY2luZzogM3B4O1xuICBmb250LXNpemU6IDE2cHg7XG4gIH1cbiAgc3BhbiB7XG4gICAgZm9udC1mYW1pbHk6ICdDb21mb3J0YWEnO1xubGluZS1oZWlnaHQ6IDE0cHg7XG5sZXR0ZXItc3BhY2luZzogM3B4O1xuZm9udC1zaXplOiAxOHB4O31cblxuXG5gXG5jb25zdCBMYXlvdXQgPSBzdHlsZWQuZGl2YFxuICB3aWR0aDogMTAwJTtcblxucG9zaXRpb246IHJlbGF0aXZlO1xuXG4gIG1hcmdpbjogMTAwcHggYXV0byA1MHB4O1xuZGlzcGxheTogZmxleDtcbmZsZXgtZmxvdzogY29sdW1uO1xuanVzdGlmeS1jb250ZW50czogY2VudGVyO1xuYWxpZ24taXRlbXM6IGNlbnRlcjtcbnRleHQtYWxpZ246IGNlbnRlcjtcblxuLmdldGludG91Y2gge1xuICBmb250LWZhbWlseTogJ0NvbWZvcnRhYSc7XG4gIHdpZHRoOiA4MCU7XG4gIG9wYWNpdHk6LjY7XG4gIGxldHRlci1zcGFjaW5nOiAzcHg7XG4gIGNvbG9yOiAke3Byb3BzID0+IHByb3BzLnRoZW1lLnRoaXJkfTtcbiAgbWFyZ2luLWJvdHRvbToyMHB4O1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuXG4gIEBtZWRpYSAobWluLXdpZHRoOiAwcHgpIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICBkaXNwbGF5OiBub25lO1xuICB9XG5cbn1cblxuLmxpbmUge1xuICBiYWNrZ3JvdW5kOiAke3Byb3BzID0+IHByb3BzLnRoZW1lLnNlY29uZH07XG4gIGhlaWdodDogMnB4O1xuICB3aWR0aDogMjUwcHg7XG4gIG1hcmdpbi1ib3R0b206IDEwcHg7XG4gIG9wYWNpdHk6LjM7XG4gIEBtZWRpYSAobWluLXdpZHRoOiAwcHgpIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgIGRpc3BsYXk6IG5vbmU7XG4gICAgfVxufVxuLmxpbmUyIHtcbiAgYmFja2dyb3VuZDogJHtwcm9wcyA9PiBwcm9wcy50aGVtZS5zZWNvbmR9O1xuICBoZWlnaHQ6IDJweDtcbiAgd2lkdGg6IDE1MHB4O1xuICBtYXJnaW4tYm90dG9tOjcwcHg7XG4gIG9wYWNpdHk6LjM7XG4gIEBtZWRpYSAobWluLXdpZHRoOiAwcHgpIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgIGRpc3BsYXk6IG5vbmU7XG4gICAgfVxufVxuXG5gXG5jb25zdCBGb3JtID0gc3R5bGVkLmZvcm1gXG4gIGRpc3BsYXk6IGdyaWQ7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyIDFmcjtcbiAgZ3JpZC1nYXA6IDIwcHg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICB3aWR0aDo2MCU7XG5cbiAgbWluLXdpZHRoOiA1MDBweDtcbiAgYmFja2dyb3VuZDogd2hpdGU7XG5cbiAgbWFyZ2luOiAwcHggYXV0bztcbiAgei1pbmRleDowO1xuICBmb250LXNpemU6IDEuNXJlbTtcbiAgbGluZS1oZWlnaHQ6IDEuNTtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBAbWVkaWEgKG1pbi13aWR0aDogMHB4KSBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgICBtaW4td2lkdGg6IDM0MHB4O1xuICAgIHdpZHRoOiA5MCU7XG4gICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnI7XG4gICAgZ3JpZC1nYXA6IDBweDtcbiAgICB9XG4gICY6YWZ0ZXIge1xuICAgIGNvbnRlbnQ6ICdHZXQgSW4gVG91Y2gnO1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICBmb250LWZhbWlseTogJ0FtZWxhcnlhcyc7XG4gICAgZm9udC1zaXplOiA0MHB4O1xuICAgIHRyYW5zZm9ybTogcm90YXRlKDkwZGVnKTtcbiAgICB0b3A6MTU1cHg7XG4gICAgcmlnaHQ6IC0yNDBweDtcbiAgICBtYXJnaW46IDAgYXV0bztcbiAgICBjb2xvcjogJHsocHJvcHMpID0+IHByb3BzLnRoZW1lLnNlY29uZH07XG4gICAgQG1lZGlhIChtaW4td2lkdGg6IDBweCkgYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7XG4gICAgICBkaXNwbGF5OiBub25lO1xuXG4gICAgICAgfVxuICB9XG4gICY6YmVmb3JlIHtcbiAgICBkaXNwbGF5OiBub25lO1xuXG4gICAgQG1lZGlhIChtaW4td2lkdGg6IDBweCkgYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7XG4gICAgICBkaXNwbGF5OiBibG9jaztcblxuICAgIGNvbnRlbnQ6ICdHZXQgSW4gVG91Y2gnO1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICBmb250LWZhbWlseTogJ0FtZWxhcnlhcyc7XG4gICAgZm9udC1zaXplOiAzMHB4O1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtMjBweCk7XG4gICAgdG9wOiAwcHg7XG5saW5lLWhlaWdodDogMTVweDtcblxuICAgIGNvbG9yOiAkeyhwcm9wcykgPT4gcHJvcHMudGhlbWUuc2Vjb25kfTtcblxuICAgICAgIH1cbiAgfVxuICAuc2lkZS1vbmUge1xuICAgIGdyaWQtY29sdW1uOiAxO1xuICB9XG4gIC5zaWRlLXR3byB7XG4gICAgZ3JpZC1jb2x1bW46IDI7XG4gICAgQG1lZGlhIChtaW4td2lkdGg6IDBweCkgYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7XG4gICAgIGdyaWQtY29sdW1uOiAxO1xuICAgICAgfVxuICB9XG4gIC5ib3RoLXNpZGVzIHtcbiAgICBncmlkLWNvbHVtbjogMS8zO1xuICB9XG4gIC5lcnJvci1tc2cge1xuICAgIGxpbmUtaGVpZ2h0OiAxMHB4O1xuICAgIGZvbnQtc2l6ZTogMTBweDtcbiAgICBtYXJnaW46IDA7XG4gICAgY29sb3I6IHJlZDtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC0zMHB4KTtcbiAgfVxuICBsYWJlbCB7XG4gICAgZGlzcGxheTogYmxvY2s7XG4gICAgbGluZS1oZWlnaHQ6IDE4cHg7XG4gICAgei1pbmRleDogMDtcbiAgICBtYXJnaW46IDAgYXV0bztcbiAgICB0ZXh0LWFsaWduOiBsZWZ0O1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGZvbnQtZmFtaWx5OiAnQ29tZm9ydGFhJztcbiAgICBvcGFjaXR5OiAwLjc7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGxldHRlci1zcGFjaW5nOiAzcHg7XG4gICAgZm9udC1zaXplOiAxLjNyZW07XG4gICAgLy8gdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbiAgICBtYXJnaW4tYm90dG9tOiAke3Byb3BzID0+IHByb3BzLmVycm9ybXNnICYmIHByb3BzLmVycm9ybXNnLnR5cGUubGVuZ3RoID4gMSAgPyAnMjBweCcgOiAnMHB4J307XG4gICAgY29sb3I6ICR7KHByb3BzKSA9PiBwcm9wcy50aGVtZS5zZWNvbmR9O1xuICB9XG4gIC5wbGFjZWhvbGRlcl9vcHRpb24ge1xuICAgIGNvbG9yOiByZ2JhKDI1NSwyNTUsMjU1LC41KTtcbiAgfVxuICAuZ2V0aW50b3VjaC1zbWFsbHNjcmVlbiB7XG4gICAgZGlzcGxheTogbm9uZTtcbiAgICBmb250LWZhbWlseTogJ0NvbWZvcnRhYSc7XG5cbiAgb3BhY2l0eTouNjtcbiAgbGV0dGVyLXNwYWNpbmc6IDNweDtcbiAgY29sb3I6ICR7cHJvcHMgPT4gcHJvcHMudGhlbWUudGhpcmR9O1xuICBtYXJnaW4tYm90dG9tOjIwcHg7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG5cbiAgQG1lZGlhIChtaW4td2lkdGg6IDYwMHB4KSBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgICBkaXNwbGF5OiBibG9jaztcbiAgICBncmlkLWNvbHVtbjogMTtcbiAgZm9udC1zaXplOiAxMXB4O1xuICB9XG4gIEBtZWRpYSAobWluLXdpZHRoOiAwcHgpIGFuZCAobWF4LXdpZHRoOiA1OTlweCkge1xuICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgIGZvbnQtc2l6ZTogOXB4O1xuICAgIGdyaWQtY29sdW1uOiAxO1xuICAgIHdpZHRoOjEwMCU7XG4gICAgfVxuICB9XG4gIGlucHV0LFxuICBzZWxlY3Qge1xuICAgIHBhZGRpbmctbGVmdDogMXJlbTtcbiAgICBwYWRkaW5nLXRvcDogMC43cmVtO1xuICAgIHBhZGRpbmctYm90dG9tOiAwLjdyZW07XG4gICAgZm9udC1zaXplOiAxLjVyZW07XG4gICAgbWFyZ2luLWJvdHRvbTogMzBweDtcbiAgICAgZm9udC1mYW1pbHk6ICdDb21mb3J0YWEnO1xuICAgIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xuICAgIGJvcmRlci1yYWRpdXM6IDNweDtcbiAgICBib3JkZXI6IDJweCBzb2xpZCAkeyhwcm9wcykgPT4gcHJvcHMudGhlbWUucHJpbWFyeX07XG4gICAgLyogYm9yZGVyLXJhZGl1czogNXB4OyAqL1xuICAgIC8qIG1hcmdpbi10b3A6IDAuOHJlbTsgKi9cbiAgICB3aWR0aDogMTAwJTtcbiAgICAmOmZvY3VzIHtcbiAgICAgIG91dGxpbmU6IDA7XG4gICAgICBib3JkZXI6IDJweCBzb2xpZCAkeyhwcm9wcykgPT4gcHJvcHMudGhlbWUuc2Vjb25kfTtcbiAgICB9XG4gIH1cbiAgLmlucHV0IHtcbiAgICBmb250LWZhbWlseTogJ0NvbWZvcnRhYSc7XG4gICAgZm9udC1zaXplOiAxM3B4O1xuICAgIHRleHQtdHJhbnNmb3JtOiBjYXBpdGFsaXplO1xuICAgIGxldHRlci1zcGFjaW5nOiAycHg7XG4gIH1cbi50aGVTZWxlY3RvciB7XG4gIGdyaWQtY29sdW1uOiAxLzM7XG4gIG1hcmdpbi1ib3R0b206IDMwcHg7XG59XG4gIC5idXR0b24tNTIge1xuICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICBmb250LXdlaWdodDogMjAwO1xuICAgIGNvbG9yOiBibGFjaztcbiAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuICAgIGxldHRlci1zcGFjaW5nOiAxcHg7XG4gICAgcGFkZGluZzogMTNweCAyMHB4IDEzcHg7XG4gICAgb3V0bGluZTogMDtcbiAgICBib3JkZXI6IDFweCBzb2xpZCBibGFjaztcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMCwgMCwgMCk7XG4gICAgdXNlci1zZWxlY3Q6IG5vbmU7XG4gICAgLXdlYmtpdC11c2VyLXNlbGVjdDogbm9uZTtcbiAgICB0b3VjaC1hY3Rpb246IG1hbmlwdWxhdGlvbjtcbiY6YWZ0ZXIge1xuICAgIGNvbnRlbnQ6IFwiXCI7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZTU0YztcbiAgICB3aWR0aDogMTAwJTtcbiAgICB6LWluZGV4OiAxO1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICBoZWlnaHQ6IDEwMCU7XG4gICAgdG9wOiA3cHg7XG4gICAgbGVmdDogN3B4O1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4mOmhvdmVyOmFmdGVyIHtcbiAgICB0b3A6IDBweDtcbiAgICBsZWZ0OiAwcHg7XG4gIH1cbn1cblxuICBAbWVkaWEgKG1pbi13aWR0aDogNzY4cHgpIHtcbiAgICAuYnV0dG9uLTUyIHtcbiAgICAgIHBhZGRpbmc6IDEzcHggNTBweCAxM3B4O1xuICAgIH1cbiAgfVxufVxuXG4uYnV0dG9uLTQ4IHtcbiAgYXBwZWFyYW5jZTogbm9uZTtcbiAgYm9yZGVyLXdpZHRoOiAwO1xuICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xuICBjb2xvcjogIzAwMDAwMDtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICBmb250LXNpemU6IDE0cHg7XG4gIGZvbnQtd2VpZ2h0OiA1MDA7XG4gIGxldHRlci1zcGFjaW5nOiAwO1xuICBsaW5lLWhlaWdodDogLjNlbTtcbiAgbWFyZ2luOiAwO1xuICBvcGFjaXR5OiAxO1xuICBvdXRsaW5lOiAwO1xuICBwYWRkaW5nOiAxLjVlbSAyLjJlbTtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgdGV4dC1yZW5kZXJpbmc6IGdlb21ldHJpY3ByZWNpc2lvbjtcbiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbiAgdHJhbnNpdGlvbjogb3BhY2l0eSAzMDBtcyBjdWJpYy1iZXppZXIoLjY5NCwgMCwgMC4zMzUsIDEpLGJhY2tncm91bmQtY29sb3IgMTAwbXMgY3ViaWMtYmV6aWVyKC42OTQsIDAsIDAuMzM1LCAxKSxjb2xvciAxMDBtcyBjdWJpYy1iZXppZXIoLjY5NCwgMCwgMC4zMzUsIDEpO1xuICB1c2VyLXNlbGVjdDogbm9uZTtcbiAgLXdlYmtpdC11c2VyLXNlbGVjdDogbm9uZTtcbiAgdG91Y2gtYWN0aW9uOiBtYW5pcHVsYXRpb247XG4gIHZlcnRpY2FsLWFsaWduOiBiYXNlbGluZTtcbiAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbiAgZ3JpZC1jb2x1bW46IDE7XG4gIHdpZHRoOiAxMjBweDtcbiAgaGVpZ2h0OiA0MHB4O1xuICBqdXN0aWZ5LXNlbGY6IGxlZnQ7XG4gIGJhY2tncm91bmQtY29sb3I6ICR7cHJvcHMgPT4gcHJvcHMudGhlbWUucHJpbWFyeX07XG5mb250LWZhbWlseTogJ0NvbWZvcnRhYSc7XG59XG5cbi5idXR0b24tNDg6YmVmb3JlIHtcbiAgYW5pbWF0aW9uOiBvcGFjaXR5RmFsbGJhY2tPdXQgLjVzIHN0ZXAtZW5kIGZvcndhcmRzO1xuICBiYWNrZmFjZS12aXNpYmlsaXR5OiBoaWRkZW47XG4gIGJhY2tncm91bmQtY29sb3I6ICNiZWE4YTdmZjtcbiAgY2xpcC1wYXRoOiBwb2x5Z29uKC0xJSAwLCAwIDAsIC0yNSUgMTAwJSwgLTElIDEwMCUpO1xuICBjb250ZW50OiBcIlwiO1xuICBoZWlnaHQ6IDEwMCU7XG4gIGxlZnQ6IDA7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiAwO1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVooMCk7XG4gIHRyYW5zaXRpb246IGNsaXAtcGF0aCAuNXMgY3ViaWMtYmV6aWVyKC4xNjUsIDAuODQsIDAuNDQsIDEpLCAtd2Via2l0LWNsaXAtcGF0aCAuNXMgY3ViaWMtYmV6aWVyKC4xNjUsIDAuODQsIDAuNDQsIDEpO1xuICB3aWR0aDogMTAwJTtcbn1cblxuLmJ1dHRvbi00ODpob3ZlcjpiZWZvcmUge1xuICBhbmltYXRpb246IG9wYWNpdHlGYWxsYmFja0luIDBzIHN0ZXAtc3RhcnQgZm9yd2FyZHM7XG4gIGNsaXAtcGF0aDogcG9seWdvbigwIDAsIDEwMSUgMCwgMTAxJSAxMDElLCAwIDEwMSUpO1xufVxuXG4uYnV0dG9uLTQ4OmFmdGVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI0ZGRkZGRjtcbn1cblxuLmJ1dHRvbi00OCBzcGFuIHtcbiAgei1pbmRleDogMTtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xufVxuLnN1Ym1pdC1idXR0b24ge1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgY29sb3I6IGJsYWNrO1xuICBncmlkLWNvbHVtbjogMjtcbiAgd2lkdGg6IDUwJTtcbiAgZGlzcGxheTogZmxleDtcbmp1c3RpZnktc2VsZjogcmlnaHQ7XG50cmFuc2l0aW9uOiAgMC43cztcbmhlaWdodDogMzBweDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG4gIGZvbnQtZmFtaWx5OiAnQ29tZm9ydGFhJztcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbmxpbmUtaGVpZ2h0OiA4cHg7XG5wYWRkaW5nOiA4cHggMnB4O1xuJjpob3ZlciB7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgYm94LXNoYWRvdzogMHB4IDRweCA2cHggLTNweCByZ2JhKDIwLDIwLDIwLC4xKTtcbiAgLy8gdHJhbnNmb3JtOiBzY2FsZSgxLjEpO1xufVxufVxuICB0ZXh0YXJlYSB7XG4gICAgcmVzaXplOiBub25lO1xuICAgIG1pbi1oZWlnaHQ6IDEwMHB4O1xuICAgIG1hcmdpbi10b3A6IDBweDtcbiAgICBmb250LWZhbWlseTogJ0NvbWZvcnRhYSc7XG4gICAgZm9udC1zaXplOiAyMHB4O1xuICAgIGJvcmRlci1yYWRpdXM6IDNweDtcbiAgICBib3JkZXI6IDJweCBzb2xpZCAkeyhwcm9wcykgPT4gcHJvcHMudGhlbWUucHJpbWFyeX07XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgcGFkZGluZy1sZWZ0OiAxcmVtO1xuICAgIHBhZGRpbmctdG9wOiAwLjdyZW07XG4gICAgcGFkZGluZy1ib3R0b206IDAuN3JlbTtcbiAgICBmb250LXNpemU6IDEuNXJlbTtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgbWFyZ2luLWJvdHRvbTogMjBweDtcbiAgICBiYWNrZ3JvdW5kOiB0cmFuc3BhcmVudDtcbi8vIHotaW5kZXg6IDA7XG4gICAgJjpmb2N1cyB7XG4gICAgICBvdXRsaW5lOiAwO1xuICAgICAgYm9yZGVyOiAycHggc29saWQgJHsocHJvcHMpID0+IHByb3BzLnRoZW1lLnNlY29uZH07XG4gICAgfVxuICB9XG4gIGJ1dHRvbixcbiAgaW5wdXRbdHlwZT0nc3VibWl0J10ge1xuICAgIHdpZHRoOiBhdXRvO1xuICAgIGNvbG9yOiB3aGl0ZTtcbiAgICBib3JkZXI6IDA7XG4gICAgZm9udC1zaXplOiAycmVtO1xuICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgcGFkZGluZzogMC41cmVtIDEuMnJlbTtcbiAgICBtYXJnaW4tdG9wOiAxcmVtO1xuICB9XG4gIGZpZWxkc2V0IHtcbiAgICBib3JkZXI6IDA7XG4gICAgcGFkZGluZzogMDtcblxuICAgICZbZGlzYWJsZWRdIHtcbiAgICAgIG9wYWNpdHk6IDAuNTtcbiAgICB9XG4gICAgJjo6YmVmb3JlIHtcbiAgICAgIGhlaWdodDogMTBweDtcbiAgICAgIG1hcmdpbi1ib3R0b206IDEwcHg7XG4gICAgICBjb250ZW50OiAnJztcbiAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgYmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KFxuICAgICAgICB0byByaWdodCxcbiAgICAgICAgJHsocHJvcHMpID0+IHByb3BzLnRoZW1lLnNlY29uZH0gMCUsXG4gICAgICAgICR7KHByb3BzKSA9PiBwcm9wcy50aGVtZS5wcmltYXJ5fSA1MCUsXG4gICAgICAgICR7KHByb3BzKSA9PiBwcm9wcy50aGVtZS5zZWNvbmR9IDEwMCVcbiAgICAgICk7XG4gICAgfVxuICAgICZbYXJpYS1idXN5PSd0cnVlJ106OmJlZm9yZSB7XG4gICAgICBiYWNrZ3JvdW5kLXNpemU6IDUwJSBhdXRvO1xuICAgICAgYW5pbWF0aW9uOiAke2xvYWRpbmd9IDAuNXMgbGluZWFyIGluZmluaXRlO1xuICAgIH1cbiAgfVxuYFxuXG5jb25zdCBNeUNvbnRhaW5lciA9ICh7IGNsYXNzTmFtZSwgY2hpbGRyZW4gfSkgPT4ge1xuICByZXR1cm4gKFxuICAgIDxkaXYgc3R5bGU9e3sgcGFkZGluZzogXCIyMHB4XCIsIGJhY2tncm91bmQ6ICdyZ2JhKDIzNywgMjIyLCAyMTMsIDEpJywgY29sb3I6IFwiI2ZmZlwiIH19PlxuICAgICAgPENhbGVuZGFyQ29udGFpbmVyIGNsYXNzTmFtZT17Y2xhc3NOYW1lfT5cblxuICAgICAgICA8ZGl2IHN0eWxlPXt7IHBvc2l0aW9uOiBcInJlbGF0aXZlXCIsIGZvbnRGYW1pbHk6ICdDb21mb3J0YWEnLCBvcGFjaXR5OiAxIH19PntjaGlsZHJlbn08L2Rpdj5cbiAgICAgIDwvQ2FsZW5kYXJDb250YWluZXI+XG4gICAgPC9kaXY+XG4gIClcbn1cblxuY29uc3Qgc2VsZWN0U3R5bGVzID0ge1xuICBjb250cm9sOiAoYmFzZSkgPT4gKHsgLi4uYmFzZSwgbWluV2lkdGg6IDI0MCwgbWFyZ2luOiAwfSksXG4gIG1lbnU6ICgpID0+ICh7IGJveFNoYWRvdzogXCIgMCAxcHggMCByZ2JhKDAsIDAsIDAsIDAuMSlcIiB9KSxcbiAgbWVudVBvcnRhbDogKCkgPT4gKHsgekluZGV4OiBcIjEwMDBcIiwgcG9zaXRpb246IFwiYWJzb2x1dGVcIiwgdG9wOiBcIjIxNHB4XCIsIGxlZnQ6IFwiMHB4XCIsIGJveFNoYWRvdzogXCIwIDFweCAwIHJnYmEoMCwgMCwgMCwgMC4xKVwiIH0pXG59O1xuLy8gY29uc3QgY3VzdG9tU3R5bGVzID0ge1xuLy8gY29udGFpbmVyOiAoYmFzZSwgc3RhdGUpID0+IHtcbi8vICAgcmV0dXJuICh7XG4vLyAgICAgICAuLi5iYXNlLFxuLy8gICAgICAgekluZGV4OiBzdGF0ZS5pc0ZvY3VzZWQgPyBcIjk5OVwiIDogXCIxXCIgIC8vT25seSB3aGVuIGN1cnJlbnQgc3RhdGUgZm9jdXNlZFxuLy8gICB9KVxuLy8gfVxuLy8gfVxuY29uc3QgcGFja2FnZU9wdGlvbnMgPSBbe3ZhbHVlOiAnZnVsbFNlcnZpY2UnLCBsYWJlbDogJ0Z1bGwgU2VydmljZSBQbGFubmluZywgU3R5bGluZyArIENvb3JkaW5hdGlvbid9LCB7dmFsdWU6ICdwYXJ0aWFsJywgbGFiZWw6ICdQYXJ0aWFsIFBsYW5uaW5nICsgQ29vcmRpbmF0aW9uJ30sIHt2YWx1ZTogJ2Nvb3JkaW5hdGlvbicsIGxhYmVsOiAnV2VkZGluZyBNYW5hZ2VtZW50L0Nvb3JkaW5hdGlvbid9LCB7dmFsdWU6ICd0YmQnLCBsYWJlbDogJ0kgd291bGQgbGlrZSB0byBkaXNjdXNzIHRoaXMgZnVydGhlciB3aXRoIHlvdSd9XVxuXG5cbmZ1bmN0aW9uIENvbnRhY3RGb3JtKCkge1xuICBjb25zdCB7XG4gICAgcmVnaXN0ZXIsXG4gICAgaGFuZGxlU3VibWl0LFxuICAgIGNvbnRyb2wsXG4gICAgZm9ybVN0YXRlOiB7IGVycm9ycyB9LFxuICB9ID0gdXNlRm9ybSgpXG5cbiAgY29uc3QgW2NyZWF0ZVN1Ym1pc3Npb24sIHsgZGF0YSwgbG9hZGluZywgZXJyb3IgfV0gPSB1c2VNdXRhdGlvbihDUkVBVEVfU1VCTUlTU0lPTiwge1xuICAgIC8vIHZhcmlhYmxlczogeyBmaXJzdE5hbWUsIGxhc3ROYW1lLCBmaWFuY2VGaXJzdCwgZmlhbmNlTGFzdCwgZW1haWwsIHZlbnVlLCBtb2JpbGVQaG9uZSwgc2VydmljZVJlcXVlc3RlZCwgYWRkaXRpb25hbEluZm99LFxuICB9KVxuY29uc29sZS5sb2coZXJyb3JzKVxuICBjb25zdCBvblN1Ym1pdCA9IGFzeW5jIChkYXRhKSA9PiB7XG5jb25zb2xlLmxvZyhkYXRhKVxuICAgYXdhaXQgY3JlYXRlU3VibWlzc2lvbih7dmFyaWFibGVzOiB7IGZpcnN0TmFtZTogZGF0YS5maXJzdE5hbWUsIGxhc3ROYW1lOiBkYXRhLmxhc3ROYW1lLCBmaWFuY2VGaXJzdDogZGF0YS5maWFuY2VGaXJzdCwgIGVtYWlsOiBkYXRhLmVtYWlsLCB2ZW51ZTogZGF0YS52ZW51ZSwgbW9iaWxlUGhvbmU6IGRhdGEubW9iaWxlTnVtYmVyLCBzZXJ2aWNlUmVxdWVzdGVkOiBkYXRhLnNlcnZpY2VSZXF1ZXN0ZWQsIGFkZGl0aW9uYWxJbmZvOiBkYXRhLmFkZGl0aW9uYWxJbmZvfX0pXG5cbiAgfVxuIGlmIChsb2FkaW5nKSByZXR1cm4gPExvYWRlcj5sb2FkaW5nPC9Mb2FkZXI+XG5cbiAgcmV0dXJuIChcbiAgICA8PlxuXG4gICAgICA8TGF5b3V0PlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImxpbmVcIiAvPlxuICAgIDxwIGNsYXNzTmFtZT1cImdldGludG91Y2hcIj5QbGVhc2Ugc2VuZCBpbnF1aXJpZXMgd2l0aCB0aGUgZm9sbG93aW5nIGZvcm0gPGJyLz5JIGxvb2sgZm9yd2FyZCB0byBzcGVha2luZyB3aXRoIHlvdSEgIDwvcD5cbiAgICA8ZGl2IGNsYXNzTmFtZT1cImxpbmUyXCIgLz5cblxueyBkYXRhICYmICFsb2FkaW5nICYmICFlcnJvciA/IDxUaGFua1lvdU1lc3NhZ2U+PGg0PlRoYW5rIHlvdSB7ZGF0YS5maXJzdE5hbWUgJiZkYXRhLmZpcnN0TmFtZX08L2g0PiAgIDxwPllvdXIgaW5xdWlyeSBoYXMgYmVlbiBzZW50ITxici8+ICBQbGVhc2UgZXhwZWN0IGEgcmVzcG9uc2UgaW4gdGhlIG5leHQgPHNwYW4+NDg8L3NwYW4+IGhvdXJzIDwvcD48L1RoYW5rWW91TWVzc2FnZT4gOlxuICAgICAgICA8Rm9ybSBvblN1Ym1pdD17aGFuZGxlU3VibWl0KG9uU3VibWl0KX0+XG4gICAgICAgICA8cCBjbGFzc05hbWU9XCJnZXRpbnRvdWNoLXNtYWxsc2NyZWVuXCI+UGxlYXNlIHNlbmQgYW55IGlucXVpcmllcyBiZWxvdy4gPGJyLz5JIGxvb2sgZm9yd2FyZCB0byBzcGVha2luZyB3aXRoIHlvdSEgIDwvcD5cbiAgICAgICAgICA8bGFiZWwgaHRtbEZvcj1cImZpcnN0bmFtZVwiIGNsYXNzTmFtZT1cInNpZGUtb25lXCI+XG5cbiAgICAgICAgICAgIEZpcnN0IE5hbWVcbiAgICAgICAgICAgIHtlcnJvcnMuZmlyc3ROYW1lICYmIDxkaXYgY2xhc3NOYW1lPVwiZXJyb3ItbXNnXCI+VGhpcyBmaWVsZCBpcyByZXF1aXJlZDwvZGl2Pn1cbiAgICAgICAgICAgIDxpbnB1dFxuICAgICAgICAgICAgZXJyb3Jtc2c9e2Vycm9ycy5maXJzdE5hbWUgfVxuICAgICAgICAgICAgICBuYW1lPVwiZmlyc3RuYW1lXCJcbiAgICAgICAgICAgICAgdHlwZT1cInRleHRcIlxuICAgICAgICAgICAgICBhcmlhLWludmFsaWQ9e2Vycm9ycy5maXJzdE5hbWUgPyBcInRydWVcIiA6IFwiZmFsc2VcIn1cbiAgICAgICAgICAgICAgLy8gcGxhY2Vob2xkZXI9XCJGaXJzdCBuYW1lXCJcbiAgICAgICAgICAgICAgey4uLnJlZ2lzdGVyKCdmaXJzdE5hbWUnLCB7IHJlcXVpcmVkOiB0cnVlLCBtYXhMZW5ndGg6IDgwIH0pfVxuICAgICAgICAgICAgLz5cblxuICAgICAgICAgIDwvbGFiZWw+XG4gICAgICAgICAgPGxhYmVsIGh0bWxGb3I9XCJsYXN0bmFtZVwiIGNsYXNzTmFtZT1cInNpZGUtdHdvXCI+XG4gICAgICAgICAgICBMYXN0IE5hbWVcbiAgICAgICAgICAgIHtlcnJvcnMubGFzdE5hbWUgJiYgPGRpdiBjbGFzc05hbWU9XCJlcnJvci1tc2dcIj5UaGlzIGZpZWxkIGlzIHJlcXVpcmVkPC9kaXY+fVxuICAgICAgICAgICAgPGlucHV0XG4gICAgICAgICAgICBlcnJvcm1zZz17ZXJyb3JzLmxhc3ROYW1lIH1cbiAgICAgICAgICAgICAgbmFtZT1cImxhc3RuYW1lXCJcbiAgICAgICAgICAgICAgdHlwZT1cInRleHRcIlxuICAgICAgICAgICAgICAvLyBwbGFjZWhvbGRlcj1cIkxhc3QgbmFtZVwiXG4gICAgICAgICAgICAgIHsuLi5yZWdpc3RlcignbGFzdE5hbWUnLCB7IHJlcXVpcmVkOiB0cnVlLCBtYXhMZW5ndGg6IDEwMCB9KX1cbiAgICAgICAgICAgIC8+XG4gICAgICAgICAgPC9sYWJlbD5cbiAgICAgICAgICA8bGFiZWwgaHRtbEZvcj1cImZpYW5jZUZpcnN0XCIgY2xhc3NOYW1lPVwic2lkZS1vbmVcIj5cbiAgICAgICAgICAgIEZpYW5jZSZhcG9zO3MgbmFtZVxuICAgICAgICAgICAge2Vycm9ycy5maWFuY2VGaXJzdCAmJiA8ZGl2IGNsYXNzTmFtZT1cImVycm9yLW1zZ1wiPlRoaXMgZmllbGQgaXMgcmVxdWlyZWQ8L2Rpdj59XG4gICAgICAgICAgICA8aW5wdXRcbiAgICAgICAgICAgIGVycm9ybXNnPXtlcnJvcnMuZmlhbmNlRmlyc3QgfVxuICAgICAgICAgICAgICBuYW1lPVwiZmlhbmNlRmlyc3RcIlxuICAgICAgICAgICAgICB0eXBlPVwidGV4dFwiXG4gICAgICAgICAgICAgIC8vIHBsYWNlaG9sZGVyPVwiXCJcbiAgICAgICAgICAgICAgey4uLnJlZ2lzdGVyKCdmaWFuY2VGaXJzdCcsIHsgcmVxdWlyZWQ6IHRydWUgfSl9XG4gICAgICAgICAgICAvPlxuICAgICAgICAgIDwvbGFiZWw+XG5cbiAgICAgICAgICA8bGFiZWwgaHRtbEZvcj1cImVtYWlsXCIgY2xhc3NOYW1lPVwic2lkZS10d29cIj5cbiAgICAgICAgICAgIEVtYWlsXG4gICAgICAgICAgICB7ZXJyb3JzLmVtYWlsICYmIDxkaXYgY2xhc3NOYW1lPVwiZXJyb3ItbXNnXCI+VGhpcyBmaWVsZCBpcyByZXF1aXJlZDwvZGl2Pn1cbiAgICAgICAgICAgIDxpbnB1dFxuICAgICAgICAgICAgZXJyb3Jtc2c9e2Vycm9ycy5lbWFpbCB9XG4gICAgICAgICAgICAgIG5hbWU9XCJlbWFpbFwiXG4gICAgICAgICAgICAgIHR5cGU9XCJ0ZXh0XCJcbiAgICAgICAgICAgICAgLy8gcGxhY2Vob2xkZXI9XCJFbWFpbFwiXG4gICAgICAgICAgICAgIHsuLi5yZWdpc3RlcignZW1haWwnLCB7IHJlcXVpcmVkOiB0cnVlLCBwYXR0ZXJuOiAvXlxcUytAXFxTKyQvaSB9KX1cbiAgICAgICAgICAgIC8+XG4gICAgICAgICAgPC9sYWJlbD5cbiAgICAgICAgICA8bGFiZWwgaHRtbEZvcj1cIm1vYmlsZU51bWJlclwiIGNsYXNzTmFtZT1cInNpZGUtb25lXCI+XG4gICAgICAgICAgICBNb2JpbGUgTnVtYmVyXG4gICAgICAgICAgICB7ZXJyb3JzLm1vYmlsZU51bWJlcj8udHlwZSA9PT0gJ3JlcXVpcmVkJyA/IDxkaXYgY2xhc3NOYW1lPVwiZXJyb3ItbXNnXCI+VGhpcyBmaWVsZCBpcyByZXF1aXJlZDwvZGl2PiA6ICcnfVxuICAgICAgICAgICAgeyBlcnJvcnMubW9iaWxlTnVtYmVyPy50eXBlID09PSAnbWluTGVuZ3RoJyA/IDxkaXYgY2xhc3NOYW1lPVwiZXJyb3ItbXNnXCI+TXVzdCBiZSAxMCBkaWdpdCBudW1iZXI8L2Rpdj4gOiAnJyB9XG4gICAgICAgICAgICA8aW5wdXRcbiAgICAgICAgICAgIGVycm9ybXNnPXtlcnJvcnMubW9iaWxlTnVtYmVyIH1cbiAgICAgICAgICAgICAgbmFtZT1cIm1vYmlsZU51bWJlclwiXG4gICAgICAgICAgICAgIHR5cGU9XCJ0ZWxcIlxuICAgICAgICAgICAgICAvLyBwbGFjZWhvbGRlcj1cIlwiXG4gICAgICAgICAgICAgIHsuLi5yZWdpc3RlcignbW9iaWxlTnVtYmVyJywge1xuICAgICAgICAgICAgICAgIHJlcXVpcmVkOiB0cnVlLFxuICAgICAgICAgICAgICAgIG1pbkxlbmd0aDogMTAsXG4gICAgICAgICAgICAgICAgbWF4TGVuZ3RoOiAxNixcbiAgICAgICAgICAgICAgICBwYXR0ZXJuOiBcIi4/KFxcXFxkezN9KS4qKFxcXFxkezN9KS4qKFxcXFxkezR9KVwiLFxuICAgICAgICAgICAgICB9KX1cbiAgICAgICAgICAgIC8+XG4gICAgICAgICAgPC9sYWJlbD5cbiAgICAgICAgICA8bGFiZWwgaHRtbEZvcj1cImRhdGVcIiBjbGFzc05hbWU9XCJzaWRlLXR3b1wiPlxuICAgICAgICAgICAgRGF0ZSBvZiBXZWRkaW5nXG4gICAgICAgICAgICB7ZXJyb3JzLmRhdGUgJiYgPGRpdiBjbGFzc05hbWU9XCJlcnJvci1tc2dcIj5UaGlzIGZpZWxkIGlzIHJlcXVpcmVkPC9kaXY+fVxuICAgICAgICAgIDxDb250cm9sbGVyXG4gICAgICAgICAgICBjb250cm9sPXtjb250cm9sfVxuICAgICAgICAgICAgbmFtZT1cIlJlYWN0RGF0ZXBpY2tlclwiXG4gICAgICAgICAgICByZW5kZXI9eyh7IGZpZWxkIH0pID0+IChcbiAgICAgICAgICAgICAgPFJlYWN0RGF0ZVBpY2tlclxuICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cImlucHV0XCJcbiAgICAgICAgICAgICAgICBwbGFjZWhvbGRlclRleHQ9XCJTZWxlY3QgZGF0ZVwiXG4gICAgICAgICAgICAgICAgb25DaGFuZ2U9eyhlKSA9PiBmaWVsZC5vbkNoYW5nZShlKX1cbiAgICAgICAgICAgICAgICBzZWxlY3RlZD17ZmllbGQudmFsdWV9XG5cbiAgICAgICAgICAgICAgICBkYXRlRm9ybWF0PVwiTU1NTSBkLCB5eXl5XCJcbiAgICAgICAgICAgICAgICBjYWxlbmRhckNvbnRhaW5lcj17TXlDb250YWluZXJ9XG4gICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICApfVxuICAgICAgICAgIC8+XG4gICAgICAgICAgPC9sYWJlbD5cbiAgICAgICAgICA8bGFiZWwgY2xhc3NOYW1lPVwidGhlU2VsZWN0b3JcIiBodG1sRm9yPVwic2VydmljZVJlcXVlc3RlZFwiPlxuICAgICAgICAgICAgUGxhbm5pbmcgUGFja2FnZVxuXG4gICAgICAgICAgICAgIDxDb250cm9sbGVyXG4gICAgICAgICAgICAgICAgbmFtZT1cInNlcnZpY2VSZXF1ZXN0ZWRcIlxuICAgICAgICAgICAgICAgIGNvbnRyb2w9e2NvbnRyb2x9XG4gICAgICAgICAgICAgICAgcmVuZGVyPXsoe2ZpZWxkfSkgPT5cbiAgICAgICAgICAgICAgPFNlbGVjdFxuICAgICAgICAgICAgICBpbnB1dFJlZj17ZmllbGQucmVmfVxuICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cImJhc2ljLXNpbmdsZSBzZWxlY3Rvci1jc3NcIlxuICAgICAgICAgICAgICAgIGNsYXNzTmFtZVByZWZpeD1cInNlbGVjdFwiXG5cbiAgICAgICAgICAgICAgICBkZWZhdWx0VmFsdWU9e3BhY2thZ2VPcHRpb25zWzBdfVxuXG5cbiAgICAgICAgICAgICAgICB2YWx1ZT17cGFja2FnZU9wdGlvbnMuZmluZChjID0+IGMudmFsdWUgPT09IGZpZWxkLnZhbHVlKX1cbiAgICAgICAgICAgICAgICBvbkNoYW5nZT17dmFsID0+IGZpZWxkLm9uQ2hhbmdlKHZhbC52YWx1ZSl9XG5cbiAgICAgICAgICAgICAgICBzdHlsZXM9e3NlbGVjdFN0eWxlc31cbiAgICAgICAgICAgICAgICBvcHRpb25zPXtwYWNrYWdlT3B0aW9uc31cbiAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAvPlxuXG5cblxuICAgICAgICAgICAgPC9sYWJlbD5cbiAgICAgICAgICA8bGFiZWwgaHRtbEZvcj1cInZlbnVlXCIgY2xhc3NOYW1lPVwiYm90aC1zaWRlc1wiPlxuICAgICAgICAgICAgVmVudWVcbiAgICAgICAgICAgIHtlcnJvcnMudmVudWUgJiYgPGRpdiBjbGFzc05hbWU9XCJlcnJvci1tc2dcIj5UaGlzIGZpZWxkIGlzIHJlcXVpcmVkPC9kaXY+fVxuICAgICAgICAgICAgPHRleHRhcmVhXG5cbiAgICAgICAgICAgICAgbmFtZT1cInZlbnVlXCJcbiAgICAgICAgICAgICAgdHlwZT1cInRleHRcIlxuICAgICAgICAgICAgICBwbGFjZWhvbGRlcj1cIklmIHlvdSBkb24ndCBoYXZlIGEgdmVudWUsIGJyaWVmbHkgZGVzY3JpYmUgd2hhdCB5b3UncmUgbG9va2luZyBmb3JcIlxuICAgICAgICAgICAgICB7Li4ucmVnaXN0ZXIoJ3ZlbnVlJywge1xuICAgICAgICAgICAgICAgIHJlcXVpcmVkOiB0cnVlLFxuICAgICAgICAgICAgICB9KX1cbiAgICAgICAgICAgIC8+XG4gICAgICAgICAgPC9sYWJlbD5cbiAgICAgICAgICA8bGFiZWwgaHRtbEZvcj1cImFkZGl0aW9uYWxJbmZvXCIgY2xhc3NOYW1lPVwiYm90aC1zaWRlc1wiPlxuICAgICAgICAgICAgQW55IEFkZGl0aW9uYWwgSW5mb3JtYXRpb24/XG4gICAgICAgICAgICA8dGV4dGFyZWFcbiAgICAgICAgICAgICAgey4uLnJlZ2lzdGVyKCdhZGRpdGlvbmFsSW5mb3JtYXRpb24nLCB7fSl9XG4gICAgICAgICAgICAgIG5hbWU9XCJhZGRpdGlvbmFsSW5mb1wiXG4gICAgICAgICAgICAgIHR5cGU9XCJ0ZXh0XCJcbiAgICAgICAgICAgICAgcGxhY2Vob2xkZXI9XCJJcyB0aGVyZSBhbnl0aGluZyBlbHNlIHlvdSdkIGxpa2UgdG8gc2hhcmU/XCJcbiAgICAgICAgICAgIC8+XG4gICAgICAgICAgPC9sYWJlbD5cblxuICAgICAgICAgIDxidXR0b24gdHlwZT1cInN1Ym1pdFwiIGNsYXNzTmFtZT1cImJ1dHRvbi00OFwiIHJvbGU9XCJidXR0b25cIj48c3BhbiBjbGFzc05hbWU9XCJ0ZXh0XCI+U3VibWl0IDwvc3Bhbj4gPC9idXR0b24+XG4gICAgICAgIDwvRm9ybT59XG4gICAgICA8L0xheW91dD5cbiAgICA8Lz5cbiAgKVxufVxuZXhwb3J0IGRlZmF1bHQgQ29udGFjdEZvcm1cbiJdLCJuYW1lcyI6WyJzdHlsZWQiLCJrZXlmcmFtZXMiLCJ1c2VGb3JtIiwiQ29udHJvbGxlciIsInVzZU11dGF0aW9uIiwiZ3FsIiwiTG9hZGVyIiwiUmVhY3REYXRlUGlja2VyIiwiQ2FsZW5kYXJDb250YWluZXIiLCJTZWxlY3QiLCJDUkVBVEVfU1VCTUlTU0lPTiIsImxvYWRpbmciLCJUaGFua1lvdU1lc3NhZ2UiLCJkaXYiLCJwcm9wcyIsInRoZW1lIiwicHJpbWFyeSIsInRoaXJkIiwiTGF5b3V0Iiwic2Vjb25kIiwiRm9ybSIsImZvcm0iLCJlcnJvcm1zZyIsInR5cGUiLCJsZW5ndGgiLCJNeUNvbnRhaW5lciIsImNsYXNzTmFtZSIsImNoaWxkcmVuIiwic3R5bGUiLCJwYWRkaW5nIiwiYmFja2dyb3VuZCIsImNvbG9yIiwicG9zaXRpb24iLCJmb250RmFtaWx5Iiwib3BhY2l0eSIsInNlbGVjdFN0eWxlcyIsImNvbnRyb2wiLCJiYXNlIiwibWluV2lkdGgiLCJtYXJnaW4iLCJtZW51IiwiYm94U2hhZG93IiwibWVudVBvcnRhbCIsInpJbmRleCIsInRvcCIsImxlZnQiLCJwYWNrYWdlT3B0aW9ucyIsInZhbHVlIiwibGFiZWwiLCJDb250YWN0Rm9ybSIsInJlZ2lzdGVyIiwiaGFuZGxlU3VibWl0IiwiZm9ybVN0YXRlIiwiZXJyb3JzIiwiY3JlYXRlU3VibWlzc2lvbiIsImRhdGEiLCJlcnJvciIsImNvbnNvbGUiLCJsb2ciLCJvblN1Ym1pdCIsInZhcmlhYmxlcyIsImZpcnN0TmFtZSIsImxhc3ROYW1lIiwiZmlhbmNlRmlyc3QiLCJlbWFpbCIsInZlbnVlIiwibW9iaWxlUGhvbmUiLCJtb2JpbGVOdW1iZXIiLCJzZXJ2aWNlUmVxdWVzdGVkIiwiYWRkaXRpb25hbEluZm8iLCJwIiwiYnIiLCJoNCIsInNwYW4iLCJodG1sRm9yIiwiaW5wdXQiLCJuYW1lIiwiYXJpYS1pbnZhbGlkIiwicmVxdWlyZWQiLCJtYXhMZW5ndGgiLCJwYXR0ZXJuIiwibWluTGVuZ3RoIiwiZGF0ZSIsInJlbmRlciIsImZpZWxkIiwicGxhY2Vob2xkZXJUZXh0Iiwib25DaGFuZ2UiLCJlIiwic2VsZWN0ZWQiLCJkYXRlRm9ybWF0IiwiY2FsZW5kYXJDb250YWluZXIiLCJpbnB1dFJlZiIsInJlZiIsImNsYXNzTmFtZVByZWZpeCIsImRlZmF1bHRWYWx1ZSIsImZpbmQiLCJjIiwidmFsIiwic3R5bGVzIiwib3B0aW9ucyIsInRleHRhcmVhIiwicGxhY2Vob2xkZXIiLCJidXR0b24iLCJyb2xlIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./components/ContactForm.js\n");
 
 /***/ }),
 
-/***/ 5577:
+/***/ "./components/HeroSlider.js":
+/*!**********************************!*\
+  !*** ./components/HeroSlider.js ***!
+  \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (/* binding */ Instagram)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7518);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-
-
-const Div = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({
-    componentId: "sc-3fe4bb15-0"
-})`
-width: 80%;
-
-
-
-margin: 50px auto;
-position: relative;
-margin-bottom:30px;
-@media (min-width: 361px) and (max-width: 900px) {
-
-    width: 90%;
-}
-.lightwidget__lightbox-caption {
-    font-family: 'Comfortaa';
-}
-iframe .lightwidget__lightbox-caption {
-    font-family: 'Comfortaa';
-}
-p {
-
-
-font-family: 'Comfortaa';
-width: 80%;
-opacity:.6;
-letter-spacing: 3px;
-color: ${(props)=>props.theme.third};
-margin-bottom:20px;
-text-transform: uppercase;
-}
-`;
-const styles = {
-    width: "100%",
-    border: 0
-};
-function Instagram() {
-    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Div, {
-        children: [
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("script", {
-                src: "https://cdn.lightwidget.com/widgets/lightwidget.js"
-            }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("iframe", {
-                src: "//lightwidget.com/widgets/8a7bafaa68d0564c98fd89d193228571.html",
-                scrolling: "no",
-                allowtransparency: "true",
-                className: "lightwidget-widget",
-                style: styles
-            })
-        ]
-    });
-};
-
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ \"styled-components\");\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react_awesome_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-awesome-slider */ \"react-awesome-slider\");\n/* harmony import */ var react_awesome_slider__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_awesome_slider__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var react_awesome_slider_dist_autoplay__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-awesome-slider/dist/autoplay */ \"react-awesome-slider/dist/autoplay\");\n/* harmony import */ var react_awesome_slider_dist_autoplay__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_awesome_slider_dist_autoplay__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var react_awesome_slider_dist_styles_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-awesome-slider/dist/styles.css */ \"./node_modules/react-awesome-slider/dist/styles.css\");\n/* harmony import */ var react_awesome_slider_dist_styles_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_awesome_slider_dist_styles_css__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\nconst fadeOut = styled_components__WEBPACK_IMPORTED_MODULE_1__.keyframes` {\n  from { opacity: 1.0; }\n  to   { opacity: 0.0; }\n}`;\nconst fadeIn = styled_components__WEBPACK_IMPORTED_MODULE_1__.keyframes` {\n  from { opacity: 0.0; }\n  to   { opacity: 1.0; }\n}`;\nconst scroller = styled_components__WEBPACK_IMPORTED_MODULE_1__.keyframes` {\n  0% {\n    transform: rotate(-45deg) translate(0, 0);\n    opacity: 0;\n  }\n  50% {\n    opacity: 1;\n  }\n  100% {\n    transform: rotate(-45deg) translate(-20px, 20px);\n    opacity: 0;\n  }\n}`;\nconst SliderDiv = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({\n    displayName: \"HeroSlider__SliderDiv\",\n    componentId: \"sc-2dc81682-0\"\n})`\n  width: 100%;\n  height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: lightgrey;\n\n  .shorten {\n    height: 100vh;\n  }\n  .arrow {\n    height: 50%;\n  }\n  .awssld__bullets {\n    transform: translateY(-50px) scale(0.6);\n    z-index: 100;\n    color: rgba(222, 222, 222, 0.7);\n  }\n  .awssld__bullets button {\n    background: rgba(222, 222, 222, 0.8);\n  }\n  .awssld__bullets--active {\n    transform: scale(1.2);\n  }\n\n  a {\n  padding-top: 0px;\n  position: absolute;\n  bottom:  0px;\n\n  z-index: 100;\n  display: flex;\n  -webkit-transform: translate(0, -50%);\n  transform: translate(0, -50%);\n  color: #503931;\n  font : normal 400 20px/1 'Josefin Sans', sans-serif;\n  letter-spacing: .1em;\n  text-decoration: none;\n  transition: opacity .3s;\nwidth: 100px;\nheight: 100px;\n&:hover {\n  cursor: pointer;\n}\n  }\n   span {\n    position: absolute;\n    top: 0;\n    left: 50%;\n    width: 24px;\n    height: 24px;\n    margin-left: -12px;\n    border-left: 2px solid #503931;\n    border-bottom: 2px solid #503931;\n    -webkit-transform: rotate(-45deg);\n    transform: rotate(-45deg);\n    -webkit-animation: ${scroller} 3s infinite;\n    animation: ${scroller} 3s infinite;\n    box-sizing: border-box;\nz-index: 100;\n  }\n  .aws-btn {\n\n\n    --loader-bar-color: rgba(255,255,255,0);\n    --loader-bar-height: 0px;\n    }\n  .awssld--animated {\n    will-change: opacity;\n    visibility: visible; }\n  .awssld--moveRight {\n    animation: ${fadeIn} 3s cubic-bezier(0.5, 0.075, 0.25, 0.95) ;\n  }\n  .awssld--moveLeft {\n    -webkit-animation:  ${fadeIn} 3s cubic-bezier(0.5, 0.075, 0.25, 0.95);\n            animation:  ${fadeIn} 3s cubic-bezier(0.5, 0.075, 0.25, 0.95); }\n  .awssld--exit {\n    z-index: 0; }\n    .awssld--exit.awssld--moveLeft {\n      -webkit-animation:  ${fadeOut} 3s cubic-bezier(0.5, 0.075, 0.25, 0.95);\n              animation:  ${fadeOut} 3s cubic-bezier(0.5, 0.075, 0.25, 0.95); }\n    .awssld--exit.awssld--moveRight {\n      -webkit-animation:  ${fadeOut} 3s cubic-bezier(0.5, 0.075, 0.25, 0.95);\n              animation:  ${fadeOut} 3s cubic-bezier(0.5, 0.075, 0.25, 0.95); }\n   .awssld__timer {\n               opacity: 0;\n              }\n`;\nconst Opaque = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({\n    displayName: \"HeroSlider__Opaque\",\n    componentId: \"sc-2dc81682-1\"\n})`\n\nposition: absolute;\nwidth: 100%;\nheight: 100vh;\nbackground: rgba(245,245,245,.5);\nz-index: 50;\n`;\nconst Title = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({\n    displayName: \"HeroSlider__Title\",\n    componentId: \"sc-2dc81682-2\"\n})`\n  display: flex;\n  // width: 100%;\n\n  position: absolute;\n  height: 100%;\n  justify-content: center;\n  align-items: center;\n  z-index: 60;\n  letter-spacing: 4px;\n\n color: ${(props)=>props.theme.black};\n\n\n  .box {\n\n\n\n    display: flex;\n    flex-flow: column;\n    justify-contents: center;\n    align-items: center;\n    text-align: center;\nmargin: 0 auto;\n\n  }\n  img {\n    width: 400px;\n    display: flex;\n    margin: 0 auto;\n    transform: translateX(-2px)  ;\n    @media (min-width: 0px) and (max-width: 768px) {\n      width: 90%;\n      max-width: 400px;\n    }\n  }\n\n\n  h2 {\n    font-size: 1em;\ncolor: #000000;\n    font-family: 'Comfortaa';\n    width: 100%;\n    text-align: center;\ntext-transform: uppercase;\n// font-weight: 900;\n@media (min-width: 0px) and (max-width: 768px) {\nfont-size: .7em;\nmargin-top: 20px;\n}\n  }\n\n  .arrow-down {\n    width: 33px;\n    height: 33px;\n    border: 3px solid #333;\n    border-left: 0;\n    border-top: 0;\n    z-index: 100;\nbottom: 0;\n     transform: rotate(45deg);\n     &:hover {\n       cursor: pointer;\n     }\n  }\n`;\nconst AutoplaySlider = react_awesome_slider_dist_autoplay__WEBPACK_IMPORTED_MODULE_3___default()((react_awesome_slider__WEBPACK_IMPORTED_MODULE_2___default()));\nconst HeroSlider = function(props) {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(SliderDiv, {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Title, {\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: \"box\",\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                            src: \"/../static/stephysbrideguidelogodarkbrown.png\",\n                            alt: \"stephys bride guide\"\n                        }, void 0, false, {\n                            fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/HeroSlider.js\",\n                            lineNumber: 213,\n                            columnNumber: 7\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h2\", {\n                            children: \"wedding planning | styling | coordination\"\n                        }, void 0, false, {\n                            fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/HeroSlider.js\",\n                            lineNumber: 214,\n                            columnNumber: 9\n                        }, this)\n                    ]\n                }, void 0, true, {\n                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/HeroSlider.js\",\n                    lineNumber: 212,\n                    columnNumber: 7\n                }, this)\n            }, void 0, false, {\n                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/HeroSlider.js\",\n                lineNumber: 210,\n                columnNumber: 7\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Opaque, {}, void 0, false, {\n                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/HeroSlider.js\",\n                lineNumber: 220,\n                columnNumber: 7\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(AutoplaySlider, {\n                className: \"shorten aws-btn\",\n                play: true,\n                cancelOnInteraction: false,\n                buttons: false,\n                bullets: false,\n                interval: 10000,\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        \"data-src\": \"/../static/stephysbrideguide-olivia.jpeg\"\n                    }, void 0, false, {\n                        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/HeroSlider.js\",\n                        lineNumber: 229,\n                        columnNumber: 11\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        \"data-src\": \"/../static/stephysbrideguide-alexa.jpg\"\n                    }, void 0, false, {\n                        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/HeroSlider.js\",\n                        lineNumber: 230,\n                        columnNumber: 11\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        \"data-src\": \"/../static/stephysbrideguide-tristan-olivia.jpg\"\n                    }, void 0, false, {\n                        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/HeroSlider.js\",\n                        lineNumber: 231,\n                        columnNumber: 11\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        \"data-src\": \"/../static/stephysbrideguide-julya-jack.JPG\"\n                    }, void 0, false, {\n                        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/HeroSlider.js\",\n                        lineNumber: 232,\n                        columnNumber: 11\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        \"data-src\": \"/../static/stephysbrideguide-noel-david.jpg\"\n                    }, void 0, false, {\n                        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/HeroSlider.js\",\n                        lineNumber: 233,\n                        columnNumber: 11\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        \"data-src\": \"/../static/stephysbrideguide-heather-tablescape.jpg\"\n                    }, void 0, false, {\n                        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/HeroSlider.js\",\n                        lineNumber: 234,\n                        columnNumber: 11\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        \"data-src\": \"/../static/stephysbrideguide-bouqet.jpg\"\n                    }, void 0, false, {\n                        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/HeroSlider.js\",\n                        lineNumber: 235,\n                        columnNumber: 11\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        \"data-src\": \"/../static/stephysbrideguide-heather-drew.jpg\"\n                    }, void 0, false, {\n                        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/HeroSlider.js\",\n                        lineNumber: 236,\n                        columnNumber: 11\n                    }, this)\n                ]\n            }, void 0, true, {\n                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/HeroSlider.js\",\n                lineNumber: 221,\n                columnNumber: 9\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"a\", {\n                className: \"scroll-down-button\",\n                onClick: props.arrowClick,\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {}, void 0, false, {\n                    fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/HeroSlider.js\",\n                    lineNumber: 238,\n                    columnNumber: 71\n                }, this)\n            }, void 0, false, {\n                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/HeroSlider.js\",\n                lineNumber: 238,\n                columnNumber: 9\n            }, this)\n        ]\n    }, void 0, true, {\n        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/HeroSlider.js\",\n        lineNumber: 209,\n        columnNumber: 5\n    }, this);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HeroSlider);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL0hlcm9TbGlkZXIuanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7QUFDQTtBQUFtRDtBQUNGO0FBQ1k7QUFDaEI7QUFJN0MsTUFBTUksT0FBTyxHQUNaSCx3REFBUyxDQUFDOzs7Q0FHVixDQUFDO0FBQ0YsTUFBTUksTUFBTSxHQUNYSix3REFBUyxDQUFDOzs7Q0FHVixDQUFDO0FBRUYsTUFBTUssUUFBUSxHQUNiTCx3REFBUyxDQUFDOzs7Ozs7Ozs7Ozs7Q0FZVixDQUFDO0FBS0YsTUFBTU0sU0FBUyxHQUFHUCx1RUFBVTs7O0VBQUEsQ0FBQzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O3VCQXlETixFQUFFTSxRQUFRLENBQUM7ZUFDbkIsRUFBRUEsUUFBUSxDQUFDOzs7Ozs7Ozs7Ozs7OztlQWNYLEVBQUVELE1BQU0sQ0FBQzs7O3dCQUdBLEVBQUVBLE1BQU0sQ0FBQzt3QkFDVCxFQUFFQSxNQUFNLENBQUM7Ozs7MEJBSVAsRUFBRUQsT0FBTyxDQUFDOzBCQUNWLEVBQUVBLE9BQU8sQ0FBQzs7MEJBRVYsRUFBRUEsT0FBTyxDQUFDOzBCQUNWLEVBQUVBLE9BQU8sQ0FBQzs7OztBQUlwQyxDQUFDO0FBQ0QsTUFBTUssTUFBTSxHQUFHVCx1RUFBVTs7O0VBQUEsQ0FBQzs7Ozs7OztBQU8xQixDQUFDO0FBQ0QsTUFBTVUsS0FBSyxHQUFHVix1RUFBVTs7O0VBQUEsQ0FBQzs7Ozs7Ozs7Ozs7UUFXakIsRUFBRVcsQ0FBQUEsS0FBSyxHQUFJQSxLQUFLLENBQUNDLEtBQUssQ0FBQ0MsS0FBSyxDQUFDOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFzRHJDLENBQUM7QUFFRCxNQUFNQyxjQUFjLEdBQUdYLHlFQUFZLENBQUNELDZEQUFhLENBQUM7QUFJbEQsTUFBTWEsVUFBVSxHQUFHLFNBQVNKLEtBQUssRUFBRTtJQUVqQyxxQkFDRSw4REFBQ0osU0FBUzs7MEJBQ1IsOERBQUNHLEtBQUs7MEJBRU4sNEVBQUNGLEtBQUc7b0JBQUNRLFNBQVMsRUFBQyxLQUFLOztzQ0FDcEIsOERBQUNDLEtBQUc7NEJBQUNDLEdBQUcsRUFBQywrQ0FBK0M7NEJBQUNDLEdBQUcsRUFBQyxxQkFBcUI7Ozs7O2dDQUFHO3NDQUNuRiw4REFBQ0MsSUFBRTtzQ0FBQywyQ0FBeUM7Ozs7O2dDQUFLOzs7Ozs7d0JBRTVDOzs7OztvQkFFQTswQkFFUiw4REFBQ1gsTUFBTTs7OztvQkFBRTswQkFDUCw4REFBQ0ssY0FBYztnQkFDYkUsU0FBUyxFQUFDLGlCQUFpQjtnQkFDM0JLLElBQUksRUFBRSxJQUFJO2dCQUNWQyxtQkFBbUIsRUFBRSxLQUFLO2dCQUMxQkMsT0FBTyxFQUFFLEtBQUs7Z0JBQ2RDLE9BQU8sRUFBRSxLQUFLO2dCQUNkQyxRQUFRLEVBQUUsS0FBSzs7a0NBRWYsOERBQUNqQixLQUFHO3dCQUFDa0IsVUFBUSxFQUFDLDBDQUEwQzs7Ozs7NEJBQUc7a0NBQzNELDhEQUFDbEIsS0FBRzt3QkFBQ2tCLFVBQVEsRUFBQyx3Q0FBd0M7Ozs7OzRCQUFHO2tDQUN6RCw4REFBQ2xCLEtBQUc7d0JBQUNrQixVQUFRLEVBQUMsaURBQWlEOzs7Ozs0QkFBRztrQ0FDbEUsOERBQUNsQixLQUFHO3dCQUFDa0IsVUFBUSxFQUFDLDZDQUE2Qzs7Ozs7NEJBQUc7a0NBQzlELDhEQUFDbEIsS0FBRzt3QkFBQ2tCLFVBQVEsRUFBQyw2Q0FBNkM7Ozs7OzRCQUFHO2tDQUM5RCw4REFBQ2xCLEtBQUc7d0JBQUNrQixVQUFRLEVBQUMscURBQXFEOzs7Ozs0QkFBRztrQ0FDdEUsOERBQUNsQixLQUFHO3dCQUFDa0IsVUFBUSxFQUFDLHlDQUF5Qzs7Ozs7NEJBQUc7a0NBQzFELDhEQUFDbEIsS0FBRzt3QkFBQ2tCLFVBQVEsRUFBQywrQ0FBK0M7Ozs7OzRCQUFHOzs7Ozs7b0JBQ2pEOzBCQUNqQiw4REFBQ0MsR0FBQztnQkFBRVgsU0FBUyxFQUFDLG9CQUFvQjtnQkFBQ1ksT0FBTyxFQUFFakIsS0FBSyxDQUFDa0IsVUFBVTswQkFBRSw0RUFBQ0MsTUFBSTs7Ozt3QkFBUTs7Ozs7b0JBQUk7Ozs7OztZQUN2RSxDQUNiO0NBQ0Y7QUFFRCxpRUFBZWYsVUFBVSIsInNvdXJjZXMiOlsid2VicGFjazovL3N0ZXBoeXMtYnJpZGUtZ3VpZGUvLi9jb21wb25lbnRzL0hlcm9TbGlkZXIuanM/MTYyYSJdLCJzb3VyY2VzQ29udGVudCI6WyJcbmltcG9ydCBzdHlsZWQsIHtrZXlmcmFtZXN9IGZyb20gJ3N0eWxlZC1jb21wb25lbnRzJ1xuaW1wb3J0IEF3ZXNvbWVTbGlkZXIgIGZyb20gJ3JlYWN0LWF3ZXNvbWUtc2xpZGVyJ1xuaW1wb3J0IHdpdGhBdXRvcGxheSBmcm9tICdyZWFjdC1hd2Vzb21lLXNsaWRlci9kaXN0L2F1dG9wbGF5J1xuaW1wb3J0ICdyZWFjdC1hd2Vzb21lLXNsaWRlci9kaXN0L3N0eWxlcy5jc3MnXG5cblxuXG5jb25zdCBmYWRlT3V0ID1cbiBrZXlmcmFtZXNgIHtcbiAgZnJvbSB7IG9wYWNpdHk6IDEuMDsgfVxuICB0byAgIHsgb3BhY2l0eTogMC4wOyB9XG59YFxuY29uc3QgZmFkZUluID1cbiBrZXlmcmFtZXNgIHtcbiAgZnJvbSB7IG9wYWNpdHk6IDAuMDsgfVxuICB0byAgIHsgb3BhY2l0eTogMS4wOyB9XG59YFxuXG5jb25zdCBzY3JvbGxlciA9XG4ga2V5ZnJhbWVzYCB7XG4gIDAlIHtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgtNDVkZWcpIHRyYW5zbGF0ZSgwLCAwKTtcbiAgICBvcGFjaXR5OiAwO1xuICB9XG4gIDUwJSB7XG4gICAgb3BhY2l0eTogMTtcbiAgfVxuICAxMDAlIHtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgtNDVkZWcpIHRyYW5zbGF0ZSgtMjBweCwgMjBweCk7XG4gICAgb3BhY2l0eTogMDtcbiAgfVxufWBcblxuXG5cblxuY29uc3QgU2xpZGVyRGl2ID0gc3R5bGVkLmRpdmBcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwdmg7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBsaWdodGdyZXk7XG5cbiAgLnNob3J0ZW4ge1xuICAgIGhlaWdodDogMTAwdmg7XG4gIH1cbiAgLmFycm93IHtcbiAgICBoZWlnaHQ6IDUwJTtcbiAgfVxuICAuYXdzc2xkX19idWxsZXRzIHtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoLTUwcHgpIHNjYWxlKDAuNik7XG4gICAgei1pbmRleDogMTAwO1xuICAgIGNvbG9yOiByZ2JhKDIyMiwgMjIyLCAyMjIsIDAuNyk7XG4gIH1cbiAgLmF3c3NsZF9fYnVsbGV0cyBidXR0b24ge1xuICAgIGJhY2tncm91bmQ6IHJnYmEoMjIyLCAyMjIsIDIyMiwgMC44KTtcbiAgfVxuICAuYXdzc2xkX19idWxsZXRzLS1hY3RpdmUge1xuICAgIHRyYW5zZm9ybTogc2NhbGUoMS4yKTtcbiAgfVxuXG4gIGEge1xuICBwYWRkaW5nLXRvcDogMHB4O1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGJvdHRvbTogIDBweDtcblxuICB6LWluZGV4OiAxMDA7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIC13ZWJraXQtdHJhbnNmb3JtOiB0cmFuc2xhdGUoMCwgLTUwJSk7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlKDAsIC01MCUpO1xuICBjb2xvcjogIzUwMzkzMTtcbiAgZm9udCA6IG5vcm1hbCA0MDAgMjBweC8xICdKb3NlZmluIFNhbnMnLCBzYW5zLXNlcmlmO1xuICBsZXR0ZXItc3BhY2luZzogLjFlbTtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICB0cmFuc2l0aW9uOiBvcGFjaXR5IC4zcztcbndpZHRoOiAxMDBweDtcbmhlaWdodDogMTAwcHg7XG4mOmhvdmVyIHtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuICB9XG4gICBzcGFuIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiAwO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB3aWR0aDogMjRweDtcbiAgICBoZWlnaHQ6IDI0cHg7XG4gICAgbWFyZ2luLWxlZnQ6IC0xMnB4O1xuICAgIGJvcmRlci1sZWZ0OiAycHggc29saWQgIzUwMzkzMTtcbiAgICBib3JkZXItYm90dG9tOiAycHggc29saWQgIzUwMzkzMTtcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKC00NWRlZyk7XG4gICAgdHJhbnNmb3JtOiByb3RhdGUoLTQ1ZGVnKTtcbiAgICAtd2Via2l0LWFuaW1hdGlvbjogJHtzY3JvbGxlcn0gM3MgaW5maW5pdGU7XG4gICAgYW5pbWF0aW9uOiAke3Njcm9sbGVyfSAzcyBpbmZpbml0ZTtcbiAgICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xuei1pbmRleDogMTAwO1xuICB9XG4gIC5hd3MtYnRuIHtcblxuXG4gICAgLS1sb2FkZXItYmFyLWNvbG9yOiByZ2JhKDI1NSwyNTUsMjU1LDApO1xuICAgIC0tbG9hZGVyLWJhci1oZWlnaHQ6IDBweDtcbiAgICB9XG4gIC5hd3NzbGQtLWFuaW1hdGVkIHtcbiAgICB3aWxsLWNoYW5nZTogb3BhY2l0eTtcbiAgICB2aXNpYmlsaXR5OiB2aXNpYmxlOyB9XG4gIC5hd3NzbGQtLW1vdmVSaWdodCB7XG4gICAgYW5pbWF0aW9uOiAke2ZhZGVJbn0gM3MgY3ViaWMtYmV6aWVyKDAuNSwgMC4wNzUsIDAuMjUsIDAuOTUpIDtcbiAgfVxuICAuYXdzc2xkLS1tb3ZlTGVmdCB7XG4gICAgLXdlYmtpdC1hbmltYXRpb246ICAke2ZhZGVJbn0gM3MgY3ViaWMtYmV6aWVyKDAuNSwgMC4wNzUsIDAuMjUsIDAuOTUpO1xuICAgICAgICAgICAgYW5pbWF0aW9uOiAgJHtmYWRlSW59IDNzIGN1YmljLWJlemllcigwLjUsIDAuMDc1LCAwLjI1LCAwLjk1KTsgfVxuICAuYXdzc2xkLS1leGl0IHtcbiAgICB6LWluZGV4OiAwOyB9XG4gICAgLmF3c3NsZC0tZXhpdC5hd3NzbGQtLW1vdmVMZWZ0IHtcbiAgICAgIC13ZWJraXQtYW5pbWF0aW9uOiAgJHtmYWRlT3V0fSAzcyBjdWJpYy1iZXppZXIoMC41LCAwLjA3NSwgMC4yNSwgMC45NSk7XG4gICAgICAgICAgICAgIGFuaW1hdGlvbjogICR7ZmFkZU91dH0gM3MgY3ViaWMtYmV6aWVyKDAuNSwgMC4wNzUsIDAuMjUsIDAuOTUpOyB9XG4gICAgLmF3c3NsZC0tZXhpdC5hd3NzbGQtLW1vdmVSaWdodCB7XG4gICAgICAtd2Via2l0LWFuaW1hdGlvbjogICR7ZmFkZU91dH0gM3MgY3ViaWMtYmV6aWVyKDAuNSwgMC4wNzUsIDAuMjUsIDAuOTUpO1xuICAgICAgICAgICAgICBhbmltYXRpb246ICAke2ZhZGVPdXR9IDNzIGN1YmljLWJlemllcigwLjUsIDAuMDc1LCAwLjI1LCAwLjk1KTsgfVxuICAgLmF3c3NsZF9fdGltZXIge1xuICAgICAgICAgICAgICAgb3BhY2l0eTogMDtcbiAgICAgICAgICAgICAgfVxuYFxuY29uc3QgT3BhcXVlID0gc3R5bGVkLmRpdmBcblxucG9zaXRpb246IGFic29sdXRlO1xud2lkdGg6IDEwMCU7XG5oZWlnaHQ6IDEwMHZoO1xuYmFja2dyb3VuZDogcmdiYSgyNDUsMjQ1LDI0NSwuNSk7XG56LWluZGV4OiA1MDtcbmBcbmNvbnN0IFRpdGxlID0gc3R5bGVkLmRpdmBcbiAgZGlzcGxheTogZmxleDtcbiAgLy8gd2lkdGg6IDEwMCU7XG5cbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBoZWlnaHQ6IDEwMCU7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICB6LWluZGV4OiA2MDtcbiAgbGV0dGVyLXNwYWNpbmc6IDRweDtcblxuIGNvbG9yOiAke3Byb3BzID0+IHByb3BzLnRoZW1lLmJsYWNrfTtcblxuXG4gIC5ib3gge1xuXG5cblxuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1mbG93OiBjb2x1bW47XG4gICAganVzdGlmeS1jb250ZW50czogY2VudGVyO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xubWFyZ2luOiAwIGF1dG87XG5cbiAgfVxuICBpbWcge1xuICAgIHdpZHRoOiA0MDBweDtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIG1hcmdpbjogMCBhdXRvO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgtMnB4KSAgO1xuICAgIEBtZWRpYSAobWluLXdpZHRoOiAwcHgpIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgICAgd2lkdGg6IDkwJTtcbiAgICAgIG1heC13aWR0aDogNDAwcHg7XG4gICAgfVxuICB9XG5cblxuICBoMiB7XG4gICAgZm9udC1zaXplOiAxZW07XG5jb2xvcjogIzAwMDAwMDtcbiAgICBmb250LWZhbWlseTogJ0NvbWZvcnRhYSc7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xudGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbi8vIGZvbnQtd2VpZ2h0OiA5MDA7XG5AbWVkaWEgKG1pbi13aWR0aDogMHB4KSBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbmZvbnQtc2l6ZTogLjdlbTtcbm1hcmdpbi10b3A6IDIwcHg7XG59XG4gIH1cblxuICAuYXJyb3ctZG93biB7XG4gICAgd2lkdGg6IDMzcHg7XG4gICAgaGVpZ2h0OiAzM3B4O1xuICAgIGJvcmRlcjogM3B4IHNvbGlkICMzMzM7XG4gICAgYm9yZGVyLWxlZnQ6IDA7XG4gICAgYm9yZGVyLXRvcDogMDtcbiAgICB6LWluZGV4OiAxMDA7XG5ib3R0b206IDA7XG4gICAgIHRyYW5zZm9ybTogcm90YXRlKDQ1ZGVnKTtcbiAgICAgJjpob3ZlciB7XG4gICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICB9XG4gIH1cbmBcblxuY29uc3QgQXV0b3BsYXlTbGlkZXIgPSB3aXRoQXV0b3BsYXkoQXdlc29tZVNsaWRlcilcblxuXG5cbmNvbnN0IEhlcm9TbGlkZXIgPSBmdW5jdGlvbihwcm9wcykge1xuXG4gIHJldHVybiAoXG4gICAgPFNsaWRlckRpdj5cbiAgICAgIDxUaXRsZT5cblxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJib3hcIj5cbiAgICAgIDxpbWcgc3JjPVwiLy4uL3N0YXRpYy9zdGVwaHlzYnJpZGVndWlkZWxvZ29kYXJrYnJvd24ucG5nXCIgYWx0PVwic3RlcGh5cyBicmlkZSBndWlkZVwiIC8+XG4gICAgICAgIDxoMj53ZWRkaW5nIHBsYW5uaW5nIHwgc3R5bGluZyB8IGNvb3JkaW5hdGlvbjwvaDI+XG5cbiAgICAgICAgPC9kaXY+XG5cbiAgICAgIDwvVGl0bGU+XG5cbiAgICAgIDxPcGFxdWUvPlxuICAgICAgICA8QXV0b3BsYXlTbGlkZXJcbiAgICAgICAgICBjbGFzc05hbWU9XCJzaG9ydGVuIGF3cy1idG5cIlxuICAgICAgICAgIHBsYXk9e3RydWV9XG4gICAgICAgICAgY2FuY2VsT25JbnRlcmFjdGlvbj17ZmFsc2V9XG4gICAgICAgICAgYnV0dG9ucz17ZmFsc2V9XG4gICAgICAgICAgYnVsbGV0cz17ZmFsc2V9XG4gICAgICAgICAgaW50ZXJ2YWw9ezEwMDAwfVxuICAgICAgICA+XG4gICAgICAgICAgPGRpdiBkYXRhLXNyYz1cIi8uLi9zdGF0aWMvc3RlcGh5c2JyaWRlZ3VpZGUtb2xpdmlhLmpwZWdcIiAvPlxuICAgICAgICAgIDxkaXYgZGF0YS1zcmM9XCIvLi4vc3RhdGljL3N0ZXBoeXNicmlkZWd1aWRlLWFsZXhhLmpwZ1wiIC8+XG4gICAgICAgICAgPGRpdiBkYXRhLXNyYz1cIi8uLi9zdGF0aWMvc3RlcGh5c2JyaWRlZ3VpZGUtdHJpc3Rhbi1vbGl2aWEuanBnXCIgLz5cbiAgICAgICAgICA8ZGl2IGRhdGEtc3JjPVwiLy4uL3N0YXRpYy9zdGVwaHlzYnJpZGVndWlkZS1qdWx5YS1qYWNrLkpQR1wiIC8+XG4gICAgICAgICAgPGRpdiBkYXRhLXNyYz1cIi8uLi9zdGF0aWMvc3RlcGh5c2JyaWRlZ3VpZGUtbm9lbC1kYXZpZC5qcGdcIiAvPlxuICAgICAgICAgIDxkaXYgZGF0YS1zcmM9XCIvLi4vc3RhdGljL3N0ZXBoeXNicmlkZWd1aWRlLWhlYXRoZXItdGFibGVzY2FwZS5qcGdcIiAvPlxuICAgICAgICAgIDxkaXYgZGF0YS1zcmM9XCIvLi4vc3RhdGljL3N0ZXBoeXNicmlkZWd1aWRlLWJvdXFldC5qcGdcIiAvPlxuICAgICAgICAgIDxkaXYgZGF0YS1zcmM9XCIvLi4vc3RhdGljL3N0ZXBoeXNicmlkZWd1aWRlLWhlYXRoZXItZHJldy5qcGdcIiAvPlxuICAgICAgICA8L0F1dG9wbGF5U2xpZGVyPlxuICAgICAgICA8YSAgY2xhc3NOYW1lPVwic2Nyb2xsLWRvd24tYnV0dG9uXCIgb25DbGljaz17cHJvcHMuYXJyb3dDbGlja30+PHNwYW4+PC9zcGFuPjwvYT5cbiAgICA8L1NsaWRlckRpdj5cbiAgKVxufVxuXG5leHBvcnQgZGVmYXVsdCBIZXJvU2xpZGVyIl0sIm5hbWVzIjpbInN0eWxlZCIsImtleWZyYW1lcyIsIkF3ZXNvbWVTbGlkZXIiLCJ3aXRoQXV0b3BsYXkiLCJmYWRlT3V0IiwiZmFkZUluIiwic2Nyb2xsZXIiLCJTbGlkZXJEaXYiLCJkaXYiLCJPcGFxdWUiLCJUaXRsZSIsInByb3BzIiwidGhlbWUiLCJibGFjayIsIkF1dG9wbGF5U2xpZGVyIiwiSGVyb1NsaWRlciIsImNsYXNzTmFtZSIsImltZyIsInNyYyIsImFsdCIsImgyIiwicGxheSIsImNhbmNlbE9uSW50ZXJhY3Rpb24iLCJidXR0b25zIiwiYnVsbGV0cyIsImludGVydmFsIiwiZGF0YS1zcmMiLCJhIiwib25DbGljayIsImFycm93Q2xpY2siLCJzcGFuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./components/HeroSlider.js\n");
 
 /***/ }),
 
-/***/ 7040:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7518);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-
-
-
-const SectionBlock = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-e72ac477-0"
-})`
-display: flex;
-
-flex-flow: column;
-margin: 150px auto 90px;
-justify-content: center;
-align-items: center;
-
-.top {
-min-width: 320px;
-width: 60%;
-max-width: 900px;
-  text-align: center;
-
-
-
-  opacity:.6;
-  letter-spacing: 3px;
-  color: ${(props)=>props.theme.third};
-
-  text-transform: uppercase;
-
-}
-.line {
-  background: ${(props)=>props.theme.second};
-  height: 2px;
-  width: 250px;
-
-  opacity:.3;
-}
-.line2 {
-  background: ${(props)=>props.theme.second};
-  height: 2px;
-  width: 150px;
-  margin-bottom:70px;
-  opacity:.3;
-}
-
-`;
-const Services = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-e72ac477-1"
-})`
-display: grid;
-  grid-template-columns: 45% 1fr;
-  width: 100%;
-  margin-bottom: 160px;
-  align-items: center;
-  justify-content: center;
-  background:  rgba(237, 222, 213, .4);
-  position: relative;
-  overflow: hidden;
-  @media (min-width: 0px) and (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-  .col {
-    grid-column: 1;
-    margin: 0 auto;
-    padding: 20px;
-    @media (min-width: 0px) and (max-width: 768px) {
-      grid-column: 1;
-      grid-row: 2;
-    }
-
-  }
-  .right-align {
-    text-align: right;
-    @media (min-width: 0px) and (max-width: 768px) {
-     text-align: left;
-    }
-  }
-h2 {
-  position: absolute;
-  font-family: 'Amelaryas';
-  font-size:40px;
-  z-index: 50;
-justify-self: left;
-
-  line-height: 50px;
-  transform: translateY(25px) translateX(10px);
-  // color: ${(props)=>props.theme.third};
-margin: 0;
-@media (min-width: 0px) and (max-width: 768px) {
-font-size: 30px;
-}
-}
-  .col2 {
-position: relative;
-    grid-column: 2;
-    display: grid;
-    justify-content: right;
-    align-items: top                     ;
-    margin: 0 auto;
-
-grid-row: 1;
-@media (min-width: 0px) and (max-width: 768px) {
-  grid-column: 1;
-  grid-row: 1;
-}
-   }
-  img {
-    height: 500px;
-    position: relative;
-
-    overflow: hidden;
-    margin: 60px auto;
-    @media (min-width: 0px) and (max-width: 768px) {
-     margin: 60px auto 10px;
-    }
-  }
-  h3 {
-
-    font-size: 12px;
-    margin-bottom: 0;
-    margin-top: 30px;
-    color: #503931;
-    font-family: 'Amelaryas';
-
-  }
-  p {
-    font-size: 13px;
-    line-height: 17px;
-    color: #503931;
-    padding-left: 20px;
-
-  }
-
-`;
-const GoToMe = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-e72ac477-2"
-})`
-position: absolute;
-
-height: 20px;
-width: 20px;
-`;
-const Intro = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().forwardRef((props, ref)=>{
-    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-        children: [
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(GoToMe, {
-                ref: ref
-            }),
-            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(SectionBlock, {
-                children: [
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                        className: "line"
-                    }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                        className: "top",
-                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                            children: "Helping couples put together an event that revolves around the love they share brings me so much joy. I feel honored to be able to provide my guidance, passion + industry knowledge to the couples I work with, always making it my priority to ensure a beautiful wedding day that will be cherished forever!"
-                        })
-                    }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                        className: "line2"
-                    })
-                ]
-            }),
-            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Services, {
-                children: [
-                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                        className: "col",
-                        children: [
-                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                className: "right-align",
-                                children: [
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
-                                        children: "Full Service Planning & Design"
-                                    }),
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                                        children: "For couples who would like guidance throughout the wedding planning process including securing and managing a dream team of vendors, keeping you on track with budget, monthly to do lists and assistance with every design detail along the way bringing your vision to life."
-                                    })
-                                ]
-                            }),
-                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                className: "right-align",
-                                children: [
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
-                                        children: "  Partial Planning"
-                                    }),
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                                        children: "For the couples who have started planning but need assistance securing the rest of your vendors and pulling together a cohesive vision and help filling in the missing pieces! "
-                                    })
-                                ]
-                            }),
-                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                className: "right-align",
-                                children: [
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
-                                        children: " Wedding Management & Coordination"
-                                    }),
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                                        children: "Enjoy the final months leading up to your wedding and know all the remaining tasks and logistics will be handled by me. All your hard work planning can be confidently handed over to me to be executed and ensure a flawless wedding day. You can probably write the coordination package best since you help so much the day of."
-                                    })
-                                ]
-                            })
-                        ]
-                    }),
-                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                        className: "col2",
-                        children: [
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
-                                children: "Planning Services"
-                            }),
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
-                                src: "/../static/stephysbrideguide-terranea.png",
-                                alt: "invitation suite picture"
-                            })
-                        ]
-                    })
-                ]
-            })
-        ]
-    });
-});
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Intro);
-
-
-/***/ }),
-
-/***/ 494:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7518);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_awesome_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6318);
-/* harmony import */ var react_awesome_slider__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_awesome_slider__WEBPACK_IMPORTED_MODULE_3__);
-
-
-
-
-
-
-const SectionBlock = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-664c34b-0"
-})`
-width: 100%;
-display: flex;
-position: relative;
-.small-screen {
-  display: none;
-   @media (min-width: 0px) and (max-width: 768px) {
-     display: block;
-    font-size: 30px;
-    position: absolute;
-    font-family: 'Amelaryas';
-    margin: 0;
-    z-index: 50;
-     transform: translateY(-45px) translateX(10px);
-   }
-}
-
-`;
-const SliderDiv = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-664c34b-1"
-})`
-  width: 100%;
-position: relative;
-  display: grid;
-  grid-template-columns: 1fr 40%;
-  justify-content: center;
-  align-items: top;
-  @media (min-width: 0px) and (max-width: 768px) {
-    display: flex;
-    flex-flow: column;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
- }
-  .shorten {
-    height: 100%;
-    @media (min-width: 0px) and (max-width: 768px) {
-   grid-row: 1;
-   height: 300px;
-   }
-  }
-
-  .awssld__bullets button {
-    transform: translateY(-45px);
-    z-index: 300;
-    transition: .5s;
-width: 10px;
-height: 10px;
-&:hover {
-  transform:translateY(-45px) scale(1.1);
-}
-      }
-
-
-  .awssld__controls button {
-top: 94%;
-@media (min-width: 0px) and (max-width: 768px) {
-  top: 90%;
-
-   }
-  }
-
-
-          .large-screen {
-                position: absolute;
-                font-family: 'Amelaryas';
-                font-size:45px;
-                margin: 0;
-                z-index: 50;
-                 transform: translateY(-70px) translateX(20px);
-                 @media (min-width: 0px) and (max-width: 768px) {
-                display: none;
-
-              }
-              }
-              .aws-btn {
-
-                --control-button-opacity: 1;
-                --organic-arrow-thickness: 2px;
-                --organic-arrow-border-radius:0px;
-                --organic-arrow-height: 20px;
-                --organic-arrow-color: white;
-                --control-button-width: 10%;
-                --control-button-height: 8%;
-                --control-button-background: rgba(0,0,0,.5);
-                --control-bullet-color: rgba(245,245,245,.5);
-                --control-bullet-active-color:  rgba(245,245,245,1);
-                --loader-bar-color: rgba(255,255,255,0);
-                --loader-bar-height: 0px;
-
-                }
-                .awssld__controls__arrow-left, .awssld__controls__arrow-right {
-                  height: 10px;
-                }
-                .awssld__next,.awssld__prev {
-                  height: 25px;
-                  width: 80px;
-                }
-`;
-const Slide = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-664c34b-2"
-})`
-position: relative;
-z-index: 1;
-
-`;
-const TextSide = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
-    componentId: "sc-664c34b-3"
-})`
-display: flex;
-flex-flow: column;
-grid-column: 2;
-padding: 0 30px;
-
-justify-content: center;
-
-
-
-@media (min-width: 0px) and (max-width: 768px) {
-margin-top: 30px;
-padding: 0 60px;
-
-  }
-.diane {
-  display: block;
-  font-family: 'Comfortaa';
-  // text-transform: uppercase;
-  font-size: 1.3rem;
-  font-weight: 900;
-  line-height: 17px;
-  width: 100%;
-  position: relative;
-  text-align: left;
-  z-index: 500;
-  transform: translate3d(0, 0, 0);
-  opacity: 1;
-  color: ${(props)=>props.theme.third};
-  transition: transform 0.45s cubic-bezier(0.15, 0.3, 0.15, 1), opacity 0.35s ease-out;
-  @media (min-width: 0px) and (max-width: 768px) {
-
-    text-align: center;
-      }
-  &:before {
-    content: '            ';
-    position: absolute;
-
-    background-image: url("/../static/quotes.svg");
-    background-repeat: no-repeat;
-
-    height: 80px;
-    width: 100px;
-    background-color: transparent;
-    transform: translateY(-30px) translateX(-10px);
-    opacity: .3;
-  }
-}
-.name {
-  display: block;
-
-  position: relative;
-  font-size: 2.1rem;
-  font-weight: 900;
-color: ${(props)=>props.theme.third};
-text-align: right;
-  font-family: "Tomatoes";
-  transform: translateY(-4px) translateX(-10px);
-}
-img {
-  position: absolute;
-  height: 80px;
-
-  opacity: .3;
-  transform: translateY(-30px) translateX(-10px);
-}
-`;
-const data = [
-    {
-        name: "Diane Levy",
-        text: "Stephy was an absolute dream to work with! She is everything that I wanted in a wedding planner + more. She gave us very helpful and detailed information, was always extremely communicative, helped calm me down when the stressful moments arose, and was there to navigate every aspect of my wedding. Nick, her husband was also amazing, extremely hardworking, and so great to work with. I am sad that my wedding is over and I won\u2019t be working with her anymore!! My special day seriously wouldn\u2019t have been what it was without stephy and I am forever grateful...100/100 !"
-    },
-    {
-        name: "Noel Larson",
-        text: "I can't say enough amazing things about sweet, sweet Stephy! The moment I got on an intro call with Stephy, I knew she was the one I wanted by my side through this wedding planning process. Not only is she amazing at what she does, she is truly the most genuine, selfless, kind, communicative, even-keeled and hard working person there is! Our wedding was pushed due to COVID and she always made me feel like I was her top priority, no matter where I was in the process. She was extremely organized and professional throughout the entire process, while also making me feel like I had a built in best friend along the way. Whenever I needed help or was feeling anxious about any planning decisions, she was always available to hop on a call, or chat via text or email. I was pretty much in contact with Stephy every single day for months leading up to the wedding. Towards the final months of the wedding planning process, I was so exhausted with making small decisions around decor items etc. and Stephy stepped in to help make final decisions on linens, chargers, day-of items, repurposing florals etc., I knew I could full trust her. She truly went above and beyond in every way and we're so grateful to her (and to her husband, Nick) for all of their help, support, and guidance over the past couple of years. I could go on and on, but in short, Stephy is the absolute best!"
-    },
-    {
-        name: "Shannon Jackson",
-        text: "I cannot recommend Stephy enough! I had been following Stephy\u2019s Bride Guide on instagram years before getting engaged, & had always dreamed of having a wedding as beautiful as those she had planned! After getting engaged, there was no easier choice than to hire Stephy as our planner. Our planning journey was so easy, enjoyable and stress free! She was available 24/7 for questions, and was so incredibly supportive through our wedding planning and replanning after our postponement (thanks covid!). Stephy has a wealth of knowledge and the best eye for design & went above and beyond with her duties on the day of! Our wedding day was more beautiful than I ever could\u2019ve imagined!! Thank you Stephy for making our wedding day so wonderful!"
-    },
-    {
-        name: "Kristine Kollenda",
-        text: "Stephy was the best wedding coordinator we could've possibly hired!!! We wanted to hire a 'month-of' coordinator to help finalize our plans already set in place and she provided service at least 3 months ahead of our wedding date. She was always available to take our calls, texts, and emails without hesitation or complaint! She helped us come up with ideas for decor and was always so kind and helpful! Literally, she went above and beyond what we hired her for! She is a true professional and our wedding couldn't have gone more perfectly at the Ole Hanson Beach Club! We can't thank her and her husband, Nick, enough for going above and beyond and making our wedding day perfect!"
-    },
-    {
-        name: "Alexa Jesko",
-        text: "I had briefly interviewed a few other planners, but once I talked with Stephy who was so warm and bubbly - I knew she was the one. From the beginning, Stephy was incredibly organized, professional, and communicative. It was clear to me she has great style and completely understood my wedding vision aesthetic, so I felt completely confident trusting her with any design input or ideas. Any time I had questions or wanted to meet with Stephy to talk through some details- she readily made herself available to hop on a call and help sort it out. When my first florist mock-up wasn't quite the look I had envisioned, Stephy graciously took over and communicated with the utmost professionalism to make sure we could get a redo of the mockup that we loved. Even when there was a last-minute hiccup with another vendor the day before the wedding- Stephy stepped in and truly saved the day. She helped our day go as seamlessly and perfectly as we could have imagined and helped bring our vision to life! I can't imagine this planning process without her- I would recommend Stephy without hesitation!"
-    }
-];
-const Reviews = function() {
-    const sliderRef = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(null);
-    const { 0: selectedSlide , 1: setSelectedSlide  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0);
-    console.log(sliderRef.current && sliderRef.current);
-    const changeText = (bride)=>{
-        // const slideNumber = sliderRef.current?.
-        console.log(bride.nextMedia.reviewtext);
-        setSelectedSlide(bride.nextMedia.reviewtext);
-    };
-    // useEffect(() => {
-    //   if (selectedSlide === null)  return
-    //   console.log('useeffect')
-    // changeText(selectedSlide)
-    // }, [selectedSlide])
-    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(SectionBlock, {
-        children: [
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
-                className: "small-screen",
-                children: "Client Sentiments"
-            }),
-            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(SliderDiv, {
-                children: [
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
-                        className: "large-screen",
-                        children: "Client Sentiments"
-                    }),
-                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((react_awesome_slider__WEBPACK_IMPORTED_MODULE_3___default()), {
-                        ref: sliderRef,
-                        className: "shorten aws-btn",
-                        play: false,
-                        selected: true,
-                        buttons: true,
-                        bullets: true,
-                        mobileTouch: true,
-                        onTransitionRequest: changeText,
-                        children: [
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Slide, {
-                                reviewtext: 0,
-                                "data-src": "/../static/stephysbrideguide-review.jpg"
-                            }),
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Slide, {
-                                reviewtext: 2,
-                                "data-src": "/../static/stephysbrideguide-shannon-review-resize.jpg"
-                            }),
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Slide, {
-                                reviewtext: 1,
-                                "data-src": "/../static/stephysbrideguide-noel-review-2.jpg"
-                            }),
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Slide, {
-                                reviewtext: 3,
-                                "data-src": "/../static/stephysbrideguide-olivia-review.jpg"
-                            }),
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Slide, {
-                                reviewtext: 4,
-                                "data-src": "/../static/stephysbrideguide-alexa-review.jpg"
-                            })
-                        ]
-                    }),
-                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(TextSide, {
-                        children: [
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                                className: "diane",
-                                children: data[selectedSlide].text
-                            }),
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                className: "name",
-                                children: data[selectedSlide].name
-                            })
-                        ]
-                    })
-                ]
-            })
-        ]
-    });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Reviews);
-
-
-/***/ }),
-
-/***/ 3678:
+/***/ "./components/HomePage.js":
+/*!********************************!*\
+  !*** ./components/HomePage.js ***!
+  \********************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Home)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6641);
-/* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_seo__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_HomePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7175);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components_HomePage__WEBPACK_IMPORTED_MODULE_2__]);
-_components_HomePage__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
-
-
-
-function Home() {
-    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-        children: [
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(next_seo__WEBPACK_IMPORTED_MODULE_1__.NextSeo, {
-                title: "Stephys Bride Guide",
-                description: "Wedding Planning, Styling + Coordination in Southern California.",
-                canonical: "https://www.stephysbrideguide.com/"
-            }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_HomePage__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {})
-        ]
-    });
-};
-
-__webpack_async_result__();
-} catch(e) { __webpack_async_result__(e); } });
+"use strict";
+eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ HomePage)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _HeroSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./HeroSlider */ \"./components/HeroSlider.js\");\n/* harmony import */ var _ContactForm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ContactForm */ \"./components/ContactForm.js\");\n/* harmony import */ var _Reviews__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Reviews */ \"./components/Reviews.js\");\n/* harmony import */ var _Intro__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Intro */ \"./components/Intro.js\");\n/* harmony import */ var _Instagram__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Instagram */ \"./components/Instagram.js\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_ContactForm__WEBPACK_IMPORTED_MODULE_3__]);\n_ContactForm__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\n\n\n\n\n\n\n\nfunction HomePage() {\n    // const inquiryRef = useRef(null)\n    const ref = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(null);\n    const arrowClick = ()=>{\n        ref.current?.scrollIntoView({\n            behavior: \"smooth\"\n        });\n    };\n    console.log(arrowClick);\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_HeroSlider__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n                arrowClick: arrowClick\n            }, void 0, false, {\n                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/HomePage.js\",\n                lineNumber: 19,\n                columnNumber: 7\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_Intro__WEBPACK_IMPORTED_MODULE_5__[\"default\"], {\n                ref: ref\n            }, void 0, false, {\n                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/HomePage.js\",\n                lineNumber: 20,\n                columnNumber: 7\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_Reviews__WEBPACK_IMPORTED_MODULE_4__[\"default\"], {}, void 0, false, {\n                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/HomePage.js\",\n                lineNumber: 21,\n                columnNumber: 7\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_ContactForm__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {}, void 0, false, {\n                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/HomePage.js\",\n                lineNumber: 22,\n                columnNumber: 7\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_Instagram__WEBPACK_IMPORTED_MODULE_6__[\"default\"], {}, void 0, false, {\n                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/HomePage.js\",\n                lineNumber: 23,\n                columnNumber: 7\n            }, this)\n        ]\n    }, void 0, true);\n};\n\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL0hvbWVQYWdlLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTtBQUE2QjtBQUNTO0FBQ0M7QUFDUjtBQUNKO0FBQ1E7QUFFcEIsU0FBU00sUUFBUSxHQUFHO0lBQ2pDLGtDQUFrQztJQUNsQyxNQUFNQyxHQUFHLEdBQUdQLDZDQUFNLENBQUMsSUFBSSxDQUFDO0lBQ3hCLE1BQU1RLFVBQVUsR0FBRyxJQUFNO1FBQ3ZCRCxHQUFHLENBQUNFLE9BQU8sRUFBRUMsY0FBYyxDQUFDO1lBQUNDLFFBQVEsRUFBRSxRQUFRO1NBQUMsQ0FBQztLQUNsRDtJQUdEQyxPQUFPLENBQUNDLEdBQUcsQ0FBQ0wsVUFBVSxDQUFDO0lBQ3ZCLHFCQUNFOzswQkFDRSw4REFBQ1AsbURBQVU7Z0JBQUNPLFVBQVUsRUFBRUEsVUFBVTs7Ozs7b0JBQUs7MEJBQ3ZDLDhEQUFDSiw4Q0FBSztnQkFBQ0csR0FBRyxFQUFFQSxHQUFHOzs7OztvQkFBRzswQkFDbEIsOERBQUNKLGdEQUFPOzs7O29CQUFFOzBCQUNWLDhEQUFDRCxvREFBVzs7OztvQkFBRzswQkFDZiw4REFBQ0csa0RBQVM7Ozs7b0JBQUc7O29CQUNaLENBQ0o7Q0FDRiIsInNvdXJjZXMiOlsid2VicGFjazovL3N0ZXBoeXMtYnJpZGUtZ3VpZGUvLi9jb21wb25lbnRzL0hvbWVQYWdlLmpzPzhmZGYiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHt1c2VSZWYgfSBmcm9tICdyZWFjdCdcbiBpbXBvcnQgSGVyb1NsaWRlciBmcm9tICcuL0hlcm9TbGlkZXInXG5pbXBvcnQgQ29udGFjdEZvcm0gZnJvbSAnLi9Db250YWN0Rm9ybSdcbmltcG9ydCBSZXZpZXdzIGZyb20gJy4vUmV2aWV3cydcbmltcG9ydCBJbnRybyBmcm9tICcuL0ludHJvJ1xuaW1wb3J0IEluc3RhZ3JhbSBmcm9tICcuL0luc3RhZ3JhbSdcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gSG9tZVBhZ2UoKSB7XG4gIC8vIGNvbnN0IGlucXVpcnlSZWYgPSB1c2VSZWYobnVsbClcbiAgY29uc3QgcmVmID0gdXNlUmVmKG51bGwpXG4gIGNvbnN0IGFycm93Q2xpY2sgPSAoKSA9PiB7XG4gICAgcmVmLmN1cnJlbnQ/LnNjcm9sbEludG9WaWV3KHtiZWhhdmlvcjogJ3Ntb290aCd9KVxuICB9XG5cblxuICBjb25zb2xlLmxvZyhhcnJvd0NsaWNrKVxuICByZXR1cm4gKFxuICAgIDw+XG4gICAgICA8SGVyb1NsaWRlciBhcnJvd0NsaWNrPXthcnJvd0NsaWNrfSAgLz5cbiAgICAgIDxJbnRybyByZWY9e3JlZn0vPlxuICAgICAgPFJldmlld3MvPlxuICAgICAgPENvbnRhY3RGb3JtIC8+XG4gICAgICA8SW5zdGFncmFtIC8+XG4gICAgPC8+XG4gIClcbn1cbiJdLCJuYW1lcyI6WyJ1c2VSZWYiLCJIZXJvU2xpZGVyIiwiQ29udGFjdEZvcm0iLCJSZXZpZXdzIiwiSW50cm8iLCJJbnN0YWdyYW0iLCJIb21lUGFnZSIsInJlZiIsImFycm93Q2xpY2siLCJjdXJyZW50Iiwic2Nyb2xsSW50b1ZpZXciLCJiZWhhdmlvciIsImNvbnNvbGUiLCJsb2ciXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./components/HomePage.js\n");
 
 /***/ }),
 
-/***/ 9114:
+/***/ "./components/Instagram.js":
+/*!*********************************!*\
+  !*** ./components/Instagram.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Instagram)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ \"styled-components\");\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);\n\n\nconst Div = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({\n    displayName: \"Instagram__Div\",\n    componentId: \"sc-3fe4bb15-0\"\n})`\nwidth: 80%;\n\n\n\nmargin: 50px auto;\nposition: relative;\nmargin-bottom:30px;\n@media (min-width: 361px) and (max-width: 900px) {\n\n    width: 90%;\n}\n.lightwidget__lightbox-caption {\n    font-family: 'Comfortaa';\n}\niframe .lightwidget__lightbox-caption {\n    font-family: 'Comfortaa';\n}\np {\n\n\nfont-family: 'Comfortaa';\nwidth: 80%;\nopacity:.6;\nletter-spacing: 3px;\ncolor: ${(props)=>props.theme.third};\nmargin-bottom:20px;\ntext-transform: uppercase;\n}\n`;\nconst styles = {\n    width: \"100%\",\n    border: 0\n};\nfunction Instagram() {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Div, {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"script\", {\n                src: \"https://cdn.lightwidget.com/widgets/lightwidget.js\"\n            }, void 0, false, {\n                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Instagram.js\",\n                lineNumber: 44,\n                columnNumber: 1\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"iframe\", {\n                src: \"//lightwidget.com/widgets/8a7bafaa68d0564c98fd89d193228571.html\",\n                scrolling: \"no\",\n                allowtransparency: \"true\",\n                className: \"lightwidget-widget\",\n                style: styles\n            }, void 0, false, {\n                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Instagram.js\",\n                lineNumber: 44,\n                columnNumber: 75\n            }, this)\n        ]\n    }, void 0, true, {\n        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Instagram.js\",\n        lineNumber: 42,\n        columnNumber: 9\n    }, this);\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL0luc3RhZ3JhbS5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7OztBQUFBO0FBQXNDO0FBRXRDLE1BQU1DLEdBQUcsR0FBR0QsdUVBQVU7OztFQUFBLENBQUM7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7T0F5QmhCLEVBQUVHLENBQUFBLEtBQUssR0FBSUEsS0FBSyxDQUFDQyxLQUFLLENBQUNDLEtBQUssQ0FBQzs7OztBQUlwQyxDQUFDO0FBQ0QsTUFBTUMsTUFBTSxHQUFHO0lBQ1hDLEtBQUssRUFBRSxNQUFNO0lBQ2JDLE1BQU0sRUFBRSxDQUFDO0NBRVo7QUFFYyxTQUFTQyxTQUFTLEdBQUc7SUFFaEMscUJBQ0ksOERBQUNSLEdBQUc7OzBCQUVaLDhEQUFDUyxRQUFNO2dCQUFDQyxHQUFHLEVBQUMsb0RBQW9EOzs7OztvQkFBVTswQkFBQSw4REFBQ0MsUUFBTTtnQkFBQ0QsR0FBRyxFQUFDLGlFQUFpRTtnQkFBRUUsU0FBUyxFQUFDLElBQUk7Z0JBQUNDLGlCQUFpQixFQUFDLE1BQU07Z0JBQUNDLFNBQVMsRUFBQyxvQkFBb0I7Z0JBQUNDLEtBQUssRUFBRVYsTUFBTTs7Ozs7b0JBQVc7Ozs7OztZQUM5TyxDQUNMO0NBQ0oiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zdGVwaHlzLWJyaWRlLWd1aWRlLy4vY29tcG9uZW50cy9JbnN0YWdyYW0uanM/M2VlOCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgc3R5bGVkIGZyb20gJ3N0eWxlZC1jb21wb25lbnRzJ1xuXG5jb25zdCBEaXYgPSBzdHlsZWQuZGl2YFxud2lkdGg6IDgwJTtcblxuXG5cbm1hcmdpbjogNTBweCBhdXRvO1xucG9zaXRpb246IHJlbGF0aXZlO1xubWFyZ2luLWJvdHRvbTozMHB4O1xuQG1lZGlhIChtaW4td2lkdGg6IDM2MXB4KSBhbmQgKG1heC13aWR0aDogOTAwcHgpIHtcblxuICAgIHdpZHRoOiA5MCU7XG59XG4ubGlnaHR3aWRnZXRfX2xpZ2h0Ym94LWNhcHRpb24ge1xuICAgIGZvbnQtZmFtaWx5OiAnQ29tZm9ydGFhJztcbn1cbmlmcmFtZSAubGlnaHR3aWRnZXRfX2xpZ2h0Ym94LWNhcHRpb24ge1xuICAgIGZvbnQtZmFtaWx5OiAnQ29tZm9ydGFhJztcbn1cbnAge1xuXG5cbmZvbnQtZmFtaWx5OiAnQ29tZm9ydGFhJztcbndpZHRoOiA4MCU7XG5vcGFjaXR5Oi42O1xubGV0dGVyLXNwYWNpbmc6IDNweDtcbmNvbG9yOiAke3Byb3BzID0+IHByb3BzLnRoZW1lLnRoaXJkfTtcbm1hcmdpbi1ib3R0b206MjBweDtcbnRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG59XG5gXG5jb25zdCBzdHlsZXMgPSB7XG4gICAgd2lkdGg6IFwiMTAwJVwiLFxuICAgIGJvcmRlcjogMCxcbiAgICAvLyBvdmVyZmxvdzogXCJoaWRkZW5cIlxufVxuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBJbnN0YWdyYW0oKSB7XG5cbiAgICByZXR1cm4gKFxuICAgICAgICA8RGl2PlxuXG48c2NyaXB0IHNyYz1cImh0dHBzOi8vY2RuLmxpZ2h0d2lkZ2V0LmNvbS93aWRnZXRzL2xpZ2h0d2lkZ2V0LmpzXCI+PC9zY3JpcHQ+PGlmcmFtZSBzcmM9XCIvL2xpZ2h0d2lkZ2V0LmNvbS93aWRnZXRzLzhhN2JhZmFhNjhkMDU2NGM5OGZkODlkMTkzMjI4NTcxLmh0bWxcIiAgc2Nyb2xsaW5nPVwibm9cIiBhbGxvd3RyYW5zcGFyZW5jeT1cInRydWVcIiBjbGFzc05hbWU9XCJsaWdodHdpZGdldC13aWRnZXRcIiBzdHlsZT17c3R5bGVzfT48L2lmcmFtZT5cbiAgICA8L0Rpdj5cbiAgICApXG59XG4iXSwibmFtZXMiOlsic3R5bGVkIiwiRGl2IiwiZGl2IiwicHJvcHMiLCJ0aGVtZSIsInRoaXJkIiwic3R5bGVzIiwid2lkdGgiLCJib3JkZXIiLCJJbnN0YWdyYW0iLCJzY3JpcHQiLCJzcmMiLCJpZnJhbWUiLCJzY3JvbGxpbmciLCJhbGxvd3RyYW5zcGFyZW5jeSIsImNsYXNzTmFtZSIsInN0eWxlIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./components/Instagram.js\n");
+
+/***/ }),
+
+/***/ "./components/Intro.js":
+/*!*****************************!*\
+  !*** ./components/Intro.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ \"styled-components\");\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nconst SectionBlock = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({\n    displayName: \"Intro__SectionBlock\",\n    componentId: \"sc-8da9c15b-0\"\n})`\ndisplay: flex;\n\nflex-flow: column;\nmargin: 150px auto 90px;\njustify-content: center;\nalign-items: center;\n\n.top {\nmin-width: 320px;\nwidth: 60%;\nmax-width: 900px;\n  text-align: center;\n\n\n\n  opacity:.6;\n  letter-spacing: 3px;\n  color: ${(props)=>props.theme.third};\n\n  text-transform: uppercase;\n\n}\n.line {\n  background: ${(props)=>props.theme.second};\n  height: 2px;\n  width: 250px;\n\n  opacity:.3;\n}\n.line2 {\n  background: ${(props)=>props.theme.second};\n  height: 2px;\n  width: 150px;\n  margin-bottom:70px;\n  opacity:.3;\n}\n\n`;\nconst Services = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({\n    displayName: \"Intro__Services\",\n    componentId: \"sc-8da9c15b-1\"\n})`\ndisplay: grid;\n  grid-template-columns: 45% 1fr;\n  width: 100%;\n  margin-bottom: 160px;\n  align-items: center;\n  justify-content: center;\n  background:  rgba(237, 222, 213, .4);\n  position: relative;\n  overflow: hidden;\n  @media (min-width: 0px) and (max-width: 768px) {\n    grid-template-columns: 1fr;\n\n  }\n  .col {\n    grid-column: 1;\n    margin: 0 auto;\n    padding: 20px;\n    @media (min-width: 0px) and (max-width: 768px) {\n      grid-column: 1;\n      grid-row: 2;\n      margin-bottom: 30px;\n    }\n\n  }\n  .right-align {\n    text-align: right;\n    @media (min-width: 0px) and (max-width: 768px) {\n     text-align: left;\n    }\n  }\nh2 {\n  position: absolute;\n  font-family: 'Amelaryas';\n  font-size:40px;\n  z-index: 50;\njustify-self: left;\n\n  line-height: 50px;\n  transform: translateY(25px) translateX(10px);\n  // color: ${(props)=>props.theme.third};\nmargin: 0;\n@media (min-width: 769px) and (max-width: 962px) {\n  font-size: 35px;\n  }\n@media (min-width: 0px) and (max-width: 768px) {\nfont-size: 30px;\n}\n}\n  .col2 {\nposition: relative;\n    grid-column: 2;\n    display: grid;\n    justify-content: right;\n    align-items: top                     ;\n    margin: 0 auto;\n\ngrid-row: 1;\n@media (min-width: 0px) and (max-width: 768px) {\n  grid-column: 1;\n  grid-row: 1;\n}\n   }\n  img {\nwidth: 100%;\nmin-width: 500px;\n    position: relative;\n\n    overflow: hidden;\n    margin: 60px auto;\n    @media (min-width: 0px) and (max-width: 768px) {\n     margin: 60px auto 10px;\n     width: 90%;\n     min-width: 300px;\n    }\n  }\n  h3 {\n\n    font-size: 12px;\n    margin-bottom: 0;\n    margin-top: 30px;\n    color: #503931;\n    font-family: 'Amelaryas';\n\n  }\n  p {\n    font-size: 13px;\n    line-height: 17px;\n    color: #503931;\n    padding-left: 20px;\n\n  }\n\n`;\nconst GoToMe = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({\n    displayName: \"Intro__GoToMe\",\n    componentId: \"sc-8da9c15b-2\"\n})`\nposition: absolute;\n\nheight: 20px;\nwidth: 20px;\n`;\nconst Intro = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_1___default().forwardRef((props, ref)=>{\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(GoToMe, {\n                ref: ref\n            }, void 0, false, {\n                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Intro.js\",\n                lineNumber: 147,\n                columnNumber: 5\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(SectionBlock, {\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"line\"\n                    }, void 0, false, {\n                        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Intro.js\",\n                        lineNumber: 149,\n                        columnNumber: 3\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"top\",\n                        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                            children: \"Helping couples put together an event that revolves around the love they share brings me so much joy. I feel honored to be able to provide my guidance, passion + industry knowledge to the couples I work with, always making it my priority to ensure a beautiful wedding day that will be cherished forever!\"\n                        }, void 0, false, {\n                            fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Intro.js\",\n                            lineNumber: 150,\n                            columnNumber: 24\n                        }, undefined)\n                    }, void 0, false, {\n                        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Intro.js\",\n                        lineNumber: 150,\n                        columnNumber: 3\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"line2\"\n                    }, void 0, false, {\n                        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Intro.js\",\n                        lineNumber: 151,\n                        columnNumber: 3\n                    }, undefined)\n                ]\n            }, void 0, true, {\n                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Intro.js\",\n                lineNumber: 148,\n                columnNumber: 3\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Services, {\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"col\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"right-align\",\n                                children: [\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h3\", {\n                                        children: \"Full Service Planning & Design\"\n                                    }, void 0, false, {\n                                        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Intro.js\",\n                                        lineNumber: 158,\n                                        columnNumber: 5\n                                    }, undefined),\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                        children: \"For couples who would like guidance throughout the wedding planning process including securing and managing a dream team of vendors, keeping you on track with budget, monthly to do lists and assistance with every design detail along the way bringing your vision to life.\"\n                                    }, void 0, false, {\n                                        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Intro.js\",\n                                        lineNumber: 159,\n                                        columnNumber: 3\n                                    }, undefined)\n                                ]\n                            }, void 0, true, {\n                                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Intro.js\",\n                                lineNumber: 157,\n                                columnNumber: 5\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"right-align\",\n                                children: [\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h3\", {\n                                        children: \"  Partial Planning\"\n                                    }, void 0, false, {\n                                        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Intro.js\",\n                                        lineNumber: 162,\n                                        columnNumber: 1\n                                    }, undefined),\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                        children: \"For the couples who have started planning but need assistance securing the rest of your vendors and pulling together a cohesive vision and help filling in the missing pieces! \"\n                                    }, void 0, false, {\n                                        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Intro.js\",\n                                        lineNumber: 163,\n                                        columnNumber: 3\n                                    }, undefined)\n                                ]\n                            }, void 0, true, {\n                                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Intro.js\",\n                                lineNumber: 161,\n                                columnNumber: 1\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"right-align\",\n                                children: [\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h3\", {\n                                        children: \" Wedding Management & Coordination\"\n                                    }, void 0, false, {\n                                        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Intro.js\",\n                                        lineNumber: 167,\n                                        columnNumber: 2\n                                    }, undefined),\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                        children: \"Enjoy the final months leading up to your wedding and know all the remaining tasks and logistics will be handled by me. All your hard work planning can be confidently handed over to me to be executed and ensure a flawless wedding day.\"\n                                    }, void 0, false, {\n                                        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Intro.js\",\n                                        lineNumber: 168,\n                                        columnNumber: 3\n                                    }, undefined)\n                                ]\n                            }, void 0, true, {\n                                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Intro.js\",\n                                lineNumber: 165,\n                                columnNumber: 1\n                            }, undefined)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Intro.js\",\n                        lineNumber: 155,\n                        columnNumber: 5\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"col2\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h2\", {\n                                children: \"Planning Services\"\n                            }, void 0, false, {\n                                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Intro.js\",\n                                lineNumber: 171,\n                                columnNumber: 3\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                                src: \"/../static/stephysbrideguide-terranea.png\",\n                                alt: \"invitation suite picture\"\n                            }, void 0, false, {\n                                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Intro.js\",\n                                lineNumber: 172,\n                                columnNumber: 3\n                            }, undefined)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Intro.js\",\n                        lineNumber: 170,\n                        columnNumber: 3\n                    }, undefined)\n                ]\n            }, void 0, true, {\n                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Intro.js\",\n                lineNumber: 154,\n                columnNumber: 3\n            }, undefined)\n        ]\n    }, void 0, true);\n});\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Intro);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL0ludHJvLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7QUFBQTtBQUF5QjtBQUNhO0FBRXRDLE1BQU1FLFlBQVksR0FBR0QsdUVBQVU7OztFQUFBLENBQUM7Ozs7Ozs7Ozs7Ozs7Ozs7OztTQWtCdkIsRUFBRUcsQ0FBQUEsS0FBSyxHQUFJQSxLQUFLLENBQUNDLEtBQUssQ0FBQ0MsS0FBSyxDQUFDOzs7Ozs7Y0FNeEIsRUFBRUYsQ0FBQUEsS0FBSyxHQUFJQSxLQUFLLENBQUNDLEtBQUssQ0FBQ0UsTUFBTSxDQUFDOzs7Ozs7O2NBTzlCLEVBQUVILENBQUFBLEtBQUssR0FBSUEsS0FBSyxDQUFDQyxLQUFLLENBQUNFLE1BQU0sQ0FBQzs7Ozs7OztBQU81QyxDQUFDO0FBQ0QsTUFBTUMsUUFBUSxHQUFHUCx1RUFBVTs7O0VBQUEsQ0FBQzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztZQXdDaEIsRUFBRUcsQ0FBQUEsS0FBSyxHQUFJQSxLQUFLLENBQUNDLEtBQUssQ0FBQ0MsS0FBSyxDQUFDOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQXFEekMsQ0FBQztBQUVELE1BQU1HLE1BQU0sR0FBR1IsdUVBQVU7OztFQUFBLENBQUM7Ozs7O0FBSzFCLENBQUM7QUFDRCxNQUFNUyxLQUFLLGlCQUFHVix1REFBZ0IsQ0FBQyxDQUFDSSxLQUFLLEVBQUVRLEdBQUcsR0FBSztJQUM3QyxxQkFDRTs7MEJBQ0EsOERBQUNILE1BQU07Z0JBQUNHLEdBQUcsRUFBRUEsR0FBRzs7Ozs7eUJBQUc7MEJBQ3JCLDhEQUFDVixZQUFZOztrQ0FDYiw4REFBQ0MsS0FBRzt3QkFBQ1UsU0FBUyxFQUFDLE1BQU07Ozs7O2lDQUFFO2tDQUN2Qiw4REFBQ1YsS0FBRzt3QkFBQ1UsU0FBUyxFQUFDLEtBQUs7a0NBQUMsNEVBQUNDLEdBQUM7c0NBQUMsaVRBQStTOzs7OztxQ0FBSTs7Ozs7aUNBQU07a0NBQ2pWLDhEQUFDWCxLQUFHO3dCQUFDVSxTQUFTLEVBQUMsT0FBTzs7Ozs7aUNBQUc7Ozs7Ozt5QkFFVjswQkFDZiw4REFBQ0wsUUFBUTs7a0NBQ1AsOERBQUNMLEtBQUc7d0JBQUNVLFNBQVMsRUFBQyxLQUFLOzswQ0FFcEIsOERBQUNWLEtBQUc7Z0NBQUNVLFNBQVMsRUFBQyxhQUFhOztrREFDNUIsOERBQUNFLElBQUU7a0RBQUMsZ0NBQWtDOzs7OztpREFBSztrREFDN0MsOERBQUNELEdBQUM7a0RBQUMsZ1JBQThROzs7OztpREFBSTs7Ozs7O3lDQUNqUjswQ0FDTiw4REFBQ1gsS0FBRztnQ0FBQ1UsU0FBUyxFQUFDLGFBQWE7O2tEQUM1Qiw4REFBQ0UsSUFBRTtrREFBQyxvQkFBa0I7Ozs7O2lEQUFLO2tEQUN6Qiw4REFBQ0QsR0FBQztrREFBQyxpTEFBK0s7Ozs7O2lEQUFJOzs7Ozs7eUNBQ2xMOzBDQUNOLDhEQUFDWCxLQUFHO2dDQUFDVSxTQUFTLEVBQUMsYUFBYTs7a0RBRTNCLDhEQUFDRSxJQUFFO2tEQUFDLG9DQUFzQzs7Ozs7aURBQUs7a0RBQzlDLDhEQUFDRCxHQUFDO2tEQUFDLDRPQUEwTzs7Ozs7aURBQUk7Ozs7Ozt5Q0FBTTs7Ozs7O2lDQUNqUDtrQ0FDTiw4REFBQ1gsS0FBRzt3QkFBQ1UsU0FBUyxFQUFDLE1BQU07OzBDQUNyQiw4REFBQ0csSUFBRTswQ0FBQyxtQkFBaUI7Ozs7O3lDQUFLOzBDQUMxQiw4REFBQ0MsS0FBRztnQ0FBQ0MsR0FBRyxFQUFDLDJDQUEyQztnQ0FBQ0MsR0FBRyxFQUFDLDBCQUEwQjs7Ozs7eUNBQUc7Ozs7OztpQ0FDaEY7Ozs7Ozt5QkFDSzs7b0JBQ1IsQ0FDRjtDQUNGLENBQUM7QUFFRixpRUFBZVQsS0FBSyIsInNvdXJjZXMiOlsid2VicGFjazovL3N0ZXBoeXMtYnJpZGUtZ3VpZGUvLi9jb21wb25lbnRzL0ludHJvLmpzPzNlZWYiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0J1xuaW1wb3J0IHN0eWxlZCBmcm9tICdzdHlsZWQtY29tcG9uZW50cydcblxuY29uc3QgU2VjdGlvbkJsb2NrID0gc3R5bGVkLmRpdmBcbmRpc3BsYXk6IGZsZXg7XG5cbmZsZXgtZmxvdzogY29sdW1uO1xubWFyZ2luOiAxNTBweCBhdXRvIDkwcHg7XG5qdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbmFsaWduLWl0ZW1zOiBjZW50ZXI7XG5cbi50b3Age1xubWluLXdpZHRoOiAzMjBweDtcbndpZHRoOiA2MCU7XG5tYXgtd2lkdGg6IDkwMHB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG5cblxuXG4gIG9wYWNpdHk6LjY7XG4gIGxldHRlci1zcGFjaW5nOiAzcHg7XG4gIGNvbG9yOiAke3Byb3BzID0+IHByb3BzLnRoZW1lLnRoaXJkfTtcblxuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuXG59XG4ubGluZSB7XG4gIGJhY2tncm91bmQ6ICR7cHJvcHMgPT4gcHJvcHMudGhlbWUuc2Vjb25kfTtcbiAgaGVpZ2h0OiAycHg7XG4gIHdpZHRoOiAyNTBweDtcblxuICBvcGFjaXR5Oi4zO1xufVxuLmxpbmUyIHtcbiAgYmFja2dyb3VuZDogJHtwcm9wcyA9PiBwcm9wcy50aGVtZS5zZWNvbmR9O1xuICBoZWlnaHQ6IDJweDtcbiAgd2lkdGg6IDE1MHB4O1xuICBtYXJnaW4tYm90dG9tOjcwcHg7XG4gIG9wYWNpdHk6LjM7XG59XG5cbmBcbmNvbnN0IFNlcnZpY2VzID0gc3R5bGVkLmRpdmBcbmRpc3BsYXk6IGdyaWQ7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogNDUlIDFmcjtcbiAgd2lkdGg6IDEwMCU7XG4gIG1hcmdpbi1ib3R0b206IDE2MHB4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYmFja2dyb3VuZDogIHJnYmEoMjM3LCAyMjIsIDIxMywgLjQpO1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIEBtZWRpYSAobWluLXdpZHRoOiAwcHgpIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyO1xuXG4gIH1cbiAgLmNvbCB7XG4gICAgZ3JpZC1jb2x1bW46IDE7XG4gICAgbWFyZ2luOiAwIGF1dG87XG4gICAgcGFkZGluZzogMjBweDtcbiAgICBAbWVkaWEgKG1pbi13aWR0aDogMHB4KSBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgICAgIGdyaWQtY29sdW1uOiAxO1xuICAgICAgZ3JpZC1yb3c6IDI7XG4gICAgICBtYXJnaW4tYm90dG9tOiAzMHB4O1xuICAgIH1cblxuICB9XG4gIC5yaWdodC1hbGlnbiB7XG4gICAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gICAgQG1lZGlhIChtaW4td2lkdGg6IDBweCkgYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7XG4gICAgIHRleHQtYWxpZ246IGxlZnQ7XG4gICAgfVxuICB9XG5oMiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZm9udC1mYW1pbHk6ICdBbWVsYXJ5YXMnO1xuICBmb250LXNpemU6NDBweDtcbiAgei1pbmRleDogNTA7XG5qdXN0aWZ5LXNlbGY6IGxlZnQ7XG5cbiAgbGluZS1oZWlnaHQ6IDUwcHg7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgyNXB4KSB0cmFuc2xhdGVYKDEwcHgpO1xuICAvLyBjb2xvcjogJHtwcm9wcyA9PiBwcm9wcy50aGVtZS50aGlyZH07XG5tYXJnaW46IDA7XG5AbWVkaWEgKG1pbi13aWR0aDogNzY5cHgpIGFuZCAobWF4LXdpZHRoOiA5NjJweCkge1xuICBmb250LXNpemU6IDM1cHg7XG4gIH1cbkBtZWRpYSAobWluLXdpZHRoOiAwcHgpIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuZm9udC1zaXplOiAzMHB4O1xufVxufVxuICAuY29sMiB7XG5wb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgZ3JpZC1jb2x1bW46IDI7XG4gICAgZGlzcGxheTogZ3JpZDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHJpZ2h0O1xuICAgIGFsaWduLWl0ZW1zOiB0b3AgICAgICAgICAgICAgICAgICAgICA7XG4gICAgbWFyZ2luOiAwIGF1dG87XG5cbmdyaWQtcm93OiAxO1xuQG1lZGlhIChtaW4td2lkdGg6IDBweCkgYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7XG4gIGdyaWQtY29sdW1uOiAxO1xuICBncmlkLXJvdzogMTtcbn1cbiAgIH1cbiAgaW1nIHtcbndpZHRoOiAxMDAlO1xubWluLXdpZHRoOiA1MDBweDtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG5cbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgIG1hcmdpbjogNjBweCBhdXRvO1xuICAgIEBtZWRpYSAobWluLXdpZHRoOiAwcHgpIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgICBtYXJnaW46IDYwcHggYXV0byAxMHB4O1xuICAgICB3aWR0aDogOTAlO1xuICAgICBtaW4td2lkdGg6IDMwMHB4O1xuICAgIH1cbiAgfVxuICBoMyB7XG5cbiAgICBmb250LXNpemU6IDEycHg7XG4gICAgbWFyZ2luLWJvdHRvbTogMDtcbiAgICBtYXJnaW4tdG9wOiAzMHB4O1xuICAgIGNvbG9yOiAjNTAzOTMxO1xuICAgIGZvbnQtZmFtaWx5OiAnQW1lbGFyeWFzJztcblxuICB9XG4gIHAge1xuICAgIGZvbnQtc2l6ZTogMTNweDtcbiAgICBsaW5lLWhlaWdodDogMTdweDtcbiAgICBjb2xvcjogIzUwMzkzMTtcbiAgICBwYWRkaW5nLWxlZnQ6IDIwcHg7XG5cbiAgfVxuXG5gXG5cbmNvbnN0IEdvVG9NZSA9IHN0eWxlZC5kaXZgXG5wb3NpdGlvbjogYWJzb2x1dGU7XG5cbmhlaWdodDogMjBweDtcbndpZHRoOiAyMHB4O1xuYFxuY29uc3QgSW50cm8gPSBSZWFjdC5mb3J3YXJkUmVmKChwcm9wcywgcmVmKSA9PiB7XG4gIHJldHVybiAoXG4gICAgPD5cbiAgICA8R29Ub01lIHJlZj17cmVmfS8+XG4gIDxTZWN0aW9uQmxvY2sgPlxuICA8ZGl2IGNsYXNzTmFtZT1cImxpbmVcIi8+XG4gIDxkaXYgY2xhc3NOYW1lPVwidG9wXCI+PHA+SGVscGluZyBjb3VwbGVzIHB1dCB0b2dldGhlciBhbiBldmVudCB0aGF0IHJldm9sdmVzIGFyb3VuZCB0aGUgbG92ZSB0aGV5IHNoYXJlIGJyaW5ncyBtZSBzbyBtdWNoIGpveS4gSSBmZWVsIGhvbm9yZWQgdG8gYmUgYWJsZSB0byBwcm92aWRlIG15IGd1aWRhbmNlLCBwYXNzaW9uICsgaW5kdXN0cnkga25vd2xlZGdlIHRvIHRoZSBjb3VwbGVzIEkgd29yayB3aXRoLCBhbHdheXMgbWFraW5nIGl0IG15IHByaW9yaXR5IHRvIGVuc3VyZSBhIGJlYXV0aWZ1bCB3ZWRkaW5nIGRheSB0aGF0IHdpbGwgYmUgY2hlcmlzaGVkIGZvcmV2ZXIhPC9wPjwvZGl2PlxuICA8ZGl2IGNsYXNzTmFtZT1cImxpbmUyXCIgLz5cblxuICA8L1NlY3Rpb25CbG9jaz5cbiAgPFNlcnZpY2VzPlxuICAgIDxkaXYgY2xhc3NOYW1lPVwiY29sXCI+XG5cbiAgICA8ZGl2IGNsYXNzTmFtZT1cInJpZ2h0LWFsaWduXCI+XG4gICAgPGgzPkZ1bGwgU2VydmljZSBQbGFubmluZyAmYW1wOyBEZXNpZ248L2gzPlxuICA8cD5Gb3IgY291cGxlcyB3aG8gd291bGQgbGlrZSBndWlkYW5jZSB0aHJvdWdob3V0IHRoZSB3ZWRkaW5nIHBsYW5uaW5nIHByb2Nlc3MgaW5jbHVkaW5nIHNlY3VyaW5nIGFuZCBtYW5hZ2luZyBhIGRyZWFtIHRlYW0gb2YgdmVuZG9ycywga2VlcGluZyB5b3Ugb24gdHJhY2sgd2l0aCBidWRnZXQsIG1vbnRobHkgdG8gZG8gbGlzdHMgYW5kIGFzc2lzdGFuY2Ugd2l0aCBldmVyeSBkZXNpZ24gZGV0YWlsIGFsb25nIHRoZSB3YXkgYnJpbmdpbmcgeW91ciB2aXNpb24gdG8gbGlmZS48L3A+XG48L2Rpdj5cbjxkaXYgY2xhc3NOYW1lPVwicmlnaHQtYWxpZ25cIj5cbjxoMz4gIFBhcnRpYWwgUGxhbm5pbmc8L2gzPlxuICA8cD5Gb3IgdGhlIGNvdXBsZXMgd2hvIGhhdmUgc3RhcnRlZCBwbGFubmluZyBidXQgbmVlZCBhc3Npc3RhbmNlIHNlY3VyaW5nIHRoZSByZXN0IG9mIHlvdXIgdmVuZG9ycyBhbmQgcHVsbGluZyB0b2dldGhlciBhIGNvaGVzaXZlIHZpc2lvbiBhbmQgaGVscCBmaWxsaW5nIGluIHRoZSBtaXNzaW5nIHBpZWNlcyEgPC9wPlxuPC9kaXY+XG48ZGl2IGNsYXNzTmFtZT1cInJpZ2h0LWFsaWduXCI+XG5cbiA8aDM+IFdlZGRpbmcgTWFuYWdlbWVudCAmYW1wOyBDb29yZGluYXRpb248L2gzPlxuICA8cD5FbmpveSB0aGUgZmluYWwgbW9udGhzIGxlYWRpbmcgdXAgdG8geW91ciB3ZWRkaW5nIGFuZCBrbm93IGFsbCB0aGUgcmVtYWluaW5nIHRhc2tzIGFuZCBsb2dpc3RpY3Mgd2lsbCBiZSBoYW5kbGVkIGJ5IG1lLiBBbGwgeW91ciBoYXJkIHdvcmsgcGxhbm5pbmcgY2FuIGJlIGNvbmZpZGVudGx5IGhhbmRlZCBvdmVyIHRvIG1lIHRvIGJlIGV4ZWN1dGVkIGFuZCBlbnN1cmUgYSBmbGF3bGVzcyB3ZWRkaW5nIGRheS48L3A+PC9kaXY+XG4gIDwvZGl2PlxuICA8ZGl2IGNsYXNzTmFtZT1cImNvbDJcIj5cbiAgPGgyPlBsYW5uaW5nIFNlcnZpY2VzPC9oMj5cbiAgPGltZyBzcmM9XCIvLi4vc3RhdGljL3N0ZXBoeXNicmlkZWd1aWRlLXRlcnJhbmVhLnBuZ1wiIGFsdD1cImludml0YXRpb24gc3VpdGUgcGljdHVyZVwiIC8+XG4gIDwvZGl2PlxuICA8L1NlcnZpY2VzPlxuICA8Lz5cbiAgKVxufSlcblxuZXhwb3J0IGRlZmF1bHQgSW50cm9cbiJdLCJuYW1lcyI6WyJSZWFjdCIsInN0eWxlZCIsIlNlY3Rpb25CbG9jayIsImRpdiIsInByb3BzIiwidGhlbWUiLCJ0aGlyZCIsInNlY29uZCIsIlNlcnZpY2VzIiwiR29Ub01lIiwiSW50cm8iLCJmb3J3YXJkUmVmIiwicmVmIiwiY2xhc3NOYW1lIiwicCIsImgzIiwiaDIiLCJpbWciLCJzcmMiLCJhbHQiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./components/Intro.js\n");
+
+/***/ }),
+
+/***/ "./components/Loader.js":
+/*!******************************!*\
+  !*** ./components/Loader.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ \"styled-components\");\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);\n\n\nconst loader = styled_components__WEBPACK_IMPORTED_MODULE_1__.keyframes`\n    0% {\n      -webkit-transform: rotate(0deg);\n      -ms-transform: rotate(0deg);\n      transform: rotate(0deg);\n    }\n    100% {\n      -webkit-transform: rotate(360deg);\n      -ms-transform: rotate(360deg);\n      transform: rotate(360deg);\n    }\n`;\nconst Loadz = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({\n    displayName: \"Loader__Loadz\",\n    componentId: \"sc-fe580b69-0\"\n})`\n  .loading-wrapper {\n    position: fixed;\n    width: 100%;\n    height: 100%;\n    left: 0;\n    top: 0;\n\n  }\n\n  .loading-text {\n    display: flex;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    color: #999;\n    width: 100px;\n    height: 30px;\n    margin: ${(props)=>props.name ? \"-7px 0 0 48px\" : \"-7px 0 0 -34px\"};\n    line-height: 12px;\n\n    text-align: center;\n    font-size: 14px;\n  }\n\n  .loading-content {\n    display: block;\n    position: absolute;\n    left: 50%;\n    top: 50%;  z-index:999999;\n    width: 170px;\n    height: 170px;\n    margin: -85px 0 0 -85px;\n    border: 3px solid #f00;\n    &:after {\n      content: '';\n      position: absolute;\n      border: 3px solid #0f0;\n      left: 15px;\n      right: 15px;\n      top: 15px;\n      bottom: 15px;\n    }\n    &:before {\n      content: '';\n      position: absolute;\n      border: 3px solid #00f;\n      left: 5px;\n      right: 5px;\n      top: 5px;\n      bottom: 5px;\n    }\n  }\n  .loading-content {\n    border: 3px solid transparent;\n    border-top-color: ${(props)=>props.theme.primary};\n    border-bottom-color: ${(props)=>props.theme.primary};\n    border-radius: 50%;\n    animation: ${loader} 2s linear infinite;\n    &:before {\n      border: 3px solid transparent;\n      border-top-color: ${(props)=>props.theme.second};\n      border-bottom-color: ${(props)=>props.theme.second};\n      border-radius: 50%;\n      animation: ${loader} 3s linear infinite;\n    }\n    &:after {\n      border: 3px solid transparent;\n      border-top-color: ${(props)=>props.theme.third};\n      border-bottom-color: ${(props)=>props.theme.third};\n      border-radius: 50%;\n      animation: ${loader} 1.5s linear infinite;\n    }\n  }\n\n  .content-wrapper {\n    color: #fff;\n    position: fixed;\n    left: 0;\n    top: 20px;\n    width: 100%;\n    height: 100%;\n  }\n`;\nconst Loader = (props)=>{\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Loadz, {\n        className: \"loading-wrapper\",\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: \"loading-text\",\n                children: props.name ? props.name : props.loader\n            }, void 0, false, {\n                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Loader.js\",\n                lineNumber: 102,\n                columnNumber: 7\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: \"loading-content\"\n            }, void 0, false, {\n                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Loader.js\",\n                lineNumber: 105,\n                columnNumber: 7\n            }, undefined)\n        ]\n    }, void 0, true, {\n        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Loader.js\",\n        lineNumber: 101,\n        columnNumber: 5\n    }, undefined);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Loader);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL0xvYWRlci5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7OztBQUFBO0FBQXFEO0FBQ3JELE1BQU1FLE1BQU0sR0FBR0Qsd0RBQVMsQ0FBQzs7Ozs7Ozs7Ozs7QUFXekIsQ0FBQztBQUNELE1BQU1FLEtBQUssR0FBR0gsdUVBQVU7OztFQUFBLENBQUM7Ozs7Ozs7Ozs7Ozs7Ozs7OztZQWtCYixFQUFFLENBQUNLLEtBQUssR0FBTUEsS0FBSyxDQUFDQyxJQUFJLEdBQUcsZUFBZSxHQUFHLGdCQUFnQixDQUFFOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O3NCQXFDckQsRUFBRUQsQ0FBQUEsS0FBSyxHQUFJQSxLQUFLLENBQUNFLEtBQUssQ0FBQ0MsT0FBTyxDQUFDO3lCQUM1QixFQUFFSCxDQUFBQSxLQUFLLEdBQUlBLEtBQUssQ0FBQ0UsS0FBSyxDQUFDQyxPQUFPLENBQUM7O2VBRXpDLEVBQUVOLE1BQU0sQ0FBQzs7O3dCQUdBLEVBQUVHLENBQUFBLEtBQUssR0FBSUEsS0FBSyxDQUFDRSxLQUFLLENBQUNFLE1BQU0sQ0FBQzsyQkFDM0IsRUFBRUosQ0FBQUEsS0FBSyxHQUFJQSxLQUFLLENBQUNFLEtBQUssQ0FBQ0UsTUFBTSxDQUFDOztpQkFFeEMsRUFBRVAsTUFBTSxDQUFDOzs7O3dCQUlGLEVBQUVHLENBQUFBLEtBQUssR0FBSUEsS0FBSyxDQUFDRSxLQUFLLENBQUNHLEtBQUssQ0FBQzsyQkFDMUIsRUFBRUwsQ0FBQUEsS0FBSyxHQUFJQSxLQUFLLENBQUNFLEtBQUssQ0FBQ0csS0FBSyxDQUFDOztpQkFFdkMsRUFBRVIsTUFBTSxDQUFDOzs7Ozs7Ozs7Ozs7QUFZMUIsQ0FBQztBQUVELE1BQU1TLE1BQU0sR0FBRyxDQUFDTixLQUFLLEdBQUs7SUFDeEIscUJBQ0UsOERBQUNGLEtBQUs7UUFBQ1MsU0FBUyxFQUFDLGlCQUFpQjs7MEJBQ2hDLDhEQUFDUixLQUFHO2dCQUFDUSxTQUFTLEVBQUMsY0FBYzswQkFDMUJQLEtBQUssQ0FBQ0MsSUFBSSxHQUFHRCxLQUFLLENBQUNDLElBQUksR0FBR0QsS0FBSyxDQUFDSCxNQUFNOzs7Ozt5QkFDbkM7MEJBQ04sOERBQUNFLEtBQUc7Z0JBQUNRLFNBQVMsRUFBQyxpQkFBaUI7Ozs7O3lCQUFPOzs7Ozs7aUJBQ2pDLENBQ1Q7Q0FDRjtBQUVELGlFQUFlRCxNQUFNIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vc3RlcGh5cy1icmlkZS1ndWlkZS8uL2NvbXBvbmVudHMvTG9hZGVyLmpzP2ExNTEiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHN0eWxlZCwgeyBrZXlmcmFtZXMgfSBmcm9tICdzdHlsZWQtY29tcG9uZW50cydcbmNvbnN0IGxvYWRlciA9IGtleWZyYW1lc2BcbiAgICAwJSB7XG4gICAgICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDBkZWcpO1xuICAgICAgLW1zLXRyYW5zZm9ybTogcm90YXRlKDBkZWcpO1xuICAgICAgdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7XG4gICAgfVxuICAgIDEwMCUge1xuICAgICAgLXdlYmtpdC10cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpO1xuICAgICAgLW1zLXRyYW5zZm9ybTogcm90YXRlKDM2MGRlZyk7XG4gICAgICB0cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpO1xuICAgIH1cbmBcbmNvbnN0IExvYWR6ID0gc3R5bGVkLmRpdmBcbiAgLmxvYWRpbmctd3JhcHBlciB7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBsZWZ0OiAwO1xuICAgIHRvcDogMDtcblxuICB9XG5cbiAgLmxvYWRpbmctdGV4dCB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIGNvbG9yOiAjOTk5O1xuICAgIHdpZHRoOiAxMDBweDtcbiAgICBoZWlnaHQ6IDMwcHg7XG4gICAgbWFyZ2luOiAkeyhwcm9wcykgPT4gKHByb3BzLm5hbWUgPyAnLTdweCAwIDAgNDhweCcgOiAnLTdweCAwIDAgLTM0cHgnKX07XG4gICAgbGluZS1oZWlnaHQ6IDEycHg7XG5cbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgZm9udC1zaXplOiAxNHB4O1xuICB9XG5cbiAgLmxvYWRpbmctY29udGVudCB7XG4gICAgZGlzcGxheTogYmxvY2s7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0b3A6IDUwJTsgIHotaW5kZXg6OTk5OTk5O1xuICAgIHdpZHRoOiAxNzBweDtcbiAgICBoZWlnaHQ6IDE3MHB4O1xuICAgIG1hcmdpbjogLTg1cHggMCAwIC04NXB4O1xuICAgIGJvcmRlcjogM3B4IHNvbGlkICNmMDA7XG4gICAgJjphZnRlciB7XG4gICAgICBjb250ZW50OiAnJztcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvcmRlcjogM3B4IHNvbGlkICMwZjA7XG4gICAgICBsZWZ0OiAxNXB4O1xuICAgICAgcmlnaHQ6IDE1cHg7XG4gICAgICB0b3A6IDE1cHg7XG4gICAgICBib3R0b206IDE1cHg7XG4gICAgfVxuICAgICY6YmVmb3JlIHtcbiAgICAgIGNvbnRlbnQ6ICcnO1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm9yZGVyOiAzcHggc29saWQgIzAwZjtcbiAgICAgIGxlZnQ6IDVweDtcbiAgICAgIHJpZ2h0OiA1cHg7XG4gICAgICB0b3A6IDVweDtcbiAgICAgIGJvdHRvbTogNXB4O1xuICAgIH1cbiAgfVxuICAubG9hZGluZy1jb250ZW50IHtcbiAgICBib3JkZXI6IDNweCBzb2xpZCB0cmFuc3BhcmVudDtcbiAgICBib3JkZXItdG9wLWNvbG9yOiAke3Byb3BzID0+IHByb3BzLnRoZW1lLnByaW1hcnl9O1xuICAgIGJvcmRlci1ib3R0b20tY29sb3I6ICR7cHJvcHMgPT4gcHJvcHMudGhlbWUucHJpbWFyeX07XG4gICAgYm9yZGVyLXJhZGl1czogNTAlO1xuICAgIGFuaW1hdGlvbjogJHtsb2FkZXJ9IDJzIGxpbmVhciBpbmZpbml0ZTtcbiAgICAmOmJlZm9yZSB7XG4gICAgICBib3JkZXI6IDNweCBzb2xpZCB0cmFuc3BhcmVudDtcbiAgICAgIGJvcmRlci10b3AtY29sb3I6ICR7cHJvcHMgPT4gcHJvcHMudGhlbWUuc2Vjb25kfTtcbiAgICAgIGJvcmRlci1ib3R0b20tY29sb3I6ICR7cHJvcHMgPT4gcHJvcHMudGhlbWUuc2Vjb25kfTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcbiAgICAgIGFuaW1hdGlvbjogJHtsb2FkZXJ9IDNzIGxpbmVhciBpbmZpbml0ZTtcbiAgICB9XG4gICAgJjphZnRlciB7XG4gICAgICBib3JkZXI6IDNweCBzb2xpZCB0cmFuc3BhcmVudDtcbiAgICAgIGJvcmRlci10b3AtY29sb3I6ICR7cHJvcHMgPT4gcHJvcHMudGhlbWUudGhpcmR9O1xuICAgICAgYm9yZGVyLWJvdHRvbS1jb2xvcjogJHtwcm9wcyA9PiBwcm9wcy50aGVtZS50aGlyZH07XG4gICAgICBib3JkZXItcmFkaXVzOiA1MCU7XG4gICAgICBhbmltYXRpb246ICR7bG9hZGVyfSAxLjVzIGxpbmVhciBpbmZpbml0ZTtcbiAgICB9XG4gIH1cblxuICAuY29udGVudC13cmFwcGVyIHtcbiAgICBjb2xvcjogI2ZmZjtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgbGVmdDogMDtcbiAgICB0b3A6IDIwcHg7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICB9XG5gXG5cbmNvbnN0IExvYWRlciA9IChwcm9wcykgPT4ge1xuICByZXR1cm4gKFxuICAgIDxMb2FkeiBjbGFzc05hbWU9XCJsb2FkaW5nLXdyYXBwZXJcIj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwibG9hZGluZy10ZXh0XCI+XG4gICAgICAgIHtwcm9wcy5uYW1lID8gcHJvcHMubmFtZSA6IHByb3BzLmxvYWRlcn1cbiAgICAgIDwvZGl2PlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJsb2FkaW5nLWNvbnRlbnRcIj48L2Rpdj5cbiAgICA8L0xvYWR6PlxuICApXG59XG5cbmV4cG9ydCBkZWZhdWx0IExvYWRlclxuIl0sIm5hbWVzIjpbInN0eWxlZCIsImtleWZyYW1lcyIsImxvYWRlciIsIkxvYWR6IiwiZGl2IiwicHJvcHMiLCJuYW1lIiwidGhlbWUiLCJwcmltYXJ5Iiwic2Vjb25kIiwidGhpcmQiLCJMb2FkZXIiLCJjbGFzc05hbWUiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./components/Loader.js\n");
+
+/***/ }),
+
+/***/ "./components/Reviews.js":
+/*!*******************************!*\
+  !*** ./components/Reviews.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ \"styled-components\");\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var react_awesome_slider_dist_styles_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-awesome-slider/dist/styles.css */ \"./node_modules/react-awesome-slider/dist/styles.css\");\n/* harmony import */ var react_awesome_slider_dist_styles_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_awesome_slider_dist_styles_css__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var react_awesome_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-awesome-slider */ \"react-awesome-slider\");\n/* harmony import */ var react_awesome_slider__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_awesome_slider__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var react_awesome_slider_dist_captioned_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-awesome-slider/dist/captioned.css */ \"./node_modules/react-awesome-slider/dist/captioned.css\");\n/* harmony import */ var react_awesome_slider_dist_captioned_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_awesome_slider_dist_captioned_css__WEBPACK_IMPORTED_MODULE_5__);\n\n\n\n\n\n\nconst SectionBlock = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({\n    displayName: \"Reviews__SectionBlock\",\n    componentId: \"sc-bff107f0-0\"\n})`\nwidth: 100%;\ndisplay: flex;\nposition: relative;\n.small-screen {\n  display: none;\n   @media (min-width: 0px) and (max-width: 768px) {\n     display: block;\n    font-size: 30px;\n    position: absolute;\n    font-family: 'Amelaryas';\n    margin: 0;\n    z-index: 50;\n     transform: translateY(-45px) translateX(10px);\n   }\n}\n\n`;\nconst SliderDiv = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({\n    displayName: \"Reviews__SliderDiv\",\n    componentId: \"sc-bff107f0-1\"\n})`\n  width: 100%;\nposition: relative;\n  display: grid;\n  grid-template-columns: 1fr 40%;\n  justify-content: center;\n  align-items: top;\n  @media (min-width: 0px) and (max-width: 768px) {\n    display: flex;\n    flex-flow: column;\n    grid-template-columns: 1fr;\n    grid-template-rows: 1fr 1fr;\n }\n  .shorten {\n    height: 100%;\n    @media (min-width: 0px) and (max-width: 768px) {\n   grid-row: 1;\n   height: 300px;\n   }\n  }\n\n  .awssld__bullets button {\n    transform: translateY(-45px);\n    z-index: 300;\n    transition: .5s;\nwidth: 10px;\nheight: 10px;\n&:hover {\n  transform:translateY(-45px) scale(1.1);\n}\n      }\n\n\n  .awssld__controls button {\ntop: 94%;\n@media (min-width: 0px) and (max-width: 768px) {\n  top: 90%;\n\n   }\n  }\n\n\n          .large-screen {\n                position: absolute;\n                font-family: 'Amelaryas';\n                font-size:45px;\n                margin: 0;\n                z-index: 50;\n                 transform: translateY(-70px) translateX(20px);\n                 @media (min-width: 0px) and (max-width: 768px) {\n                display: none;\n\n              }\n              }\n              .aws-btn {\n\n                --control-button-opacity: 1;\n                --organic-arrow-thickness: 2px;\n                --organic-arrow-border-radius:0px;\n                --organic-arrow-height: 20px;\n                --organic-arrow-color: white;\n                --control-button-width: 10%;\n                --control-button-height: 8%;\n                --control-button-background: rgba(0,0,0,.5);\n                --control-bullet-color: rgba(245,245,245,.5);\n                --control-bullet-active-color:  rgba(245,245,245,1);\n                --loader-bar-color: rgba(255,255,255,0);\n                --loader-bar-height: 0px;\n\n                }\n                .awssld__controls__arrow-left, .awssld__controls__arrow-right {\n                  height: 10px;\n                }\n                .awssld__next,.awssld__prev {\n                  height: 25px;\n                  width: 80px;\n                }\n`;\nconst Slide = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({\n    displayName: \"Reviews__Slide\",\n    componentId: \"sc-bff107f0-2\"\n})`\nposition: relative;\nz-index: 1;\n\n`;\nconst TextSide = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({\n    displayName: \"Reviews__TextSide\",\n    componentId: \"sc-bff107f0-3\"\n})`\ndisplay: flex;\nflex-flow: column;\ngrid-column: 2;\npadding: 0 30px;\n\njustify-content: center;\n\n\n\n@media (min-width: 0px) and (max-width: 768px) {\nmargin-top: 30px;\npadding: 0 60px;\n\n  }\n.diane {\n  display: block;\n  font-family: 'Comfortaa';\n  font-size: 1.3rem;\n  line-height: 17px;\n  width: 100%;\n  position: relative;\n  text-align: left;\n  z-index: 500;\n  transform: translate3d(0, 0, 0);\n  opacity: 1;\n  color: ${(props)=>props.theme.third};\n  transition: transform 0.45s cubic-bezier(0.15, 0.3, 0.15, 1), opacity 0.35s ease-out;\n  @media (min-width: 0px) and (max-width: 768px) {\n\n    text-align: center;\n      }\n  &:before {\n    content: '            ';\n    position: absolute;\n\n    background-image: url(\"/../static/quotes.svg\");\n    background-repeat: no-repeat;\n\n    height: 80px;\n    width: 100px;\n    background-color: transparent;\n    transform: translateY(-30px) translateX(-10px);\n    opacity: .3;\n  }\n}\n.name {\n  display: block;\n\n  position: relative;\n  font-size: 2.1rem;\n  font-weight: 900;\ncolor: ${(props)=>props.theme.third};\ntext-align: right;\n  font-family: \"Tomatoes\";\n  transform: translateY(-4px) translateX(-10px);\n}\nimg {\n  position: absolute;\n  height: 80px;\n\n  opacity: .3;\n  transform: translateY(-30px) translateX(-10px);\n}\n`;\nconst data = [\n    {\n        name: \"Diane Levy\",\n        text: \"Stephy was an absolute dream to work with! She is everything that I wanted in a wedding planner + more. She gave us very helpful and detailed information, was always extremely communicative, helped calm me down when the stressful moments arose, and was there to navigate every aspect of my wedding. Nick, her husband was also amazing, extremely hardworking, and so great to work with. I am sad that my wedding is over and I won\\u2019t be working with her anymore!! My special day seriously wouldn\\u2019t have been what it was without stephy and I am forever grateful...100/100 !\"\n    },\n    {\n        name: \"Noel Larson\",\n        text: \"I can't say enough amazing things about sweet, sweet Stephy! The moment I got on an intro call with Stephy, I knew she was the one I wanted by my side through this wedding planning process. Not only is she amazing at what she does, she is truly the most genuine, selfless, kind, communicative, even-keeled and hard working person there is! Our wedding was pushed due to COVID and she always made me feel like I was her top priority, no matter where I was in the process. She was extremely organized and professional throughout the entire process, while also making me feel like I had a built in best friend along the way. Whenever I needed help or was feeling anxious about any planning decisions, she was always available to hop on a call, or chat via text or email. I was pretty much in contact with Stephy every single day for months leading up to the wedding. Towards the final months of the wedding planning process, I was so exhausted with making small decisions around decor items etc. and Stephy stepped in to help make final decisions on linens, chargers, day-of items, repurposing florals etc., I knew I could full trust her. She truly went above and beyond in every way and we're so grateful to her (and to her husband, Nick) for all of their help, support, and guidance over the past couple of years. I could go on and on, but in short, Stephy is the absolute best!\"\n    },\n    {\n        name: \"Shannon Jackson\",\n        text: \"I cannot recommend Stephy enough! I had been following Stephy\\u2019s Bride Guide on instagram years before getting engaged, & had always dreamed of having a wedding as beautiful as those she had planned! After getting engaged, there was no easier choice than to hire Stephy as our planner. Our planning journey was so easy, enjoyable and stress free! She was available 24/7 for questions, and was so incredibly supportive through our wedding planning and replanning after our postponement (thanks covid!). Stephy has a wealth of knowledge and the best eye for design & went above and beyond with her duties on the day of! Our wedding day was more beautiful than I ever could\\u2019ve imagined!! Thank you Stephy for making our wedding day so wonderful!\"\n    },\n    {\n        name: \"Kristine Kollenda\",\n        text: \"Stephy was the best wedding coordinator we could've possibly hired!!! We wanted to hire a 'month-of' coordinator to help finalize our plans already set in place and she provided service at least 3 months ahead of our wedding date. She was always available to take our calls, texts, and emails without hesitation or complaint! She helped us come up with ideas for decor and was always so kind and helpful! Literally, she went above and beyond what we hired her for! She is a true professional and our wedding couldn't have gone more perfectly at the Ole Hanson Beach Club! We can't thank her and her husband, Nick, enough for going above and beyond and making our wedding day perfect!\"\n    },\n    {\n        name: \"Alexa Jesko\",\n        text: \"I had briefly interviewed a few other planners, but once I talked with Stephy who was so warm and bubbly - I knew she was the one. From the beginning, Stephy was incredibly organized, professional, and communicative. It was clear to me she has great style and completely understood my wedding vision aesthetic, so I felt completely confident trusting her with any design input or ideas. Any time I had questions or wanted to meet with Stephy to talk through some details- she readily made herself available to hop on a call and help sort it out. When my first florist mock-up wasn't quite the look I had envisioned, Stephy graciously took over and communicated with the utmost professionalism to make sure we could get a redo of the mockup that we loved. Even when there was a last-minute hiccup with another vendor the day before the wedding- Stephy stepped in and truly saved the day. She helped our day go as seamlessly and perfectly as we could have imagined and helped bring our vision to life! I can't imagine this planning process without her- I would recommend Stephy without hesitation!\"\n    }\n];\nconst Reviews = function() {\n    const sliderRef = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(null);\n    const { 0: selectedSlide , 1: setSelectedSlide  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0);\n    console.log(sliderRef.current && sliderRef.current);\n    const changeText = (bride)=>{\n        // const slideNumber = sliderRef.current?.\n        console.log(bride.nextMedia.reviewtext);\n        setSelectedSlide(bride.nextMedia.reviewtext);\n    };\n    // useEffect(() => {\n    //   if (selectedSlide === null)  return\n    //   console.log('useeffect')\n    // changeText(selectedSlide)\n    // }, [selectedSlide])\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(SectionBlock, {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h2\", {\n                className: \"small-screen\",\n                children: \"Client Sentiments\"\n            }, void 0, false, {\n                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Reviews.js\",\n                lineNumber: 214,\n                columnNumber: 5\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(SliderDiv, {\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h2\", {\n                        className: \"large-screen\",\n                        children: \"Client Sentiments\"\n                    }, void 0, false, {\n                        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Reviews.js\",\n                        lineNumber: 216,\n                        columnNumber: 1\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((react_awesome_slider__WEBPACK_IMPORTED_MODULE_4___default()), {\n                        ref: sliderRef,\n                        className: \"shorten aws-btn\",\n                        play: false,\n                        selected: true,\n                        buttons: true,\n                        bullets: true,\n                        // mobileTouch={true}\n                        onTransitionRequest: changeText,\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Slide, {\n                                reviewtext: 0,\n                                \"data-src\": \"/../static/stephysbrideguide-review.jpg\"\n                            }, void 0, false, {\n                                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Reviews.js\",\n                                lineNumber: 227,\n                                columnNumber: 2\n                            }, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Slide, {\n                                reviewtext: 2,\n                                \"data-src\": \"/../static/stephysbrideguide-shannon-review-resize.jpg\"\n                            }, void 0, false, {\n                                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Reviews.js\",\n                                lineNumber: 229,\n                                columnNumber: 7\n                            }, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Slide, {\n                                reviewtext: 1,\n                                \"data-src\": \"/../static/stephysbrideguide-noel-review-2.jpg\"\n                            }, void 0, false, {\n                                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Reviews.js\",\n                                lineNumber: 231,\n                                columnNumber: 8\n                            }, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Slide, {\n                                reviewtext: 3,\n                                \"data-src\": \"/../static/stephysbrideguide-olivia-review.jpg\"\n                            }, void 0, false, {\n                                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Reviews.js\",\n                                lineNumber: 233,\n                                columnNumber: 7\n                            }, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Slide, {\n                                reviewtext: 4,\n                                \"data-src\": \"/../static/stephysbrideguide-alexa-review.jpg\"\n                            }, void 0, false, {\n                                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Reviews.js\",\n                                lineNumber: 236,\n                                columnNumber: 7\n                            }, this)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Reviews.js\",\n                        lineNumber: 217,\n                        columnNumber: 5\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(TextSide, {\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                className: \"diane\",\n                                children: data[selectedSlide].text\n                            }, void 0, false, {\n                                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Reviews.js\",\n                                lineNumber: 242,\n                                columnNumber: 5\n                            }, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"name\",\n                                children: data[selectedSlide].name\n                            }, void 0, false, {\n                                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Reviews.js\",\n                                lineNumber: 243,\n                                columnNumber: 5\n                            }, this)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Reviews.js\",\n                        lineNumber: 240,\n                        columnNumber: 5\n                    }, this)\n                ]\n            }, void 0, true, {\n                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Reviews.js\",\n                lineNumber: 215,\n                columnNumber: 5\n            }, this)\n        ]\n    }, void 0, true, {\n        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/components/Reviews.js\",\n        lineNumber: 213,\n        columnNumber: 10\n    }, this);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Reviews);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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RTswQ0FDUiw4REFBQzNCLEtBQUs7Z0NBQUdrQixVQUFVLEVBQUUsQ0FBQztnQ0FBSVMsVUFBUSxFQUFFLHdEQUF3RDs7Ozs7b0NBQ3BGOzBDQUNQLDhEQUFDM0IsS0FBSztnQ0FBSWtCLFVBQVUsRUFBRSxDQUFDO2dDQUFJUyxVQUFRLEVBQUUsZ0RBQWdEOzs7OztvQ0FDOUU7MENBQ1IsOERBQUMzQixLQUFLO2dDQUFJa0IsVUFBVSxFQUFFLENBQUM7Z0NBQUdTLFVBQVEsRUFBQyxnREFBZ0Q7Ozs7O29DQUMzRTswQ0FFUiw4REFBQzNCLEtBQUs7Z0NBQUNrQixVQUFVLEVBQUUsQ0FBQztnQ0FBT1MsVUFBUSxFQUFDLCtDQUErQzs7Ozs7b0NBQzNFOzs7Ozs7NEJBQ007a0NBRWhCLDhEQUFDMUIsUUFBUTs7MENBRVQsOERBQUMyQixHQUFDO2dDQUFDUixTQUFTLEVBQUMsT0FBTzswQ0FBRWYsSUFBSSxDQUFDSyxhQUFhLENBQUMsQ0FBQ0gsSUFBSTs7Ozs7b0NBQUs7MENBQ25ELDhEQUFDVCxLQUFHO2dDQUFDc0IsU0FBUyxFQUFDLE1BQU07MENBQUVmLElBQUksQ0FBQ0ssYUFBYSxDQUFDLENBQUNKLElBQUk7Ozs7O29DQUFPOzs7Ozs7NEJBRTdDOzs7Ozs7b0JBQ0Q7Ozs7OztZQUNHO0NBQ2Q7QUFFRCxpRUFBZUUsT0FBTyIsInNvdXJjZXMiOlsid2VicGFjazovL3N0ZXBoeXMtYnJpZGUtZ3VpZGUvLi9jb21wb25lbnRzL1Jldmlld3MuanM/OTYzOCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHsgdXNlU3RhdGUsIHVzZVJlZiB9IGZyb20gJ3JlYWN0J1xuaW1wb3J0IHN0eWxlZCBmcm9tICdzdHlsZWQtY29tcG9uZW50cydcblxuaW1wb3J0ICdyZWFjdC1hd2Vzb21lLXNsaWRlci9kaXN0L3N0eWxlcy5jc3MnXG5pbXBvcnQgQXdlc29tZVNsaWRlciBmcm9tICdyZWFjdC1hd2Vzb21lLXNsaWRlcidcblxuaW1wb3J0ICdyZWFjdC1hd2Vzb21lLXNsaWRlci9kaXN0L2NhcHRpb25lZC5jc3MnXG5cblxuY29uc3QgU2VjdGlvbkJsb2NrID0gc3R5bGVkLmRpdmBcbndpZHRoOiAxMDAlO1xuZGlzcGxheTogZmxleDtcbnBvc2l0aW9uOiByZWxhdGl2ZTtcbi5zbWFsbC1zY3JlZW4ge1xuICBkaXNwbGF5OiBub25lO1xuICAgQG1lZGlhIChtaW4td2lkdGg6IDBweCkgYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7XG4gICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgIGZvbnQtc2l6ZTogMzBweDtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgZm9udC1mYW1pbHk6ICdBbWVsYXJ5YXMnO1xuICAgIG1hcmdpbjogMDtcbiAgICB6LWluZGV4OiA1MDtcbiAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC00NXB4KSB0cmFuc2xhdGVYKDEwcHgpO1xuICAgfVxufVxuXG5gXG5jb25zdCBTbGlkZXJEaXYgPSBzdHlsZWQuZGl2YFxuICB3aWR0aDogMTAwJTtcbnBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgZGlzcGxheTogZ3JpZDtcbiAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnIgNDAlO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IHRvcDtcbiAgQG1lZGlhIChtaW4td2lkdGg6IDBweCkgYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LWZsb3c6IGNvbHVtbjtcbiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmcjtcbiAgICBncmlkLXRlbXBsYXRlLXJvd3M6IDFmciAxZnI7XG4gfVxuICAuc2hvcnRlbiB7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIEBtZWRpYSAobWluLXdpZHRoOiAwcHgpIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgZ3JpZC1yb3c6IDE7XG4gICBoZWlnaHQ6IDMwMHB4O1xuICAgfVxuICB9XG5cbiAgLmF3c3NsZF9fYnVsbGV0cyBidXR0b24ge1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtNDVweCk7XG4gICAgei1pbmRleDogMzAwO1xuICAgIHRyYW5zaXRpb246IC41cztcbndpZHRoOiAxMHB4O1xuaGVpZ2h0OiAxMHB4O1xuJjpob3ZlciB7XG4gIHRyYW5zZm9ybTp0cmFuc2xhdGVZKC00NXB4KSBzY2FsZSgxLjEpO1xufVxuICAgICAgfVxuXG5cbiAgLmF3c3NsZF9fY29udHJvbHMgYnV0dG9uIHtcbnRvcDogOTQlO1xuQG1lZGlhIChtaW4td2lkdGg6IDBweCkgYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7XG4gIHRvcDogOTAlO1xuXG4gICB9XG4gIH1cblxuXG4gICAgICAgICAgLmxhcmdlLXNjcmVlbiB7XG4gICAgICAgICAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICAgICAgICAgIGZvbnQtZmFtaWx5OiAnQW1lbGFyeWFzJztcbiAgICAgICAgICAgICAgICBmb250LXNpemU6NDVweDtcbiAgICAgICAgICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgICAgICAgICAgei1pbmRleDogNTA7XG4gICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtNzBweCkgdHJhbnNsYXRlWCgyMHB4KTtcbiAgICAgICAgICAgICAgICAgQG1lZGlhIChtaW4td2lkdGg6IDBweCkgYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7XG4gICAgICAgICAgICAgICAgZGlzcGxheTogbm9uZTtcblxuICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgLmF3cy1idG4ge1xuXG4gICAgICAgICAgICAgICAgLS1jb250cm9sLWJ1dHRvbi1vcGFjaXR5OiAxO1xuICAgICAgICAgICAgICAgIC0tb3JnYW5pYy1hcnJvdy10aGlja25lc3M6IDJweDtcbiAgICAgICAgICAgICAgICAtLW9yZ2FuaWMtYXJyb3ctYm9yZGVyLXJhZGl1czowcHg7XG4gICAgICAgICAgICAgICAgLS1vcmdhbmljLWFycm93LWhlaWdodDogMjBweDtcbiAgICAgICAgICAgICAgICAtLW9yZ2FuaWMtYXJyb3ctY29sb3I6IHdoaXRlO1xuICAgICAgICAgICAgICAgIC0tY29udHJvbC1idXR0b24td2lkdGg6IDEwJTtcbiAgICAgICAgICAgICAgICAtLWNvbnRyb2wtYnV0dG9uLWhlaWdodDogOCU7XG4gICAgICAgICAgICAgICAgLS1jb250cm9sLWJ1dHRvbi1iYWNrZ3JvdW5kOiByZ2JhKDAsMCwwLC41KTtcbiAgICAgICAgICAgICAgICAtLWNvbnRyb2wtYnVsbGV0LWNvbG9yOiByZ2JhKDI0NSwyNDUsMjQ1LC41KTtcbiAgICAgICAgICAgICAgICAtLWNvbnRyb2wtYnVsbGV0LWFjdGl2ZS1jb2xvcjogIHJnYmEoMjQ1LDI0NSwyNDUsMSk7XG4gICAgICAgICAgICAgICAgLS1sb2FkZXItYmFyLWNvbG9yOiByZ2JhKDI1NSwyNTUsMjU1LDApO1xuICAgICAgICAgICAgICAgIC0tbG9hZGVyLWJhci1oZWlnaHQ6IDBweDtcblxuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAuYXdzc2xkX19jb250cm9sc19fYXJyb3ctbGVmdCwgLmF3c3NsZF9fY29udHJvbHNfX2Fycm93LXJpZ2h0IHtcbiAgICAgICAgICAgICAgICAgIGhlaWdodDogMTBweDtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgLmF3c3NsZF9fbmV4dCwuYXdzc2xkX19wcmV2IHtcbiAgICAgICAgICAgICAgICAgIGhlaWdodDogMjVweDtcbiAgICAgICAgICAgICAgICAgIHdpZHRoOiA4MHB4O1xuICAgICAgICAgICAgICAgIH1cbmBcbmNvbnN0IFNsaWRlID0gc3R5bGVkLmRpdmBcbnBvc2l0aW9uOiByZWxhdGl2ZTtcbnotaW5kZXg6IDE7XG5cbmBcblxuY29uc3QgVGV4dFNpZGUgPSBzdHlsZWQuZGl2YFxuZGlzcGxheTogZmxleDtcbmZsZXgtZmxvdzogY29sdW1uO1xuZ3JpZC1jb2x1bW46IDI7XG5wYWRkaW5nOiAwIDMwcHg7XG5cbmp1c3RpZnktY29udGVudDogY2VudGVyO1xuXG5cblxuQG1lZGlhIChtaW4td2lkdGg6IDBweCkgYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7XG5tYXJnaW4tdG9wOiAzMHB4O1xucGFkZGluZzogMCA2MHB4O1xuXG4gIH1cbi5kaWFuZSB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBmb250LWZhbWlseTogJ0NvbWZvcnRhYSc7XG4gIGZvbnQtc2l6ZTogMS4zcmVtO1xuICBsaW5lLWhlaWdodDogMTdweDtcbiAgd2lkdGg6IDEwMCU7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgdGV4dC1hbGlnbjogbGVmdDtcbiAgei1pbmRleDogNTAwO1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZTNkKDAsIDAsIDApO1xuICBvcGFjaXR5OiAxO1xuICBjb2xvcjogJHtwcm9wcyA9PiBwcm9wcy50aGVtZS50aGlyZH07XG4gIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjQ1cyBjdWJpYy1iZXppZXIoMC4xNSwgMC4zLCAwLjE1LCAxKSwgb3BhY2l0eSAwLjM1cyBlYXNlLW91dDtcbiAgQG1lZGlhIChtaW4td2lkdGg6IDBweCkgYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7XG5cbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICB9XG4gICY6YmVmb3JlIHtcbiAgICBjb250ZW50OiAnICAgICAgICAgICAgJztcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG5cbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIvLi4vc3RhdGljL3F1b3Rlcy5zdmdcIik7XG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcblxuICAgIGhlaWdodDogODBweDtcbiAgICB3aWR0aDogMTAwcHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC0zMHB4KSB0cmFuc2xhdGVYKC0xMHB4KTtcbiAgICBvcGFjaXR5OiAuMztcbiAgfVxufVxuLm5hbWUge1xuICBkaXNwbGF5OiBibG9jaztcblxuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGZvbnQtc2l6ZTogMi4xcmVtO1xuICBmb250LXdlaWdodDogOTAwO1xuY29sb3I6ICR7cHJvcHMgPT4gcHJvcHMudGhlbWUudGhpcmR9O1xudGV4dC1hbGlnbjogcmlnaHQ7XG4gIGZvbnQtZmFtaWx5OiBcIlRvbWF0b2VzXCI7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtNHB4KSB0cmFuc2xhdGVYKC0xMHB4KTtcbn1cbmltZyB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgaGVpZ2h0OiA4MHB4O1xuXG4gIG9wYWNpdHk6IC4zO1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoLTMwcHgpIHRyYW5zbGF0ZVgoLTEwcHgpO1xufVxuYFxuY29uc3QgZGF0YSA9IFtcbiAge1xuICAgIG5hbWU6ICdEaWFuZSBMZXZ5JyxcbiAgICB0ZXh0OlwiU3RlcGh5IHdhcyBhbiBhYnNvbHV0ZSBkcmVhbSB0byB3b3JrIHdpdGghIFNoZSBpcyBldmVyeXRoaW5nIHRoYXQgSSB3YW50ZWQgaW4gYSB3ZWRkaW5nIHBsYW5uZXIgKyBtb3JlLiBTaGUgZ2F2ZSB1cyB2ZXJ5IGhlbHBmdWwgYW5kIGRldGFpbGVkIGluZm9ybWF0aW9uLCB3YXMgYWx3YXlzIGV4dHJlbWVseSBjb21tdW5pY2F0aXZlLCBoZWxwZWQgY2FsbSBtZSBkb3duIHdoZW4gdGhlIHN0cmVzc2Z1bCBtb21lbnRzIGFyb3NlLCBhbmQgd2FzIHRoZXJlIHRvIG5hdmlnYXRlIGV2ZXJ5IGFzcGVjdCBvZiBteSB3ZWRkaW5nLiBOaWNrLCBoZXIgaHVzYmFuZCB3YXMgYWxzbyBhbWF6aW5nLCBleHRyZW1lbHkgaGFyZHdvcmtpbmcsIGFuZCBzbyBncmVhdCB0byB3b3JrIHdpdGguIEkgYW0gc2FkIHRoYXQgbXkgd2VkZGluZyBpcyBvdmVyIGFuZCBJIHdvbuKAmXQgYmUgd29ya2luZyB3aXRoIGhlciBhbnltb3JlISEgTXkgc3BlY2lhbCBkYXkgc2VyaW91c2x5IHdvdWxkbuKAmXQgaGF2ZSBiZWVuIHdoYXQgaXQgd2FzIHdpdGhvdXQgc3RlcGh5IGFuZCBJIGFtIGZvcmV2ZXIgZ3JhdGVmdWwuLi4xMDAvMTAwICFcIiB9LFxuICAgIHtcbiAgbmFtZTogJ05vZWwgTGFyc29uJyxcbiAgdGV4dDogXCJJIGNhbid0IHNheSBlbm91Z2ggYW1hemluZyB0aGluZ3MgYWJvdXQgc3dlZXQsIHN3ZWV0IFN0ZXBoeSEgVGhlIG1vbWVudCBJIGdvdCBvbiBhbiBpbnRybyBjYWxsIHdpdGggU3RlcGh5LCBJIGtuZXcgc2hlIHdhcyB0aGUgb25lIEkgd2FudGVkIGJ5IG15IHNpZGUgdGhyb3VnaCB0aGlzIHdlZGRpbmcgcGxhbm5pbmcgcHJvY2Vzcy4gTm90IG9ubHkgaXMgc2hlIGFtYXppbmcgYXQgd2hhdCBzaGUgZG9lcywgc2hlIGlzIHRydWx5IHRoZSBtb3N0IGdlbnVpbmUsIHNlbGZsZXNzLCBraW5kLCBjb21tdW5pY2F0aXZlLCBldmVuLWtlZWxlZCBhbmQgaGFyZCB3b3JraW5nIHBlcnNvbiB0aGVyZSBpcyEgT3VyIHdlZGRpbmcgd2FzIHB1c2hlZCBkdWUgdG8gQ09WSUQgYW5kIHNoZSBhbHdheXMgbWFkZSBtZSBmZWVsIGxpa2UgSSB3YXMgaGVyIHRvcCBwcmlvcml0eSwgbm8gbWF0dGVyIHdoZXJlIEkgd2FzIGluIHRoZSBwcm9jZXNzLiBTaGUgd2FzIGV4dHJlbWVseSBvcmdhbml6ZWQgYW5kIHByb2Zlc3Npb25hbCB0aHJvdWdob3V0IHRoZSBlbnRpcmUgcHJvY2Vzcywgd2hpbGUgYWxzbyBtYWtpbmcgbWUgZmVlbCBsaWtlIEkgaGFkIGEgYnVpbHQgaW4gYmVzdCBmcmllbmQgYWxvbmcgdGhlIHdheS4gV2hlbmV2ZXIgSSBuZWVkZWQgaGVscCBvciB3YXMgZmVlbGluZyBhbnhpb3VzIGFib3V0IGFueSBwbGFubmluZyBkZWNpc2lvbnMsIHNoZSB3YXMgYWx3YXlzIGF2YWlsYWJsZSB0byBob3Agb24gYSBjYWxsLCBvciBjaGF0IHZpYSB0ZXh0IG9yIGVtYWlsLiBJIHdhcyBwcmV0dHkgbXVjaCBpbiBjb250YWN0IHdpdGggU3RlcGh5IGV2ZXJ5IHNpbmdsZSBkYXkgZm9yIG1vbnRocyBsZWFkaW5nIHVwIHRvIHRoZSB3ZWRkaW5nLiBUb3dhcmRzIHRoZSBmaW5hbCBtb250aHMgb2YgdGhlIHdlZGRpbmcgcGxhbm5pbmcgcHJvY2VzcywgSSB3YXMgc28gZXhoYXVzdGVkIHdpdGggbWFraW5nIHNtYWxsIGRlY2lzaW9ucyBhcm91bmQgZGVjb3IgaXRlbXMgZXRjLiBhbmQgU3RlcGh5IHN0ZXBwZWQgaW4gdG8gaGVscCBtYWtlIGZpbmFsIGRlY2lzaW9ucyBvbiBsaW5lbnMsIGNoYXJnZXJzLCBkYXktb2YgaXRlbXMsIHJlcHVycG9zaW5nIGZsb3JhbHMgZXRjLiwgSSBrbmV3IEkgY291bGQgZnVsbCB0cnVzdCBoZXIuIFNoZSB0cnVseSB3ZW50IGFib3ZlIGFuZCBiZXlvbmQgaW4gZXZlcnkgd2F5IGFuZCB3ZSdyZSBzbyBncmF0ZWZ1bCB0byBoZXIgKGFuZCB0byBoZXIgaHVzYmFuZCwgTmljaykgZm9yIGFsbCBvZiB0aGVpciBoZWxwLCBzdXBwb3J0LCBhbmQgZ3VpZGFuY2Ugb3ZlciB0aGUgcGFzdCBjb3VwbGUgb2YgeWVhcnMuIEkgY291bGQgZ28gb24gYW5kIG9uLCBidXQgaW4gc2hvcnQsIFN0ZXBoeSBpcyB0aGUgYWJzb2x1dGUgYmVzdCFcIn0sXG57XG4gIG5hbWU6ICdTaGFubm9uIEphY2tzb24nLFxuICB0ZXh0OlwiSSBjYW5ub3QgcmVjb21tZW5kIFN0ZXBoeSBlbm91Z2ghIEkgaGFkIGJlZW4gZm9sbG93aW5nIFN0ZXBoeeKAmXMgQnJpZGUgR3VpZGUgb24gaW5zdGFncmFtIHllYXJzIGJlZm9yZSBnZXR0aW5nIGVuZ2FnZWQsICYgaGFkIGFsd2F5cyBkcmVhbWVkIG9mIGhhdmluZyBhIHdlZGRpbmcgYXMgYmVhdXRpZnVsIGFzIHRob3NlIHNoZSBoYWQgcGxhbm5lZCEgQWZ0ZXIgZ2V0dGluZyBlbmdhZ2VkLCB0aGVyZSB3YXMgbm8gZWFzaWVyIGNob2ljZSB0aGFuIHRvIGhpcmUgU3RlcGh5IGFzIG91ciBwbGFubmVyLiBPdXIgcGxhbm5pbmcgam91cm5leSB3YXMgc28gZWFzeSwgZW5qb3lhYmxlIGFuZCBzdHJlc3MgZnJlZSEgU2hlIHdhcyBhdmFpbGFibGUgMjQvNyBmb3IgcXVlc3Rpb25zLCBhbmQgd2FzIHNvIGluY3JlZGlibHkgc3VwcG9ydGl2ZSB0aHJvdWdoIG91ciB3ZWRkaW5nIHBsYW5uaW5nIGFuZCByZXBsYW5uaW5nIGFmdGVyIG91ciBwb3N0cG9uZW1lbnQgKHRoYW5rcyBjb3ZpZCEpLiBTdGVwaHkgaGFzIGEgd2VhbHRoIG9mIGtub3dsZWRnZSBhbmQgdGhlIGJlc3QgZXllIGZvciBkZXNpZ24gJiB3ZW50IGFib3ZlIGFuZCBiZXlvbmQgd2l0aCBoZXIgZHV0aWVzIG9uIHRoZSBkYXkgb2YhIE91ciB3ZWRkaW5nIGRheSB3YXMgbW9yZSBiZWF1dGlmdWwgdGhhbiBJIGV2ZXIgY291bGTigJl2ZSBpbWFnaW5lZCEhIFRoYW5rIHlvdSBTdGVwaHkgZm9yIG1ha2luZyBvdXIgd2VkZGluZyBkYXkgc28gd29uZGVyZnVsIVwifSxcblxue1xuICBuYW1lOiAnS3Jpc3RpbmUgS29sbGVuZGEnLFxuICB0ZXh0OlwiU3RlcGh5IHdhcyB0aGUgYmVzdCB3ZWRkaW5nIGNvb3JkaW5hdG9yIHdlIGNvdWxkJ3ZlIHBvc3NpYmx5IGhpcmVkISEhIFdlIHdhbnRlZCB0byBoaXJlIGEgJ21vbnRoLW9mJyBjb29yZGluYXRvciB0byBoZWxwIGZpbmFsaXplIG91ciBwbGFucyBhbHJlYWR5IHNldCBpbiBwbGFjZSBhbmQgc2hlIHByb3ZpZGVkIHNlcnZpY2UgYXQgbGVhc3QgMyBtb250aHMgYWhlYWQgb2Ygb3VyIHdlZGRpbmcgZGF0ZS4gU2hlIHdhcyBhbHdheXMgYXZhaWxhYmxlIHRvIHRha2Ugb3VyIGNhbGxzLCB0ZXh0cywgYW5kIGVtYWlscyB3aXRob3V0IGhlc2l0YXRpb24gb3IgY29tcGxhaW50ISBTaGUgaGVscGVkIHVzIGNvbWUgdXAgd2l0aCBpZGVhcyBmb3IgZGVjb3IgYW5kIHdhcyBhbHdheXMgc28ga2luZCBhbmQgaGVscGZ1bCEgTGl0ZXJhbGx5LCBzaGUgd2VudCBhYm92ZSBhbmQgYmV5b25kIHdoYXQgd2UgaGlyZWQgaGVyIGZvciEgU2hlIGlzIGEgdHJ1ZSBwcm9mZXNzaW9uYWwgYW5kIG91ciB3ZWRkaW5nIGNvdWxkbid0IGhhdmUgZ29uZSBtb3JlIHBlcmZlY3RseSBhdCB0aGUgT2xlIEhhbnNvbiBCZWFjaCBDbHViISBXZSBjYW4ndCB0aGFuayBoZXIgYW5kIGhlciBodXNiYW5kLCBOaWNrLCBlbm91Z2ggZm9yIGdvaW5nIGFib3ZlIGFuZCBiZXlvbmQgYW5kIG1ha2luZyBvdXIgd2VkZGluZyBkYXkgcGVyZmVjdCFcIiB9LFxue1xuICBuYW1lOiAnQWxleGEgSmVza28nLFxuICB0ZXh0OlwiSSBoYWQgYnJpZWZseSBpbnRlcnZpZXdlZCBhIGZldyBvdGhlciBwbGFubmVycywgYnV0IG9uY2UgSSB0YWxrZWQgd2l0aCBTdGVwaHkgd2hvIHdhcyBzbyB3YXJtIGFuZCBidWJibHkgLSBJIGtuZXcgc2hlIHdhcyB0aGUgb25lLiBGcm9tIHRoZSBiZWdpbm5pbmcsIFN0ZXBoeSB3YXMgaW5jcmVkaWJseSBvcmdhbml6ZWQsIHByb2Zlc3Npb25hbCwgYW5kIGNvbW11bmljYXRpdmUuIEl0IHdhcyBjbGVhciB0byBtZSBzaGUgaGFzIGdyZWF0IHN0eWxlIGFuZCBjb21wbGV0ZWx5IHVuZGVyc3Rvb2QgbXkgd2VkZGluZyB2aXNpb24gYWVzdGhldGljLCBzbyBJIGZlbHQgY29tcGxldGVseSBjb25maWRlbnQgdHJ1c3RpbmcgaGVyIHdpdGggYW55IGRlc2lnbiBpbnB1dCBvciBpZGVhcy4gQW55IHRpbWUgSSBoYWQgcXVlc3Rpb25zIG9yIHdhbnRlZCB0byBtZWV0IHdpdGggU3RlcGh5IHRvIHRhbGsgdGhyb3VnaCBzb21lIGRldGFpbHMtIHNoZSByZWFkaWx5IG1hZGUgaGVyc2VsZiBhdmFpbGFibGUgdG8gaG9wIG9uIGEgY2FsbCBhbmQgaGVscCBzb3J0IGl0IG91dC4gV2hlbiBteSBmaXJzdCBmbG9yaXN0IG1vY2stdXAgd2Fzbid0IHF1aXRlIHRoZSBsb29rIEkgaGFkIGVudmlzaW9uZWQsIFN0ZXBoeSBncmFjaW91c2x5IHRvb2sgb3ZlciBhbmQgY29tbXVuaWNhdGVkIHdpdGggdGhlIHV0bW9zdCBwcm9mZXNzaW9uYWxpc20gdG8gbWFrZSBzdXJlIHdlIGNvdWxkIGdldCBhIHJlZG8gb2YgdGhlIG1vY2t1cCB0aGF0IHdlIGxvdmVkLiBFdmVuIHdoZW4gdGhlcmUgd2FzIGEgbGFzdC1taW51dGUgaGljY3VwIHdpdGggYW5vdGhlciB2ZW5kb3IgdGhlIGRheSBiZWZvcmUgdGhlIHdlZGRpbmctIFN0ZXBoeSBzdGVwcGVkIGluIGFuZCB0cnVseSBzYXZlZCB0aGUgZGF5LiBTaGUgaGVscGVkIG91ciBkYXkgZ28gYXMgc2VhbWxlc3NseSBhbmQgcGVyZmVjdGx5IGFzIHdlIGNvdWxkIGhhdmUgaW1hZ2luZWQgYW5kIGhlbHBlZCBicmluZyBvdXIgdmlzaW9uIHRvIGxpZmUhIEkgY2FuJ3QgaW1hZ2luZSB0aGlzIHBsYW5uaW5nIHByb2Nlc3Mgd2l0aG91dCBoZXItIEkgd291bGQgcmVjb21tZW5kIFN0ZXBoeSB3aXRob3V0IGhlc2l0YXRpb24hXCIgfV1cblxuY29uc3QgUmV2aWV3cyAgPSBmdW5jdGlvbigpIHtcbiAgY29uc3Qgc2xpZGVyUmVmID0gdXNlUmVmKG51bGwpXG4gIGNvbnN0IFtzZWxlY3RlZFNsaWRlLCBzZXRTZWxlY3RlZFNsaWRlXSA9IHVzZVN0YXRlKDApXG5cbmNvbnNvbGUubG9nKHNsaWRlclJlZi5jdXJyZW50ICYmIHNsaWRlclJlZi5jdXJyZW50KVxuXG5jb25zdCBjaGFuZ2VUZXh0ID0gKGJyaWRlKSA9PiB7XG4vLyBjb25zdCBzbGlkZU51bWJlciA9IHNsaWRlclJlZi5jdXJyZW50Py5cbmNvbnNvbGUubG9nKGJyaWRlLm5leHRNZWRpYS5yZXZpZXd0ZXh0KVxuc2V0U2VsZWN0ZWRTbGlkZShicmlkZS5uZXh0TWVkaWEucmV2aWV3dGV4dClcbn1cblxuLy8gdXNlRWZmZWN0KCgpID0+IHtcbi8vICAgaWYgKHNlbGVjdGVkU2xpZGUgPT09IG51bGwpICByZXR1cm5cbi8vICAgY29uc29sZS5sb2coJ3VzZWVmZmVjdCcpXG4vLyBjaGFuZ2VUZXh0KHNlbGVjdGVkU2xpZGUpXG4vLyB9LCBbc2VsZWN0ZWRTbGlkZV0pXG5cbiAgcmV0dXJuIDxTZWN0aW9uQmxvY2s+XG4gICAgPGgyIGNsYXNzTmFtZT1cInNtYWxsLXNjcmVlblwiPkNsaWVudCBTZW50aW1lbnRzPC9oMj5cbiAgICA8U2xpZGVyRGl2PlxuPGgyIGNsYXNzTmFtZT1cImxhcmdlLXNjcmVlblwiPkNsaWVudCBTZW50aW1lbnRzPC9oMj5cbiAgICA8QXdlc29tZVNsaWRlclxuICAgIHJlZj17c2xpZGVyUmVmfVxuICAgICAgY2xhc3NOYW1lPVwic2hvcnRlbiBhd3MtYnRuXCJcbiAgICAgIHBsYXk9e2ZhbHNlfVxuICAgICAgc2VsZWN0ZWRcbiAgICAgIGJ1dHRvbnM9e3RydWV9XG4gICAgICBidWxsZXRzPXt0cnVlfVxuICAgICAgLy8gbW9iaWxlVG91Y2g9e3RydWV9XG4gICAgICBvblRyYW5zaXRpb25SZXF1ZXN0PXtjaGFuZ2VUZXh0fVxuICAgID5cbiA8U2xpZGUgICAgcmV2aWV3dGV4dD17MH0gICBkYXRhLXNyYz0gXCIvLi4vc3RhdGljL3N0ZXBoeXNicmlkZWd1aWRlLXJldmlldy5qcGdcIj5cbiAgICAgIDwvU2xpZGU+XG4gICAgICA8U2xpZGUgICByZXZpZXd0ZXh0PXsyfSAgIGRhdGEtc3JjPSBcIi8uLi9zdGF0aWMvc3RlcGh5c2JyaWRlZ3VpZGUtc2hhbm5vbi1yZXZpZXctcmVzaXplLmpwZ1wiPlxuICAgICAgPC9TbGlkZT5cbiAgICAgICA8U2xpZGUgICAgcmV2aWV3dGV4dD17MX0gICBkYXRhLXNyYz0gXCIvLi4vc3RhdGljL3N0ZXBoeXNicmlkZWd1aWRlLW5vZWwtcmV2aWV3LTIuanBnXCI+XG4gICAgICA8L1NsaWRlPlxuICAgICAgPFNsaWRlICAgIHJldmlld3RleHQ9ezN9ICBkYXRhLXNyYz1cIi8uLi9zdGF0aWMvc3RlcGh5c2JyaWRlZ3VpZGUtb2xpdmlhLXJldmlldy5qcGdcIj5cbiAgICAgIDwvU2xpZGU+XG5cbiAgICAgIDxTbGlkZSByZXZpZXd0ZXh0PXs0fSAgICAgIGRhdGEtc3JjPVwiLy4uL3N0YXRpYy9zdGVwaHlzYnJpZGVndWlkZS1hbGV4YS1yZXZpZXcuanBnXCI+XG4gICAgICA8L1NsaWRlPlxuICAgIDwvQXdlc29tZVNsaWRlcj5cblxuICAgIDxUZXh0U2lkZT5cblxuICAgIDxwIGNsYXNzTmFtZT1cImRpYW5lXCI+e2RhdGFbc2VsZWN0ZWRTbGlkZV0udGV4dH08L3A+XG4gICAgPGRpdiBjbGFzc05hbWU9XCJuYW1lXCI+e2RhdGFbc2VsZWN0ZWRTbGlkZV0ubmFtZX08L2Rpdj5cblxuICA8L1RleHRTaWRlPlxuPC9TbGlkZXJEaXY+XG48L1NlY3Rpb25CbG9jaz5cbn1cblxuZXhwb3J0IGRlZmF1bHQgUmV2aWV3c1xuIl0sIm5hbWVzIjpbIlJlYWN0IiwidXNlU3RhdGUiLCJ1c2VSZWYiLCJzdHlsZWQiLCJBd2Vzb21lU2xpZGVyIiwiU2VjdGlvbkJsb2NrIiwiZGl2IiwiU2xpZGVyRGl2IiwiU2xpZGUiLCJUZXh0U2lkZSIsInByb3BzIiwidGhlbWUiLCJ0aGlyZCIsImRhdGEiLCJuYW1lIiwidGV4dCIsIlJldmlld3MiLCJzbGlkZXJSZWYiLCJzZWxlY3RlZFNsaWRlIiwic2V0U2VsZWN0ZWRTbGlkZSIsImNvbnNvbGUiLCJsb2ciLCJjdXJyZW50IiwiY2hhbmdlVGV4dCIsImJyaWRlIiwibmV4dE1lZGlhIiwicmV2aWV3dGV4dCIsImgyIiwiY2xhc3NOYW1lIiwicmVmIiwicGxheSIsInNlbGVjdGVkIiwiYnV0dG9ucyIsImJ1bGxldHMiLCJvblRyYW5zaXRpb25SZXF1ZXN0IiwiZGF0YS1zcmMiLCJwIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./components/Reviews.js\n");
+
+/***/ }),
+
+/***/ "./pages/index.js":
+/*!************************!*\
+  !*** ./pages/index.js ***!
+  \************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Home)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next-seo */ \"next-seo\");\n/* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_seo__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_HomePage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/HomePage */ \"./components/HomePage.js\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components_HomePage__WEBPACK_IMPORTED_MODULE_2__]);\n_components_HomePage__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\n\n\n\nfunction Home() {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(next_seo__WEBPACK_IMPORTED_MODULE_1__.NextSeo, {\n                title: \"Stephys Bride Guide\",\n                description: \"Wedding Planning, Styling + Coordination in Southern California.\",\n                canonical: \"https://www.stephysbrideguide.com/\"\n            }, void 0, false, {\n                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/pages/index.js\",\n                lineNumber: 6,\n                columnNumber: 7\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_HomePage__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {}, void 0, false, {\n                fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/pages/index.js\",\n                lineNumber: 32,\n                columnNumber: 7\n            }, this)\n        ]\n    }, void 0, true, {\n        fileName: \"/Users/nickplechas/work/stephys-bride-guide-landing-page/frontend/pages/index.js\",\n        lineNumber: 5,\n        columnNumber: 5\n    }, this);\n};\n\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9pbmRleC5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBQTtBQUFrQztBQUNXO0FBQzlCLFNBQVNFLElBQUksR0FBRztJQUM3QixxQkFDRSw4REFBQ0MsS0FBRzs7MEJBQ0YsOERBQUNILDZDQUFPO2dCQUNOSSxLQUFLLEVBQUMscUJBQXFCO2dCQUMzQkMsV0FBVyxFQUFDLGtFQUFrRTtnQkFDOUVDLFNBQVMsRUFBQyxvQ0FBb0M7Ozs7O29CQXNCOUM7MEJBQ0YsOERBQUNMLDREQUFROzs7O29CQUFHOzs7Ozs7WUFDUixDQUNQO0NBQ0YiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zdGVwaHlzLWJyaWRlLWd1aWRlLy4vcGFnZXMvaW5kZXguanM/YmVlNyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBOZXh0U2VvIH0gZnJvbSAnbmV4dC1zZW8nXG5pbXBvcnQgSG9tZVBhZ2UgZnJvbSAnLi4vY29tcG9uZW50cy9Ib21lUGFnZSdcbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEhvbWUoKSB7XG4gIHJldHVybiAoXG4gICAgPGRpdj5cbiAgICAgIDxOZXh0U2VvXG4gICAgICAgIHRpdGxlPVwiU3RlcGh5cyBCcmlkZSBHdWlkZVwiXG4gICAgICAgIGRlc2NyaXB0aW9uPVwiV2VkZGluZyBQbGFubmluZywgU3R5bGluZyArIENvb3JkaW5hdGlvbiBpbiBTb3V0aGVybiBDYWxpZm9ybmlhLlwiXG4gICAgICAgIGNhbm9uaWNhbD1cImh0dHBzOi8vd3d3LnN0ZXBoeXNicmlkZWd1aWRlLmNvbS9cIlxuICAgICAgICAvLyBvcGVuR3JhcGg9e3tcbiAgICAgICAgLy8gICB1cmw6ICdodHRwczovL3d3dy5jYW5vbmljYWx1cmwuaWUvJyxcbiAgICAgICAgLy8gICB0aXRsZTogJ09wZW4gR3JhcGggVGl0bGUnLFxuICAgICAgICAvLyAgIGRlc2NyaXB0aW9uOiAnT3BlbiBHcmFwaCBEZXNjcmlwdGlvbicsXG4gICAgICAgIC8vICAgaW1hZ2VzOiBbXG4gICAgICAgIC8vICAgICB7XG4gICAgICAgIC8vICAgICAgIHVybDogJ2h0dHBzOi8vd3d3LmV4YW1wbGUuaWUvb2ctaW1hZ2UtMDEuanBnJyxcbiAgICAgICAgLy8gICAgICAgd2lkdGg6IDgwMCxcbiAgICAgICAgLy8gICAgICAgaGVpZ2h0OiA2MDAsXG4gICAgICAgIC8vICAgICAgIGFsdDogJ09nIEltYWdlIEFsdCcsXG4gICAgICAgIC8vICAgICB9LFxuICAgICAgICAvLyAgICAge1xuICAgICAgICAvLyAgICAgICB1cmw6ICdodHRwczovL3d3dy5leGFtcGxlLmllL29nLWltYWdlLTAyLmpwZycsXG4gICAgICAgIC8vICAgICAgIHdpZHRoOiA5MDAsXG4gICAgICAgIC8vICAgICAgIGhlaWdodDogODAwLFxuICAgICAgICAvLyAgICAgICBhbHQ6ICdPZyBJbWFnZSBBbHQgU2Vjb25kJyxcbiAgICAgICAgLy8gICAgIH0sXG4gICAgICAgIC8vICAgICB7IHVybDogJ2h0dHBzOi8vd3d3LmV4YW1wbGUuaWUvb2ctaW1hZ2UtMDMuanBnJyB9LFxuICAgICAgICAvLyAgICAgeyB1cmw6ICdodHRwczovL3d3dy5leGFtcGxlLmllL29nLWltYWdlLTA0LmpwZycgfSxcbiAgICAgICAgLy8gICBdLFxuICAgICAgICAvLyB9fVxuICAgICAgLz5cbiAgICAgIDxIb21lUGFnZSAvPlxuICAgIDwvZGl2PlxuICApXG59XG4iXSwibmFtZXMiOlsiTmV4dFNlbyIsIkhvbWVQYWdlIiwiSG9tZSIsImRpdiIsInRpdGxlIiwiZGVzY3JpcHRpb24iLCJjYW5vbmljYWwiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./pages/index.js\n");
+
+/***/ }),
+
+/***/ "./node_modules/react-awesome-slider/dist/captioned.css":
+/*!**************************************************************!*\
+  !*** ./node_modules/react-awesome-slider/dist/captioned.css ***!
+  \**************************************************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ "./node_modules/react-awesome-slider/dist/styles.css":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-awesome-slider/dist/styles.css ***!
+  \***********************************************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ "./node_modules/react-datepicker/dist/react-datepicker.css":
+/*!*****************************************************************!*\
+  !*** ./node_modules/react-datepicker/dist/react-datepicker.css ***!
+  \*****************************************************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ "@apollo/client":
+/*!*********************************!*\
+  !*** external "@apollo/client" ***!
+  \*********************************/
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("@apollo/client");
 
 /***/ }),
 
-/***/ 825:
+/***/ "graphql-tag":
+/*!******************************!*\
+  !*** external "graphql-tag" ***!
+  \******************************/
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("graphql-tag");
 
 /***/ }),
 
-/***/ 6641:
+/***/ "next-seo":
+/*!***************************!*\
+  !*** external "next-seo" ***!
+  \***************************/
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next-seo");
 
 /***/ }),
 
-/***/ 6689:
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("react");
 
 /***/ }),
 
-/***/ 6318:
+/***/ "react-awesome-slider":
+/*!***************************************!*\
+  !*** external "react-awesome-slider" ***!
+  \***************************************/
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("react-awesome-slider");
 
 /***/ }),
 
-/***/ 997:
+/***/ "react-awesome-slider/dist/autoplay":
+/*!*****************************************************!*\
+  !*** external "react-awesome-slider/dist/autoplay" ***!
+  \*****************************************************/
 /***/ ((module) => {
 
-module.exports = require("react/jsx-runtime");
+"use strict";
+module.exports = require("react-awesome-slider/dist/autoplay");
 
 /***/ }),
 
-/***/ 7518:
+/***/ "react-datepicker":
+/*!***********************************!*\
+  !*** external "react-datepicker" ***!
+  \***********************************/
 /***/ ((module) => {
 
+"use strict";
+module.exports = require("react-datepicker");
+
+/***/ }),
+
+/***/ "react-select":
+/*!*******************************!*\
+  !*** external "react-select" ***!
+  \*******************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-select");
+
+/***/ }),
+
+/***/ "react/jsx-dev-runtime":
+/*!****************************************!*\
+  !*** external "react/jsx-dev-runtime" ***!
+  \****************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react/jsx-dev-runtime");
+
+/***/ }),
+
+/***/ "styled-components":
+/*!************************************!*\
+  !*** external "styled-components" ***!
+  \************************************/
+/***/ ((module) => {
+
+"use strict";
 module.exports = require("styled-components");
 
 /***/ }),
 
-/***/ 5641:
+/***/ "react-hook-form":
+/*!**********************************!*\
+  !*** external "react-hook-form" ***!
+  \**********************************/
 /***/ ((module) => {
 
+"use strict";
 module.exports = import("react-hook-form");;
 
 /***/ })
@@ -1038,7 +258,7 @@ module.exports = import("react-hook-form");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [60], () => (__webpack_exec__(3678)));
+var __webpack_exports__ = (__webpack_exec__("./pages/index.js"));
 module.exports = __webpack_exports__;
 
 })();

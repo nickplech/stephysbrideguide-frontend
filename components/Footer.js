@@ -128,7 +128,7 @@ const Footer = () => (
     </a> */}
     <div className="copy">
       <p>
-        Copyright © Stephy&apos;s Bride Guide 2016-{new Date().getFullYear()}
+        Copyright © Stephy&apos;s Bride Guide 2017-{new Date().getFullYear()}
       </p>
     </div>
   </Div>

@@ -1,6 +1,11 @@
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
 import Header from './Header'
 import Footer from './Footer'
+import smoothscroll from 'smoothscroll-polyfill';
+import { useDidMount } from 'rooks';
+import {
+  isSafari,
+} from 'react-device-detect';
 
 const theme = {
   red: '#FF0000',
@@ -28,17 +33,20 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal;
   }
   @font-face {
-    font-family: 'Sydney';
-    src: url('/static/Sydney.ttf') format('ttf');
+    font-family: 'Amelaryas';
+    src: url('/static/Amelaryas.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
   }
+
   @font-face {
-    font-family: 'LemonMilk';
-    src: url('/static/LemonMilk.otf') format('otf');
+    font-family: 'Tomatoes';
+    src: url('/static/Tomatoes.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
   }
+
+
 	html {
 		box-sizing: border-box;
 		font-size: 10px;
@@ -73,6 +81,13 @@ const Inner = styled.div`
 `
 
 export default function Page({ children }) {
+  useDidMount(() => {
+    const isTargetedBrowser = isSafari
+    if(isTargetedBrowser) {
+      smoothscroll.polyfill()
+    }
+  })
+
   return (
     <>
       <GlobalStyle />

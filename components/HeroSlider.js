@@ -66,7 +66,7 @@ const SliderDiv = styled.div`
   position: absolute;
   bottom:  0px;
 
-  z-index: 800;
+  z-index: 100;
   display: flex;
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
@@ -95,7 +95,7 @@ height: 100px;
     -webkit-animation: ${scroller} 3s infinite;
     animation: ${scroller} 3s infinite;
     box-sizing: border-box;
-
+z-index: 100;
   }
   .aws-btn {
 
@@ -125,10 +125,10 @@ height: 100px;
               }
 `
 const Opaque = styled.div`
-opacity: 1;
+
 position: absolute;
 width: 100%;
-height: 100%;
+height: 100vh;
 background: rgba(245,245,245,.5);
 z-index: 50;
 `
@@ -177,8 +177,11 @@ color: #000000;
     width: 100%;
     text-align: center;
 text-transform: uppercase;
-font-weight: 900;
-
+// font-weight: 900;
+@media (min-width: 0px) and (max-width: 768px) {
+font-size: .7em;
+margin-top: 20px;
+}
   }
 
   .arrow-down {
@@ -187,6 +190,7 @@ font-weight: 900;
     border: 3px solid #333;
     border-left: 0;
     border-top: 0;
+    z-index: 100;
 bottom: 0;
      transform: rotate(45deg);
      &:hover {

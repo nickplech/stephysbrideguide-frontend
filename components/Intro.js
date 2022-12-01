@@ -52,6 +52,7 @@ display: grid;
   overflow: hidden;
   @media (min-width: 0px) and (max-width: 768px) {
     grid-template-columns: 1fr;
+
   }
   .col {
     grid-column: 1;
@@ -60,6 +61,7 @@ display: grid;
     @media (min-width: 0px) and (max-width: 768px) {
       grid-column: 1;
       grid-row: 2;
+      margin-bottom: 30px;
     }
 
   }
@@ -80,6 +82,9 @@ justify-self: left;
   transform: translateY(25px) translateX(10px);
   // color: ${props => props.theme.third};
 margin: 0;
+@media (min-width: 769px) and (max-width: 962px) {
+  font-size: 35px;
+  }
 @media (min-width: 0px) and (max-width: 768px) {
 font-size: 30px;
 }
@@ -99,13 +104,16 @@ grid-row: 1;
 }
    }
   img {
-    height: 500px;
+width: 100%;
+min-width: 500px;
     position: relative;
 
     overflow: hidden;
     margin: 60px auto;
     @media (min-width: 0px) and (max-width: 768px) {
      margin: 60px auto 10px;
+     width: 90%;
+     min-width: 300px;
     }
   }
   h3 {
@@ -139,7 +147,7 @@ const Intro = React.forwardRef((props, ref) => {
     <GoToMe ref={ref}/>
   <SectionBlock >
   <div className="line"/>
-  <div className="top"><p>Helping couples put together an event that revolves around the love they share brings me so much joy. I feel honored to be able to provide my guidance, passion + industry knowledge to the couples I work with, always making it my priority to ensure a beautiful wedding day that will be cherished forever!</p></div>
+  <div className="top"><p>Helping couples put together an event that revolves around the love they share brings me so much joy. I feel honored to be able to provide my guidance, passion + industry knowledge to the couples I work with. It is always my priority to ensure a beautiful wedding day that will be cherished forever!</p></div>
   <div className="line2" />
 
   </SectionBlock>
@@ -157,7 +165,7 @@ const Intro = React.forwardRef((props, ref) => {
 <div className="right-align">
 
  <h3> Wedding Management &amp; Coordination</h3>
-  <p>Enjoy the final months leading up to your wedding and know all the remaining tasks and logistics will be handled by me. All your hard work planning can be confidently handed over to me to be executed and ensure a flawless wedding day. You can probably write the coordination package best since you help so much the day of.</p></div>
+  <p>Enjoy the final months leading up to your wedding and know all the remaining tasks and logistics will be handled by me. All your hard work planning can be confidently handed over to me to be executed and ensure a flawless wedding day.</p></div>
   </div>
   <div className="col2">
   <h2>Planning Services</h2>

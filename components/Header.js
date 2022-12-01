@@ -24,20 +24,20 @@ const StyledHeader = styled.header`
   background: rgba(245, 245, 245, 0.5);
   width: 100%;
   align-items: stretch;
-  z-index: 1000;
+  z-index: 200;
   height: 40px;
-  grid-template-columns: 1fr 1fr  ;
+  grid-template-columns: 1fr 220px ;
   @media (min-width: 768px) {
     font-size: 1.3rem;
 
-    grid-template-columns: 200px 1fr;
+    // grid-template-columns: 300px 1fr;
 
-    display: flex;
+    // display: flex;
     align-self: center;
     justify-self: center;
 
     transition: 0.3s;
-    z-index: 100;
+
   }
 `
 

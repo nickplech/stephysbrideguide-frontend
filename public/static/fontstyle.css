@@ -1,25 +1,27 @@
 
   @font-face {
-    font-family: 'Felix';
-    src: url('../static/Felix.ttf') format('truetype');
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Bison';
-    src: url('../static/Bison-Bold.ttf') format('truetype');
-    font-display: swap;
-  
-  }
-  
-  @font-face {
-    font-family: 'Bison ThickOutline';
-    src: url('../static/BisonThickOutline.ttf') format('truetype');
-    font-display: swap;
-  
-  }
-  
-  @font-face {
+
     font-family: 'Comfortaa';
-    src: url('../static/Comfortaa.ttf') format('truetype');
+    src: url('../static/Comfortaa.woff2') format('truetype');
+    font-style: normal;
+    font-weight: normal;
     font-display: swap;
   }
+  @font-face {
+    font-family: 'Tomatoes';
+    src: url('../static/Tomatoes.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+
+  }
+
+  @font-face {
+    font-family: 'Amelaryas';
+    src: url('../static/Amelaryas.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+
+  }
+

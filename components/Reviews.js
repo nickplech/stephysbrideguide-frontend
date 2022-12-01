@@ -127,9 +127,7 @@ padding: 0 60px;
 .diane {
   display: block;
   font-family: 'Comfortaa';
-  // text-transform: uppercase;
   font-size: 1.3rem;
-  font-weight: 900;
   line-height: 17px;
   width: 100%;
   position: relative;
@@ -223,7 +221,7 @@ setSelectedSlide(bride.nextMedia.reviewtext)
       selected
       buttons={true}
       bullets={true}
-      mobileTouch={true}
+      // mobileTouch={true}
       onTransitionRequest={changeText}
     >
  <Slide    reviewtext={0}   data-src= "/../static/stephysbrideguide-review.jpg">

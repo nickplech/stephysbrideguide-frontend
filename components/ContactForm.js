@@ -1,9 +1,12 @@
 import styled, { keyframes } from 'styled-components'
-import { useForm } from 'react-hook-form'
+import { useForm, Controller } from 'react-hook-form'
 import { useMutation } from "@apollo/client"
 import gql from 'graphql-tag'
-import Loader from './Loader'
 
+import Loader from './Loader'
+import "react-datepicker/dist/react-datepicker.css";
+import ReactDatePicker, {CalendarContainer} from 'react-datepicker'
+import Select from 'react-select'
 const CREATE_SUBMISSION = gql`
   mutation CREATE_SUBMISSION(
     $firstName: String!
@@ -150,7 +153,7 @@ const Form = styled.form`
   background: white;
 
   margin: 0px auto;
-
+  z-index:0;
   font-size: 1.5rem;
   line-height: 1.5;
   font-weight: 600;
@@ -217,7 +220,7 @@ line-height: 15px;
   label {
     display: block;
     line-height: 18px;
-
+    z-index: 0;
     margin: 0 auto;
     text-align: left;
     width: 100%;
@@ -226,7 +229,7 @@ line-height: 15px;
     position: relative;
     letter-spacing: 3px;
     font-size: 1.3rem;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     margin-bottom: ${props => props.errormsg && props.errormsg.type.length > 1  ? '20px' : '0px'};
     color: ${(props) => props.theme.second};
   }
@@ -262,8 +265,7 @@ line-height: 15px;
     padding-bottom: 0.7rem;
     font-size: 1.5rem;
     margin-bottom: 30px;
-
-    font-family: 'Comfortaa';
+     font-family: 'Comfortaa';
     background: transparent;
     border-radius: 3px;
     border: 2px solid ${(props) => props.theme.primary};
@@ -275,8 +277,15 @@ line-height: 15px;
       border: 2px solid ${(props) => props.theme.second};
     }
   }
+  .input {
+    font-family: 'Comfortaa';
+    font-size: 13px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+  }
 .theSelector {
   grid-column: 1/3;
+  margin-bottom: 30px;
 }
   .button-52 {
     font-size: 16px;
@@ -413,9 +422,10 @@ padding: 8px 2px;
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
     font-size: 1.5rem;
+    position: relative;
     margin-bottom: 20px;
     background: transparent;
-
+// z-index: 0;
     &:focus {
       outline: 0;
       border: 2px solid ${(props) => props.theme.second};
@@ -457,10 +467,38 @@ padding: 8px 2px;
   }
 `
 
+const MyContainer = ({ className, children }) => {
+  return (
+    <div style={{ padding: "20px", background: 'rgba(237, 222, 213, 1)', color: "#fff" }}>
+      <CalendarContainer className={className}>
+
+        <div style={{ position: "relative", fontFamily: 'Comfortaa', opacity: 1 }}>{children}</div>
+      </CalendarContainer>
+    </div>
+  )
+}
+
+const selectStyles = {
+  control: (base) => ({ ...base, minWidth: 240, margin: 0}),
+  menu: () => ({ boxShadow: " 0 1px 0 rgba(0, 0, 0, 0.1)" }),
+  menuPortal: () => ({ zIndex: "1000", position: "absolute", top: "214px", left: "0px", boxShadow: "0 1px 0 rgba(0, 0, 0, 0.1)" })
+};
+// const customStyles = {
+// container: (base, state) => {
+//   return ({
+//       ...base,
+//       zIndex: state.isFocused ? "999" : "1"  //Only when current state focused
+//   })
+// }
+// }
+const packageOptions = [{value: 'fullService', label: 'Full Service Planning, Styling + Coordination'}, {value: 'partial', label: 'Partial Planning + Coordination'}, {value: 'coordination', label: 'Wedding Management/Coordination'}, {value: 'tbd', label: 'I Would Like to Discuss this in Further Detail'}]
+
+
 function ContactForm() {
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors },
   } = useForm()
 
@@ -469,7 +507,7 @@ function ContactForm() {
   })
 console.log(errors)
   const onSubmit = async (data) => {
-
+console.log(data)
    await createSubmission({variables: { firstName: data.firstName, lastName: data.lastName, fianceFirst: data.fianceFirst,  email: data.email, venue: data.venue, mobilePhone: data.mobileNumber, serviceRequested: data.serviceRequested, additionalInfo: data.additionalInfo}})
 
   }
@@ -485,7 +523,7 @@ console.log(errors)
 
 { data && !loading && !error ? <ThankYouMessage><h4>Thank you {data.firstName &&data.firstName}</h4>   <p>Your inquiry has been sent!<br/>  Please expect a response in the next <span>48</span> hours </p></ThankYouMessage> :
         <Form onSubmit={handleSubmit(onSubmit)}>
-         <p className="getintouch-smallscreen">Please send inquiries with the following form <br/>I look forward to speaking with you!  </p>
+         <p className="getintouch-smallscreen">Please send any inquiries below. <br/>I look forward to speaking with you!  </p>
           <label htmlFor="firstname" className="side-one">
 
             First Name
@@ -554,33 +592,47 @@ console.log(errors)
           <label htmlFor="date" className="side-two">
             Date of Wedding
             {errors.date && <div className="error-msg">This field is required</div>}
-            <input
-            errormsg={errors.date }
-              name="date"
-              type="datetime"
-              // placeholder="What is the Date of Your Wedding?"
-              {...register('date', {
-                required: true,
-              })}
-            />
-          </label>
+          <Controller
+            control={control}
+            name="ReactDatepicker"
+            render={({ field }) => (
+              <ReactDatePicker
+                className="input"
+                placeholderText="Select date"
+                onChange={(e) => field.onChange(e)}
+                selected={field.value}
 
+                dateFormat="MMMM d, yyyy"
+                calendarContainer={MyContainer}
+              />
+            )}
+          />
+          </label>
           <label className="theSelector" htmlFor="serviceRequested">
             Planning Package
-            {errors.serviceRequested && <div className="error-msg">This field is required</div>}
-            <select
-            errormsg={errors.serviceRequested }
-              name="serviceRequested"
-              type="text"
-              {...register('serviceRequested', { required: true })}
 
-            >
-            {/* <option className="placeholder_option" value="pleaseSelect">Which planning package are you considering?</option> */}
-              <option value="fullService">Full Service Planning + Styling</option>
-              <option value="partial">Partial Planning</option>
-              <option value="coordination">Wedding Management + Coordination</option>
-              <option value="tbd">I Need to Ask Some Further Questions Regarding Your Services</option>
-            </select>
+              <Controller
+                name="serviceRequested"
+                control={control}
+                render={({field}) =>
+              <Select
+              inputRef={field.ref}
+                className="basic-single selector-css"
+                classNamePrefix="select"
+
+                defaultValue={packageOptions[0]}
+
+
+                value={packageOptions.find(c => c.value === field.value)}
+                onChange={val => field.onChange(val.value)}
+
+                styles={selectStyles}
+                options={packageOptions}
+              />
+              }
+              />
+
+
 
             </label>
           <label htmlFor="venue" className="both-sides">
