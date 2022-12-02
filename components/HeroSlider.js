@@ -231,7 +231,6 @@ const HeroSlider = function(props) {
           <div data-src="/../static/stephysbrideguide-tristan-olivia.jpg" />
           <div data-src="/../static/stephysbrideguide-julya-jack.JPG" />
           <div data-src="/../static/stephysbrideguide-noel-david.jpg" />
-          <div data-src="/../static/stephysbrideguide-heather-tablescape.jpg" />
           <div data-src="/../static/stephysbrideguide-bouqet.jpg" />
           <div data-src="/../static/stephysbrideguide-heather-drew.jpg" />
         </AutoplaySlider>

@@ -18,9 +18,10 @@ export default function HomePage() {
     <>
       <HeroSlider arrowClick={arrowClick}  />
       <Intro ref={ref}/>
+
       <Reviews/>
       <ContactForm />
-      <Instagram />
+    <Instagram />
     </>
   )
 }

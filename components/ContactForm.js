@@ -508,7 +508,7 @@ function ContactForm() {
 console.log(errors)
   const onSubmit = async (data) => {
 console.log(data)
-   await createSubmission({variables: { firstName: data.firstName, lastName: data.lastName, fianceFirst: data.fianceFirst,  email: data.email, venue: data.venue, mobilePhone: data.mobileNumber, serviceRequested: data.serviceRequested, additionalInfo: data.additionalInfo}})
+   await createSubmission({variables: { firstName: data.firstName, lastName: data.lastName, fianceFirst: data.fianceFirst,  email: data.email, venue: data.venue, eventDate: data.ReactDatepicker, mobilePhone: data.mobileNumber, serviceRequested: data.serviceRequested, additionalInfo: data.additionalInfo}})
 
   }
  if (loading) return <Loader>loading</Loader>
