@@ -30,6 +30,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="/static/fontstyle.css"
           />
+          <link rel="shortcut icon" href="/../static/favicon-32x32.png" />
         </Head>
         <body>
           <Main />

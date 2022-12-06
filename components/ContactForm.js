@@ -2,11 +2,11 @@ import styled, { keyframes } from 'styled-components'
 import { useForm, Controller } from 'react-hook-form'
 import { useMutation } from "@apollo/client"
 import gql from 'graphql-tag'
-
 import Loader from './Loader'
 import "react-datepicker/dist/react-datepicker.css";
-import ReactDatePicker, {CalendarContainer} from 'react-datepicker'
+import ReactDatePicker, { CalendarContainer } from 'react-datepicker'
 import Select from 'react-select'
+
 const CREATE_SUBMISSION = gql`
   mutation CREATE_SUBMISSION(
     $firstName: String!
@@ -19,7 +19,6 @@ const CREATE_SUBMISSION = gql`
     $serviceRequested: String
     $additionalInfo: String
   ) {
-
     createSubmission(
       data: {
     firstName: $firstName
@@ -59,10 +58,9 @@ const loading = keyframes`
 `
 const ThankYouMessage = styled.div`
 width: 100%;
-
 position: relative;
 background:  ${props => props.theme.primary};
-  margin: 30px auto 110px;
+margin: 30px auto 80px;
 display: flex;
 flex-flow: column;
 justify-contents: center;
@@ -75,34 +73,32 @@ h4 {
   margin: 30px auto 10px;
   opacity:.6;
   line-height: 20px;
-font-size: 30px;
+  font-size: 30px;
   color: ${props => props.theme.third};
 }
 p {
-      font-family: 'Comfortaa';
+  font-family: 'Comfortaa';
   line-height: 14px;
   letter-spacing: 3px;
   font-size: 16px;
   }
   span {
     font-family: 'Comfortaa';
-line-height: 14px;
-letter-spacing: 3px;
-font-size: 18px;}
-
-
+    line-height: 14px;
+    letter-spacing: 3px;
+    font-size: 18px;
+  }
 `
 const Layout = styled.div`
   width: 100%;
-
-position: relative;
-
-  margin: 100px auto 50px;
-display: flex;
-flex-flow: column;
-justify-contents: center;
-align-items: center;
-text-align: center;
+  position: relative;
+  padding: 100px 0 50px;
+  margin: 0px auto 50px;
+  display: flex;
+  flex-flow: column;
+  justify-contents: center;
+  align-items: center;
+  text-align: center;
 
 .getintouch {
   font-family: 'Comfortaa';
@@ -153,7 +149,7 @@ const Form = styled.form`
   background: white;
 
   margin: 0px auto;
-  z-index:0;
+  // z-index:0;
   font-size: 1.5rem;
   line-height: 1.5;
   font-weight: 600;
@@ -220,12 +216,11 @@ line-height: 15px;
   label {
     display: block;
     line-height: 18px;
-    z-index: 0;
+    // z-index: 0;
     margin: 0 auto;
     text-align: left;
     width: 100%;
     font-family: 'Comfortaa';
-    opacity: 0.7;
     position: relative;
     letter-spacing: 3px;
     font-size: 1.3rem;
@@ -269,8 +264,8 @@ line-height: 15px;
     background: transparent;
     border-radius: 3px;
     border: 2px solid ${(props) => props.theme.primary};
-    /* border-radius: 5px; */
-    /* margin-top: 0.8rem; */
+position: relative;
+
     width: 100%;
     &:focus {
       outline: 0;
@@ -282,10 +277,19 @@ line-height: 15px;
     font-size: 13px;
     text-transform: capitalize;
     letter-spacing: 2px;
+    height: 36px;
+  }
+  .opaque {
+    opacity: .8;
+  }
+  .react-datepicker__day--selected {
+    background-color: grey;
   }
 .theSelector {
   grid-column: 1/3;
   margin-bottom: 30px;
+  position: relative;
+  z-index: 0;
 }
   .button-52 {
     font-size: 16px;
@@ -465,6 +469,17 @@ padding: 8px 2px;
       animation: ${loading} 0.5s linear infinite;
     }
   }
+  .react-datepicker-popper {
+    z-index: 300;
+    // position: absolute;
+  }
+  .select__value-container {
+    display: grid;
+    grid-template-rows: 10px;
+    grid-template-columns: 1;
+
+
+  }
 `
 
 const MyContainer = ({ className, children }) => {
@@ -479,18 +494,14 @@ const MyContainer = ({ className, children }) => {
 }
 
 const selectStyles = {
-  control: (base) => ({ ...base, minWidth: 240, margin: 0}),
+  control: (base, state) => ({ ...base, minWidth: 240, margin: 0, border: "2px solid rgba(237, 222, 213, 1)", borderColor: state.isSelected ? "rgba(237, 222, 213, 1)" : "rgba(237, 222, 213, .8)", boxShadow: state.isFocused ? 'none' : 'none'}),
   menu: () => ({ boxShadow: " 0 1px 0 rgba(0, 0, 0, 0.1)" }),
-  menuPortal: () => ({ zIndex: "1000", position: "absolute", top: "214px", left: "0px", boxShadow: "0 1px 0 rgba(0, 0, 0, 0.1)" })
+  menuPortal: () => ({ zIndex: "1000", position: "absolute", top: "214px", left: "0px", boxShadow: "0 1px 0 rgba(0, 0, 0, 0.1)" }),
+  placeholder: () => ({
+    opacity: .5
+  })
 };
-// const customStyles = {
-// container: (base, state) => {
-//   return ({
-//       ...base,
-//       zIndex: state.isFocused ? "999" : "1"  //Only when current state focused
-//   })
-// }
-// }
+
 const packageOptions = [{value: 'fullService', label: 'Full Service Planning, Styling + Coordination'}, {value: 'partial', label: 'Partial Planning + Coordination'}, {value: 'coordination', label: 'Wedding Management/Coordination'}, {value: 'tbd', label: 'I Would Like to Discuss this in Further Detail'}]
 
 
@@ -502,85 +513,81 @@ function ContactForm() {
     formState: { errors },
   } = useForm()
 
-  const [createSubmission, { data, loading, error }] = useMutation(CREATE_SUBMISSION, {
-    // variables: { firstName, lastName, fianceFirst, fianceLast, email, venue, mobilePhone, serviceRequested, additionalInfo},
-  })
+  const [createSubmission, { data, loading, error }] = useMutation(CREATE_SUBMISSION)
 console.log(errors)
   const onSubmit = async (data) => {
 console.log(data)
    await createSubmission({variables: { firstName: data.firstName, lastName: data.lastName, fianceFirst: data.fianceFirst,  email: data.email, venue: data.venue, eventDate: data.ReactDatepicker, mobilePhone: data.mobileNumber, serviceRequested: data.serviceRequested, additionalInfo: data.additionalInfo}})
 
   }
- if (loading) return <Loader>loading</Loader>
+ if (loading) return <Loader/>
 
   return (
-    <>
+
 
       <Layout>
         <div className="line" />
-    <p className="getintouch">Please send inquiries with the following form <br/>I look forward to speaking with you!  </p>
+    <p className="getintouch">Please send inquiries with the following form <br/>I look forward to speaking with you  </p>
     <div className="line2" />
 
-{ data && !loading && !error ? <ThankYouMessage><h4>Thank you {data.firstName &&data.firstName}</h4>   <p>Your inquiry has been sent!<br/>  Please expect a response in the next <span>48</span> hours </p></ThankYouMessage> :
+{ data && !loading && !error ? <ThankYouMessage><h4>Thank you {data.firstName &&data.firstName}</h4>   <p>Your inquiry has been sent!<br/> <br/> Please expect a response in the next <span>48</span> hours </p></ThankYouMessage> :
         <Form onSubmit={handleSubmit(onSubmit)}>
          <p className="getintouch-smallscreen">Please send any inquiries below. <br/>I look forward to speaking with you!  </p>
           <label htmlFor="firstname" className="side-one">
 
-            First Name
+            <div className="opaque">First Name</div>
             {errors.firstName && <div className="error-msg">This field is required</div>}
             <input
             errormsg={errors.firstName }
               name="firstname"
               type="text"
               aria-invalid={errors.firstName ? "true" : "false"}
-              // placeholder="First name"
+
               {...register('firstName', { required: true, maxLength: 80 })}
             />
 
           </label>
           <label htmlFor="lastname" className="side-two">
-            Last Name
+          <div className="opaque">Last Name</div>
             {errors.lastName && <div className="error-msg">This field is required</div>}
             <input
             errormsg={errors.lastName }
               name="lastname"
               type="text"
-              // placeholder="Last name"
+
               {...register('lastName', { required: true, maxLength: 100 })}
             />
           </label>
           <label htmlFor="fianceFirst" className="side-one">
-            Fiance&apos;s name
+          <div className="opaque">Fiance&apos;s name</div>
             {errors.fianceFirst && <div className="error-msg">This field is required</div>}
             <input
             errormsg={errors.fianceFirst }
               name="fianceFirst"
               type="text"
-              // placeholder=""
+
               {...register('fianceFirst', { required: true })}
             />
           </label>
 
           <label htmlFor="email" className="side-two">
-            Email
+          <div className="opaque">Email</div>
             {errors.email && <div className="error-msg">This field is required</div>}
             <input
             errormsg={errors.email }
               name="email"
               type="text"
-              // placeholder="Email"
               {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
             />
           </label>
           <label htmlFor="mobileNumber" className="side-one">
-            Mobile Number
+          <div className="opaque">Mobile Number</div>
             {errors.mobileNumber?.type === 'required' ? <div className="error-msg">This field is required</div> : ''}
             { errors.mobileNumber?.type === 'minLength' ? <div className="error-msg">Must be 10 digit number</div> : '' }
             <input
             errormsg={errors.mobileNumber }
               name="mobileNumber"
               type="tel"
-              // placeholder=""
               {...register('mobileNumber', {
                 required: true,
                 minLength: 10,
@@ -590,18 +597,20 @@ console.log(data)
             />
           </label>
           <label htmlFor="date" className="side-two">
-            Date of Wedding
-            {errors.date && <div className="error-msg">This field is required</div>}
+          <div className="opaque">Date of Wedding</div>
+            {errors.ReactDatepicker && <div className="error-msg">This field is required</div>}
           <Controller
             control={control}
             name="ReactDatepicker"
+            rules={{
+              required: true
+            }}
             render={({ field }) => (
               <ReactDatePicker
                 className="input"
-                placeholderText="Select date"
+                placeholderText="Select Your Date"
                 onChange={(e) => field.onChange(e)}
                 selected={field.value}
-
                 dateFormat="MMMM d, yyyy"
                 calendarContainer={MyContainer}
               />
@@ -609,34 +618,43 @@ console.log(data)
           />
           </label>
           <label className="theSelector" htmlFor="serviceRequested">
-            Planning Package
-
+          <div className="opaque">Planning Package</div>
+          {errors.serviceRequested && <div className="error-msg">This field is required</div>}
               <Controller
                 name="serviceRequested"
                 control={control}
+                rules={{
+                  required: true
+                }}
                 render={({field}) =>
               <Select
               inputRef={field.ref}
                 className="basic-single selector-css"
                 classNamePrefix="select"
-
-                defaultValue={packageOptions[0]}
-
-
+                isSearchable={false}
+                defaultValue={null}
+                theme={(theme) => ({
+                  ...theme,
+                  borderRadius: 2,
+                  colors: {
+                    ...theme.colors,
+                    primary25: 'rgba(237, 222, 213, .3)',
+                    primary75: 'rgba(237, 222, 213, .3)',
+                    primary50: 'rgba(237, 222, 213, .3)',
+                    primary: 'rgba(237, 222, 213, 1)',
+                  },
+                })}
                 value={packageOptions.find(c => c.value === field.value)}
                 onChange={val => field.onChange(val.value)}
-
+                placeholder=""
                 styles={selectStyles}
                 options={packageOptions}
               />
               }
               />
-
-
-
             </label>
           <label htmlFor="venue" className="both-sides">
-            Venue
+          <div className="opaque">Venue</div>
             {errors.venue && <div className="error-msg">This field is required</div>}
             <textarea
 
@@ -649,7 +667,7 @@ console.log(data)
             />
           </label>
           <label htmlFor="additionalInfo" className="both-sides">
-            Any Additional Information?
+          <div className="opaque">Any Additional Information?</div>
             <textarea
               {...register('additionalInformation', {})}
               name="additionalInfo"
@@ -661,7 +679,7 @@ console.log(data)
           <button type="submit" className="button-48" role="button"><span className="text">Submit </span> </button>
         </Form>}
       </Layout>
-    </>
+
   )
 }
 export default ContactForm

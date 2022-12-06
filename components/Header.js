@@ -24,7 +24,7 @@ const StyledHeader = styled.header`
   background: rgba(245, 245, 245, 0.5);
   width: 100%;
   align-items: stretch;
-  z-index: 200;
+  z-index:99;
   height: 40px;
   grid-template-columns: 1fr 220px ;
   @media (min-width: 768px) {

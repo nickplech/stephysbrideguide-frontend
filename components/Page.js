@@ -45,7 +45,12 @@ const GlobalStyle = createGlobalStyle`
     font-weight: normal;
     font-style: normal;
   }
-
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/static/Montserrat-VariableFont_wght.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
 
 	html {
 		box-sizing: border-box;
@@ -60,7 +65,7 @@ overscroll-behavior: none;
 		margin: 0;
 		font-size: 1.4rem;
 		line-height: 2;
-		font-family: 'Comfortaa';
+		font-family: 'Montserrat';
 
 	}
 a {

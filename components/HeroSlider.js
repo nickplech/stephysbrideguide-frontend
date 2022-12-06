@@ -90,6 +90,8 @@ height: 100px;
     margin-left: -12px;
     border-left: 2px solid #503931;
     border-bottom: 2px solid #503931;
+    user-select: none;
+    outline: none;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     -webkit-animation: ${scroller} 3s infinite;
@@ -191,6 +193,8 @@ margin-top: 20px;
     border-left: 0;
     border-top: 0;
     z-index: 100;
+    user-select: none;
+    outline: none;
 bottom: 0;
      transform: rotate(45deg);
      &:hover {
@@ -210,7 +214,7 @@ const HeroSlider = function(props) {
       <Title>
 
       <div className="box">
-      <img src="/../static/stephysbrideguidelogodarkbrown.png" alt="stephys bride guide" />
+      <img src="/../static/stephysbrideguide-logo.svg" alt="stephys bride guide" />
         <h2>wedding planning | styling | coordination</h2>
 
         </div>

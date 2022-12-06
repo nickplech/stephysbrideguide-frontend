@@ -44,16 +44,21 @@ color: #503931
   .insta {
     height: 25px;
     width: 25px;
-    position: absolute;
-    transform: translate(-88px, -70px);
-    align-self: center;
+    position: relative;
+
+  transform: translateY(-10px) translateX(40px);
     grid-column: 1;
     cursor: pointer;
-    justify-self: flex-end;
+    justify-self: flex-start;
     transition: 0.4s;
-    opacity: 0.7;
-    @media (min-width: 768px) {
-      transform: translate(-128px, -70px);
+    opacity: 1;
+    &:before {
+      content: '';
+      width: 50px;
+      background: ${props => props.theme.second};
+      height: 2px;
+      position: absolute;
+      transform: translateY(-10px);
     }
   }
 `
@@ -83,7 +88,6 @@ const Wrap = styled.div`
   }
   a {
     color: ${(props) => props.theme.second};
-    font-family: 'Comfortaa';
   }
   .linkage {
     grid-column: 1;
@@ -114,7 +118,7 @@ const Footer = () => (
           </Link>
         </li>
         <li className="mainLink">
-          <Link href="/">
+          <Link href="/contact">
             <a>Inquire</a>
           </Link>
         </li>
@@ -124,7 +128,7 @@ const Footer = () => (
       className="insta"
       href="https://www.instagram.com/stephysbrideguide/?hl=en"
     >
-      <Instagram src="../../static/instagram.png" />{' '}
+      <img src="../../static/instagram.png" height="25px" />{' '}
     </a> */}
     <div className="copy">
       <p>

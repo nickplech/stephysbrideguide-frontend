@@ -16,12 +16,8 @@ const Logo = styled.h1`
 position: absolute;
 line-height: 26px;
 cursor: pointer;
-transition: .3s;
-    &:hover {
-      outline: none;
-      cursor: pointer;
-   transform: translateX(23px);
-    }
+
+
   a {
     display: flex;
     align-items: center;
@@ -29,9 +25,15 @@ transition: .3s;
     font-family: 'Comfortaa';
     font-weight: 800;
     background: none;
-    border: none;
+    border: none; transition: .4s;
     text-transform: uppercase;
     color: #573b2c;
+      &:hover {
+      outline: none;
+      cursor: pointer;
+
+   transform: translateX(3px);
+    }
   }
 `
 const Mobile = styled.div`

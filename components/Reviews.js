@@ -50,8 +50,8 @@ position: relative;
     transform: translateY(-45px);
     z-index: 300;
     transition: .5s;
-width: 10px;
-height: 10px;
+width: 12px;
+height: 12px;
 &:hover {
   transform:translateY(-45px) scale(1.1);
 }
@@ -126,13 +126,13 @@ padding: 0 60px;
   }
 .diane {
   display: block;
-  font-family: 'Comfortaa';
+
   font-size: 1.3rem;
   line-height: 17px;
   width: 100%;
   position: relative;
   text-align: left;
-  z-index: 500;
+  z-index:100;
   transform: translate3d(0, 0, 0);
   opacity: 1;
   color: ${props => props.theme.third};
@@ -177,7 +177,7 @@ img {
 const data = [
   {
     name: 'Diane Levy',
-    text:"Stephy was an absolute dream to work with! She is everything that I wanted in a wedding planner + more. She gave us very helpful and detailed information, was always extremely communicative, helped calm me down when the stressful moments arose, and was there to navigate every aspect of my wedding. Nick, her husband was also amazing, extremely hardworking, and so great to work with. I am sad that my wedding is over and I won’t be working with her anymore!! My special day seriously wouldn’t have been what it was without stephy and I am forever grateful...100/100 !" },
+    text:"Stephy was an absolute dream to work with! She is everything that I wanted in a wedding planner + more. She gave us very helpful and detailed information, was always extremely communicative, helped calm me down when the stressful moments arose, and was there to navigate every aspect of my wedding. Nick, her husband was also amazing, extremely hardworking, and so great to work with. I am sad that my wedding is over and I won’t be working with her anymore!! My special day seriously wouldn’t have been what it was without stephy and I am forever grateful...100/100" },
     {
   name: 'Noel Larson',
   text: "I can't say enough amazing things about sweet, sweet Stephy! The moment I got on an intro call with Stephy, I knew she was the one I wanted by my side through this wedding planning process. Not only is she amazing at what she does, she is truly the most genuine, selfless, kind, communicative, even-keeled and hard working person there is! Our wedding was pushed due to COVID and she always made me feel like I was her top priority, no matter where I was in the process. She was extremely organized and professional throughout the entire process, while also making me feel like I had a built in best friend along the way. Whenever I needed help or was feeling anxious about any planning decisions, she was always available to hop on a call, or chat via text or email. I was pretty much in contact with Stephy every single day for months leading up to the wedding. Towards the final months of the wedding planning process, I was so exhausted with making small decisions around decor items etc. and Stephy stepped in to help make final decisions on linens, chargers, day-of items, repurposing florals etc., I knew I could full trust her. She truly went above and beyond in every way and we're so grateful to her (and to her husband, Nick) for all of their help, support, and guidance over the past couple of years. I could go on and on, but in short, Stephy is the absolute best!"},
@@ -200,6 +200,7 @@ console.log(sliderRef.current && sliderRef.current)
 
 const changeText = (bride) => {
 // const slideNumber = sliderRef.current?.
+console.log(bride)
 console.log(bride.nextMedia.reviewtext)
 setSelectedSlide(bride.nextMedia.reviewtext)
 }
@@ -222,6 +223,7 @@ setSelectedSlide(bride.nextMedia.reviewtext)
       buttons={true}
       bullets={true}
       // mobileTouch={true}
+      // onTransitionEnd={console.log('hey')}
       onTransitionRequest={changeText}
     >
  <Slide    reviewtext={0}   data-src= "/../static/stephysbrideguide-review.jpg">
