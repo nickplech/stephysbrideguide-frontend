@@ -42,7 +42,7 @@ const Mobile = styled.div`
     display: none;
   }
 `
-function Nav({ isOpen, toggle }) {
+function Nav({ isOpen, toggle, reviewClick }) {
   return (
 <>
 <Logo>
@@ -57,9 +57,9 @@ function Nav({ isOpen, toggle }) {
       <Desktop>
 
 
-          <Link href="/ondemand">
-            <a>Reviews</a>
-          </Link>
+
+            <a onClick={reviewClick}>Reviews</a>
+
           <Link href="/contact">
             <a>Inquire</a>
           </Link>

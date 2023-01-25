@@ -131,7 +131,7 @@ export function NavMenu({ isOpen, toggle, me, addy }) {
             },
           }}
         >
-          <Link href="/">
+          <Link href="/contact">
             <a>Inquire</a>
           </Link>
         </NavLink>

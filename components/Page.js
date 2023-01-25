@@ -1,3 +1,4 @@
+import {useRef} from 'react'
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
 import Header from './Header'
 import Footer from './Footer'
@@ -92,13 +93,18 @@ export default function Page({ children }) {
       smoothscroll.polyfill()
     }
   })
+  const reviewsRef = useRef(null)
 
+  const reviewClick = () => {
+    reviewsRef.current?.scrollIntoView({behavior: 'smooth'})
+    console.log("review slide up")
+  }
   return (
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <StyledPage>
-          <Header />
+        <StyledPage ref={reviewsRef}>
+          <Header reviewClick={reviewClick} />
           <Inner>{children}</Inner>
           <Footer />
         </StyledPage>

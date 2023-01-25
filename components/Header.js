@@ -41,7 +41,7 @@ const StyledHeader = styled.header`
   }
 `
 
-function Header() {
+function Header({reviewClick}) {
   const [isOpen, setOpen] = useState(false)
 
   const toggleMenu = () => {
@@ -49,7 +49,7 @@ function Header() {
   }
   return (
     <StyledHeader>
-      <Nav toggle={toggleMenu} isOpen={isOpen} />
+      <Nav toggle={toggleMenu} isOpen={isOpen} reviewClick={reviewClick} />
       <MenuToggle toggle={toggleMenu} isOpen={isOpen} />
     </StyledHeader>
   )

@@ -1,24 +1,19 @@
 import styled from 'styled-components'
 
 const Img = styled.img`
-
-    position: relative;
-
-opacity:.3;
+position: absolute;
+opacity:.2;
 margin-right: 10px;
 margin-bottom: 50px;
+z-index: 1;
+transform: translateY(-10px);
 `
 const Div = styled.div`
 width: 80%;
-
-
-
 margin: 50px auto 0;
 position: relative;
-
 @media (min-width: 361px) and (max-width: 900px) {
-
-    width: 90%;
+width: 90%;
 }
 .lightwidget__lightbox-caption {
     font-family: 'Comfortaa';
@@ -27,8 +22,6 @@ iframe .lightwidget__lightbox-caption {
     font-family: 'Comfortaa';
 }
 p {
-
-
 font-family: 'Comfortaa';
 width: 80%;
 opacity:.6;
@@ -39,23 +32,28 @@ text-transform: uppercase;
 }
 
 .lightwidget__nav-button {
-
     z-index: 990;
 }
-
 `
 const TheLink = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
+    position: relative;
     font-family: 'Tomatoes';
     font-size: 18px;
+    margin: 20px auto;
+    z-index: 5;
+    a {
+        position: relative;
+
+    z-index: 5;
+    }
 `
 
 const styles = {
     width: "100%",
     border: 0,
-    // overflow: "hidden"
 }
 
 export default function Instagram() {
@@ -71,7 +69,7 @@ export default function Instagram() {
 
 
     <TheLink>
-      <Img  src='../static/instagram.svg' height="35px" alt="instagram logo" />
+      <Img  src='../static/instagram.svg' height="55px" alt="instagram logo" />
     <a href="https://www.instagram.com/stephysbrideguide" title="Check out My Instagram!">@stephysbrideguide</a>
     </TheLink>
     </>

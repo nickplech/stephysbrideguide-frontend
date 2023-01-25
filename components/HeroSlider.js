@@ -192,9 +192,10 @@ margin-top: 20px;
     border: 3px solid #333;
     border-left: 0;
     border-top: 0;
-    z-index: 100;
+    z-index: 50;
     user-select: none;
     outline: none;
+    // position: relative;
 bottom: 0;
      transform: rotate(45deg);
      &:hover {
@@ -228,11 +229,13 @@ const HeroSlider = function(props) {
           cancelOnInteraction={false}
           buttons={false}
           bullets={false}
-          interval={10000}
+          interval={6000}
         >
           <div data-src="/../static/stephysbrideguide-olivia.jpeg" />
+          <div data-src="/../static/stephysbrideguide-noel-david-tablescape.jpg" />
           <div data-src="/../static/stephysbrideguide-alexa.jpg" />
           <div data-src="/../static/stephysbrideguide-tristan-olivia.jpg" />
+          <div data-src="/../static/stephysbrideguide-daniels.jpg" />
           <div data-src="/../static/stephysbrideguide-julya-jack.JPG" />
           <div data-src="/../static/stephysbrideguide-noel-david.jpg" />
           <div data-src="/../static/stephysbrideguide-bouqet.jpg" />

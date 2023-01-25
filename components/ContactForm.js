@@ -6,6 +6,7 @@ import Loader from './Loader'
 import "react-datepicker/dist/react-datepicker.css";
 import ReactDatePicker, { CalendarContainer } from 'react-datepicker'
 import Select from 'react-select'
+import formatPhoneNumber from '../lib/formatPhone'
 
 const CREATE_SUBMISSION = gql`
   mutation CREATE_SUBMISSION(
@@ -17,7 +18,7 @@ const CREATE_SUBMISSION = gql`
     $eventDate: DateTime
     $venue: String!
     $serviceRequested: String
-    $additionalInfo: String
+    $additionalInformation: String
   ) {
     createSubmission(
       data: {
@@ -29,7 +30,7 @@ const CREATE_SUBMISSION = gql`
     venue: $venue
     eventDate: $eventDate
     serviceRequested: $serviceRequested
-    additionalInfo: $additionalInfo
+    additionalInformation: $additionalInformation
     }
   ) {
     id
@@ -41,10 +42,11 @@ const CREATE_SUBMISSION = gql`
     venue
     eventDate
     serviceRequested
-    additionalInfo
+    additionalInformation
   }
   }
 `
+
 const loading = keyframes`
   from {
     background-position: 0 0;
@@ -56,6 +58,7 @@ const loading = keyframes`
     /* rotate: 360deg; */
   }
 `
+
 const ThankYouMessage = styled.div`
 width: 100%;
 position: relative;
@@ -70,25 +73,27 @@ user-select: none;
 h4 {
   font-family: 'Tomatoes';
   width: 60%;
-  margin: 30px auto 10px;
+  margin: 35px auto 20px;
   opacity:.6;
   line-height: 20px;
   font-size: 30px;
   color: ${props => props.theme.third};
 }
 p {
-  font-family: 'Comfortaa';
-  line-height: 14px;
+ font-family: 'Montserrat';
+  line-height: 6px;
   letter-spacing: 3px;
-  font-size: 16px;
+  font-size: 12px;
+  text-transform: uppercase;
   }
   span {
-    font-family: 'Comfortaa';
+   font-family: 'Montserrat';
     line-height: 14px;
     letter-spacing: 3px;
-    font-size: 18px;
+    font-size: 14px;
   }
 `
+
 const Layout = styled.div`
   width: 100%;
   position: relative;
@@ -101,8 +106,7 @@ const Layout = styled.div`
   text-align: center;
 
 .getintouch {
-  font-family: 'Comfortaa';
-  width: 80%;
+   width: 80%;
   opacity:.6;
   letter-spacing: 3px;
   color: ${props => props.theme.third};
@@ -147,7 +151,7 @@ const Form = styled.form`
 
   min-width: 500px;
   background: white;
-
+font-family: 'Montserrat';
   margin: 0px auto;
   // z-index:0;
   font-size: 1.5rem;
@@ -177,20 +181,16 @@ const Form = styled.form`
   }
   &:before {
     display: none;
-
     @media (min-width: 0px) and (max-width: 768px) {
-      display: block;
-
+    display: block;
     content: 'Get In Touch';
     position: relative;
     font-family: 'Amelaryas';
     font-size: 30px;
     transform: translateY(-20px);
     top: 0px;
-line-height: 15px;
-
+    line-height: 15px;
     color: ${(props) => props.theme.second};
-
        }
   }
   .side-one {
@@ -211,45 +211,58 @@ line-height: 15px;
     margin: 0;
     color: red;
     position: absolute;
+    transform: translateY(-15px);
+  }
+  .error-msg2 {
+    line-height: 10px;
+    font-size: 10px;
+    margin: 0;
+    color: red;
+    position: absolute;
     transform: translateY(-30px);
+  }
+  .error-msg3 {
+    line-height: 10px;
+    font-size: 10px;
+    margin: 0;
+    color: red;
+    position: absolute;
+    transform: translateY(-15px);
   }
   label {
     display: block;
     line-height: 18px;
-    // z-index: 0;
-    margin: 0 auto;
+     margin: 0 auto;
     text-align: left;
     width: 100%;
-    font-family: 'Comfortaa';
+   font-family: 'Montserrat';
     position: relative;
-    letter-spacing: 3px;
-    font-size: 1.3rem;
-    // text-transform: uppercase;
-    margin-bottom: ${props => props.errormsg && props.errormsg.type.length > 1  ? '20px' : '0px'};
     color: ${(props) => props.theme.second};
+    font-size: 1.3rem;
+    // margin-bottom: ${props => props.errormsg && props.errormsg.type.length > 1  ? '20px' : '0px'};
+
   }
   .placeholder_option {
     color: rgba(255,255,255,.5);
   }
   .getintouch-smallscreen {
     display: none;
+    text-transform:uppercase;
     font-family: 'Comfortaa';
-
   opacity:.6;
-  letter-spacing: 3px;
   color: ${props => props.theme.third};
   margin-bottom:20px;
-  text-transform: uppercase;
-
   @media (min-width: 600px) and (max-width: 768px) {
     display: block;
     grid-column: 1;
   font-size: 11px;
+  letter-spacing: 3px;
   }
   @media (min-width: 0px) and (max-width: 599px) {
     display: block;
-    font-size: 9px;
+    font-size: 11px;
     grid-column: 1;
+    letter-spacing: 3px;
     width:100%;
     }
   }
@@ -259,28 +272,37 @@ line-height: 15px;
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
     font-size: 1.5rem;
-    margin-bottom: 30px;
-     font-family: 'Comfortaa';
-    background: transparent;
-    border-radius: 3px;
-    border: 2px solid ${(props) => props.theme.primary};
-position: relative;
-
+    margin-bottom: 20px;
+    font-family: 'Montserrat';
+     border-radius: 1px;
+    border: 2px solid rgba(237, 222, 213, .8);
+    position: relative;
     width: 100%;
+    color: black;
+    text-transform: capitalize;
     &:focus {
       outline: 0;
-      border: 2px solid ${(props) => props.theme.second};
+      // border: 1px solid ${(props) => props.theme.second};
+    }
+    &::placeholder {
+      // letter-spacing: 3px;
+      opacity: .4;
+      font-family: "Montserrat";
     }
   }
   .input {
-    font-family: 'Comfortaa';
+   font-family: 'Montserrat';
     font-size: 13px;
     text-transform: capitalize;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
     height: 36px;
+    font-family: 'Montserrat';
+    color: black;
   }
   .opaque {
-    opacity: .8;
+    text-transform: uppercase;
+    font-size:12px;
+    color: ${props => props.theme.second};
   }
   .react-datepicker__day--selected {
     background-color: grey;
@@ -360,7 +382,7 @@ position: relative;
   height: 40px;
   justify-self: left;
   background-color: ${props => props.theme.primary};
-font-family: 'Comfortaa';
+  font-family: 'Comfortaa';
 }
 
 .button-48:before {
@@ -399,11 +421,11 @@ font-family: 'Comfortaa';
   width: 50%;
   display: flex;
 justify-self: right;
-transition:  0.7s;
+transition: 0.7s;
 height: 30px;
   justify-content: center;
   text-transform: uppercase;
-  font-family: 'Comfortaa';
+  // font-family: 'Comfortaa';
   align-items: center;
 line-height: 8px;
 padding: 8px 2px;
@@ -417,10 +439,10 @@ padding: 8px 2px;
     resize: none;
     min-height: 100px;
     margin-top: 0px;
-    font-family: 'Comfortaa';
+    font-family: 'Montserrat';
     font-size: 20px;
-    border-radius: 3px;
-    border: 2px solid ${(props) => props.theme.primary};
+    border-radius: 0px;
+    border: none;
     width: 100%;
     padding-left: 1rem;
     padding-top: 0.7rem;
@@ -428,11 +450,15 @@ padding: 8px 2px;
     font-size: 1.5rem;
     position: relative;
     margin-bottom: 20px;
-    background: transparent;
-// z-index: 0;
+    border: 2px solid rgba(237, 222, 213, .8);
+    // background: rgba(237, 222, 213, .2);
+    &::placeholder {
+      // letter-spacing: 3px;
+      opacity: .4;
+      font-family: "Montserrat";
+    }
     &:focus {
       outline: 0;
-      border: 2px solid ${(props) => props.theme.second};
     }
   }
   button,
@@ -448,7 +474,6 @@ padding: 8px 2px;
   fieldset {
     border: 0;
     padding: 0;
-
     &[disabled] {
       opacity: 0.5;
     }
@@ -469,41 +494,80 @@ padding: 8px 2px;
       animation: ${loading} 0.5s linear infinite;
     }
   }
-  .react-datepicker-popper {
-    z-index: 300;
-    // position: absolute;
-  }
+
   .select__value-container {
     display: grid;
     grid-template-rows: 10px;
     grid-template-columns: 1;
+  }
+  .email {
+    text-transform: lowercase;
+  }
 
+  react-datepicker {
+    // width: 100%;
+    margin: 0 auto;
 
   }
+ .react-datepicker__current-month {
+  //  transform: translateX(100%);
+ }
+ .react-datepicker-popper {
+  z-index: 300;
+
+@media (min-width: 0px) and (max-width: 768px) {
+  transform: translate3d(0px, 74px, 0px) ;
+    }
+  }
+ .react-datepicker__header {
+   height: 80px;
+ }
+ .venue-error {
+   transform: translateY(5px);
+ }
+ .react-datepicker__day-names {
+   margin: 15px 5px 0;
+ }
+ .react-datepicker__day-name {
+  margin: 0 10px;
+  font-size: 16px;
+}
+.react-datepicker__day {
+  margin: 7px;
+}
+.react-datepicker__current-month {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+.react-datepicker__day--keyboard-selected {
+  background: slategrey;
+}
+.react-datepicker__navigation-icon {
+
+}
 `
 
 const MyContainer = ({ className, children }) => {
   return (
-    <div style={{ padding: "20px", background: 'rgba(237, 222, 213, 1)', color: "#fff" }}>
-      <CalendarContainer className={className}>
-
-        <div style={{ position: "relative", fontFamily: 'Comfortaa', opacity: 1 }}>{children}</div>
+    <div style={{ padding: "10px",  boxShadow: '0px 12px 8px -4px rgba(0,0,0,.2)', background: "rgba(237, 222, 213, .8)" }}>
+      <CalendarContainer  className={className}>
+        <div style={{ position: "relative", fontSize: '14px', fontFamily: 'Montserrat', opacity: 1 }}>{children}</div>
       </CalendarContainer>
     </div>
   )
 }
 
 const selectStyles = {
-  control: (base, state) => ({ ...base, minWidth: 240, margin: 0, border: "2px solid rgba(237, 222, 213, 1)", borderColor: state.isSelected ? "rgba(237, 222, 213, 1)" : "rgba(237, 222, 213, .8)", boxShadow: state.isFocused ? 'none' : 'none'}),
-  menu: () => ({ boxShadow: " 0 1px 0 rgba(0, 0, 0, 0.1)" }),
-  menuPortal: () => ({ zIndex: "1000", position: "absolute", top: "214px", left: "0px", boxShadow: "0 1px 0 rgba(0, 0, 0, 0.1)" }),
+  control: (base, state) => ({ ...base, minWidth: 240, background: 'transparent', margin: 0, border: "2px solid rgba(237, 222, 213, .8)", fontFamily: "Montserrat", boxShadow: state.isFocused ? 'none' : 'none'}),
+  menu: () => ({ boxShadow: " 0 1px 0 rgba(0, 0, 0, 0.1)",  fontFamily: "Montserrat" }),
+  menuPortal: () => ({ zIndex: "1000", position: "absolute", top: "214px", left: "0px", boxShadow: "0 1px 0 rgba(0, 0, 0, 0.1)",  fontFamily: "Montserrat" }),
   placeholder: () => ({
     opacity: .5
   })
 };
 
 const packageOptions = [{value: 'fullService', label: 'Full Service Planning, Styling + Coordination'}, {value: 'partial', label: 'Partial Planning + Coordination'}, {value: 'coordination', label: 'Wedding Management/Coordination'}, {value: 'tbd', label: 'I Would Like to Discuss this in Further Detail'}]
-
 
 function ContactForm() {
   const {
@@ -514,29 +578,30 @@ function ContactForm() {
   } = useForm()
 
   const [createSubmission, { data, loading, error }] = useMutation(CREATE_SUBMISSION)
-console.log(errors)
-  const onSubmit = async (data) => {
-console.log(data)
-   await createSubmission({variables: { firstName: data.firstName, lastName: data.lastName, fianceFirst: data.fianceFirst,  email: data.email, venue: data.venue, eventDate: data.ReactDatepicker, mobilePhone: data.mobileNumber, serviceRequested: data.serviceRequested, additionalInfo: data.additionalInfo}})
 
+  const onSubmit = async (data) => {
+
+   await createSubmission({variables: { firstName: data.firstName, lastName: data.lastName, fianceFirst: data.fianceFirst,  email: data.email, venue: data.venue, eventDate: data.ReactDatepicker, mobilePhone: data.mobileNumber, serviceRequested: data.serviceRequested, additionalInformation: data.additionalInformation}})
   }
  if (loading) return <Loader/>
 
   return (
-
-
-      <Layout>
-        <div className="line" />
-    <p className="getintouch">Please send inquiries with the following form <br/>I look forward to speaking with you  </p>
+    <Layout>
+    <div className="line" />
+    <p className="getintouch">Please send inquiries with the following form <br/>I look forward to speaking with you!  </p>
     <div className="line2" />
-
-{ data && !loading && !error ? <ThankYouMessage><h4>Thank you {data.firstName &&data.firstName}</h4>   <p>Your inquiry has been sent!<br/> <br/> Please expect a response in the next <span>48</span> hours </p></ThankYouMessage> :
+{ data && !loading && !error ? <ThankYouMessage>
+  <h4>Thank you {data.firstName && data.firstName}
+   </h4>
+   <p>Your inquiry has been sent!<br/> <br/> Please expect a reply in the next <span>48</span> hours
+   </p>
+   </ThankYouMessage> :
         <Form onSubmit={handleSubmit(onSubmit)}>
          <p className="getintouch-smallscreen">Please send any inquiries below. <br/>I look forward to speaking with you!  </p>
           <label htmlFor="firstname" className="side-one">
 
             <div className="opaque">First Name</div>
-            {errors.firstName && <div className="error-msg">This field is required</div>}
+
             <input
             errormsg={errors.firstName }
               name="firstname"
@@ -545,11 +610,11 @@ console.log(data)
 
               {...register('firstName', { required: true, maxLength: 80 })}
             />
-
+    {errors.firstName && <div className="error-msg">This field is required</div>}
           </label>
           <label htmlFor="lastname" className="side-two">
           <div className="opaque">Last Name</div>
-            {errors.lastName && <div className="error-msg">This field is required</div>}
+
             <input
             errormsg={errors.lastName }
               name="lastname"
@@ -557,10 +622,11 @@ console.log(data)
 
               {...register('lastName', { required: true, maxLength: 100 })}
             />
+            {errors.lastName && <div className="error-msg">This field is required</div>}
           </label>
           <label htmlFor="fianceFirst" className="side-one">
           <div className="opaque">Fiance&apos;s name</div>
-            {errors.fianceFirst && <div className="error-msg">This field is required</div>}
+
             <input
             errormsg={errors.fianceFirst }
               name="fianceFirst"
@@ -568,37 +634,44 @@ console.log(data)
 
               {...register('fianceFirst', { required: true })}
             />
+             {errors.fianceFirst && <div className="error-msg">This field is required</div>}
           </label>
-
           <label htmlFor="email" className="side-two">
           <div className="opaque">Email</div>
-            {errors.email && <div className="error-msg">This field is required</div>}
+
             <input
             errormsg={errors.email }
               name="email"
+              className="email"
               type="text"
               {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
             />
+             {errors.email && <div className="error-msg">This field is required</div>}
           </label>
           <label htmlFor="mobileNumber" className="side-one">
           <div className="opaque">Mobile Number</div>
-            {errors.mobileNumber?.type === 'required' ? <div className="error-msg">This field is required</div> : ''}
-            { errors.mobileNumber?.type === 'minLength' ? <div className="error-msg">Must be 10 digit number</div> : '' }
+
             <input
             errormsg={errors.mobileNumber }
               name="mobileNumber"
+              // onChange={ v => formatPhoneNumber(v)}
+              placeholder="(123)456-7890"
               type="tel"
-              {...register('mobileNumber', {
+              {...register("mobileNumber", {
+
                 required: true,
                 minLength: 10,
+
                 maxLength: 16,
                 pattern: ".?(\\d{3}).*(\\d{3}).*(\\d{4})",
               })}
             />
+            {errors.mobileNumber?.type === 'required' ? <div className="error-msg">This field is required</div> : ''}
+            { errors.mobileNumber?.type === 'minLength' ? <div className="error-msg">Must be 10 digit number</div> : '' }
           </label>
           <label htmlFor="date" className="side-two">
           <div className="opaque">Date of Wedding</div>
-            {errors.ReactDatepicker && <div className="error-msg">This field is required</div>}
+
           <Controller
             control={control}
             name="ReactDatepicker"
@@ -608,7 +681,7 @@ console.log(data)
             render={({ field }) => (
               <ReactDatePicker
                 className="input"
-                placeholderText="Select Your Date"
+
                 onChange={(e) => field.onChange(e)}
                 selected={field.value}
                 dateFormat="MMMM d, yyyy"
@@ -616,10 +689,11 @@ console.log(data)
               />
             )}
           />
+           {errors.ReactDatepicker && <div className="error-msg">This field is required</div>}
           </label>
           <label className="theSelector" htmlFor="serviceRequested">
           <div className="opaque">Planning Package</div>
-          {errors.serviceRequested && <div className="error-msg">This field is required</div>}
+
               <Controller
                 name="serviceRequested"
                 control={control}
@@ -638,9 +712,9 @@ console.log(data)
                   borderRadius: 2,
                   colors: {
                     ...theme.colors,
-                    primary25: 'rgba(237, 222, 213, .3)',
-                    primary75: 'rgba(237, 222, 213, .3)',
-                    primary50: 'rgba(237, 222, 213, .3)',
+                    primary25: 'rgba(237, 222, 213, .5)',
+                    primary75: 'rgba(237, 222, 213, .5)',
+                    primary50: 'rgba(237, 222, 213, .5)',
                     primary: 'rgba(237, 222, 213, 1)',
                   },
                 })}
@@ -652,10 +726,11 @@ console.log(data)
               />
               }
               />
+                {errors.serviceRequested && <div className="error-msg2 venue-error">This field is required</div>}
             </label>
           <label htmlFor="venue" className="both-sides">
           <div className="opaque">Venue</div>
-            {errors.venue && <div className="error-msg">This field is required</div>}
+
             <textarea
 
               name="venue"
@@ -665,21 +740,21 @@ console.log(data)
                 required: true,
               })}
             />
+            {errors.venue && <div className="error-msg ">This field is required</div>}
           </label>
-          <label htmlFor="additionalInfo" className="both-sides">
+          <label htmlFor="additionalInformation" className="both-sides">
           <div className="opaque">Any Additional Information?</div>
             <textarea
               {...register('additionalInformation', {})}
-              name="additionalInfo"
+              name="additionalInformation"
               type="text"
               placeholder="Is there anything else you'd like to share?"
             />
           </label>
-
           <button type="submit" className="button-48" role="button"><span className="text">Submit </span> </button>
-        </Form>}
+        </Form>
+      }
       </Layout>
-
   )
 }
 export default ContactForm

@@ -95,7 +95,7 @@ h2 {
 }
    }
   img {
-    width: 100%;
+    width: 95%;
     min-width: 500px;
     position: relative;
     overflow: hidden;
@@ -129,6 +129,9 @@ h2 {
     font-size: 16px;
      }
   }
+  a {
+       font-family: "Tomatoes";
+  }
 `
 
 const GoToMe = styled.div`
@@ -150,16 +153,17 @@ const Intro = React.forwardRef((props, ref) => {
     <div className="col">
     <div className="right-align">
     <h3>Full Service Planning &amp; Design</h3>
-    <p>For couples who would like guidance throughout the wedding planning process including securing and managing a dream team of vendors, keeping you on track with budget, monthly to do lists and assistance with every design detail along the way bringing your vision to life.</p>
+    <p>For couples who would like guidance throughout the planning process. For example, securing and managing your dream team of vendors, keeping you on track with budget &amp; monthly to-do lists, and assistance with every design detail along the way to ensure your vision is brought to life. This package also covers your rehearsal, day-of set up, exectution and coordination of the big day!</p>
+
     </div>
     <div className="right-align">
     <h3>  Partial Planning</h3>
-    <p>For the couples who have started planning but need assistance securing the rest of your vendors and pulling together a cohesive vision and help filling in the missing pieces! </p>
+    <p>For the couples who have started planning but need assistance securing any remaining vendors as well as pulling together a cohesive vision and help filling in the missing pieces! </p>
     </div>
     <div className="right-align">
     <h3> Wedding Management &amp; Coordination</h3>
-    <p>Enjoy the final months leading up to your wedding and know all the remaining tasks and logistics will be handled by me. All your hard work planning can be confidently handed over to me to be executed and ensure a flawless wedding day.</p></div>
-    </div>
+    <p>Enjoy the final months leading up to your wedding knowing that all the remaining tasks and logistics will in good hands. All your hard work planning can be confidently handed off to be executed by me and my team to ensure a flawless wedding day.</p></div>
+   </div>
     <div className="col2">
     <h2>Planning Services</h2>
     <img src="/../static/stephysbrideguide-terranea.png" alt="invitation suite picture" />

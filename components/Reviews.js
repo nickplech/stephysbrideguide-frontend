@@ -1,11 +1,8 @@
 import React, { useState, useRef } from 'react'
 import styled from 'styled-components'
-
 import 'react-awesome-slider/dist/styles.css'
 import AwesomeSlider from 'react-awesome-slider'
-
 import 'react-awesome-slider/dist/captioned.css'
-
 
 const SectionBlock = styled.div`
 width: 100%;
@@ -23,7 +20,6 @@ position: relative;
      transform: translateY(-45px) translateX(10px);
    }
 }
-
 `
 const SliderDiv = styled.div`
   width: 100%;
@@ -132,7 +128,7 @@ padding: 0 60px;
   width: 100%;
   position: relative;
   text-align: left;
-  z-index:100;
+  z-index:50;
   transform: translate3d(0, 0, 0);
   opacity: 1;
   color: ${props => props.theme.third};
@@ -142,7 +138,7 @@ padding: 0 60px;
     text-align: center;
       }
   &:before {
-    content: '            ';
+    content: '';
     position: absolute;
 
     background-image: url("/../static/quotes.svg");
@@ -192,39 +188,33 @@ const data = [
   name: 'Alexa Jesko',
   text:"I had briefly interviewed a few other planners, but once I talked with Stephy who was so warm and bubbly - I knew she was the one. From the beginning, Stephy was incredibly organized, professional, and communicative. It was clear to me she has great style and completely understood my wedding vision aesthetic, so I felt completely confident trusting her with any design input or ideas. Any time I had questions or wanted to meet with Stephy to talk through some details- she readily made herself available to hop on a call and help sort it out. When my first florist mock-up wasn't quite the look I had envisioned, Stephy graciously took over and communicated with the utmost professionalism to make sure we could get a redo of the mockup that we loved. Even when there was a last-minute hiccup with another vendor the day before the wedding- Stephy stepped in and truly saved the day. She helped our day go as seamlessly and perfectly as we could have imagined and helped bring our vision to life! I can't imagine this planning process without her- I would recommend Stephy without hesitation!" }]
 
-const Reviews  = function() {
-  const sliderRef = useRef(null)
+const Reviews  =  React.forwardRef((props, reviewsRef) => {
+
   const [selectedSlide, setSelectedSlide] = useState(0)
 
-console.log(sliderRef.current && sliderRef.current)
+
 
 const changeText = (bride) => {
-// const slideNumber = sliderRef.current?.
-console.log(bride)
-console.log(bride.nextMedia.reviewtext)
-setSelectedSlide(bride.nextMedia.reviewtext)
+
+setSelectedSlide(bride.currentMedia?.reviewtext)
 }
 
-// useEffect(() => {
-//   if (selectedSlide === null)  return
-//   console.log('useeffect')
-// changeText(selectedSlide)
-// }, [selectedSlide])
 
-  return <SectionBlock>
+
+  return <SectionBlock ref={reviewsRef}>
     <h2 className="small-screen">Client Sentiments</h2>
     <SliderDiv>
-<h2 className="large-screen">Client Sentiments</h2>
+    <h2 className="large-screen">Client Sentiments</h2>
     <AwesomeSlider
-    ref={sliderRef}
+
       className="shorten aws-btn"
       play={false}
       selected
       buttons={true}
       bullets={true}
-      // mobileTouch={true}
-      // onTransitionEnd={console.log('hey')}
-      onTransitionRequest={changeText}
+      mobileTouch={true}
+      onTransitionEnd={changeText}
+
     >
  <Slide    reviewtext={0}   data-src= "/../static/stephysbrideguide-review.jpg">
       </Slide>
@@ -247,6 +237,7 @@ setSelectedSlide(bride.nextMedia.reviewtext)
   </TextSide>
 </SliderDiv>
 </SectionBlock>
-}
+
+})
 
 export default Reviews
